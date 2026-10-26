@@ -1,6 +1,6 @@
 {
 	"name": "create-turbinekit",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "Create a TurbineKit project: a lean, AI-first Turborepo + Next.js boilerplate on free and open tools.",
 	"license": "MIT",
 	"type": "module",
