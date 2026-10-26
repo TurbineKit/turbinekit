@@ -30,7 +30,8 @@ code:
 - `template`: only in this repository, never in a project.
 
 Ids: `files`, `files-s3`, `files-blob`, `docs`, `analytics`, `consent`,
-`orgs`, `admin`, `payments`, `resend`, `email-sdk`, `template`.
+`orgs`, `admin`, `payments`, `resend`, `email-sdk`, `template`, and the
+language codes `fr`, `es`, `pt-BR`, `de`.
 
 Whole files, dependencies, scripts, `turbo.json` variables and message keys
 (JSON can't hold comments) belong to a module through its manifest in
@@ -51,8 +52,25 @@ request. When you add a module, add its variant there.
 ## Releases
 
 Add a changeset to each pull request that changes what the CLI generates:
-`pnpm changeset`. On `main`, the release workflow collects them in a
-"Version Packages" pull request. Merging it publishes `create-turbinekit` and
-`turbinekit` together, with npm trusted publishing: there is no npm token.
+`pnpm changeset`. `create-turbinekit` and `turbinekit` always share a
+version.
+
+1. Merge the pull request. On `main`, the release workflow opens or updates
+   the "Version Packages" pull request: the next version, the changelogs, and
+   the same version in `turbinekit.json`.
+2. To release, open that pull request. The workflow's own token opened it,
+   so GitHub holds its checks: select **Approve workflows to run**, wait for
+   the checks, then merge it.
+3. The release workflow publishes both packages with npm trusted publishing
+   (there is no npm token), tags them, and writes one GitHub release,
+   `v<version>`, from the changelog of `create-turbinekit`.
+
 The template is bundled into the package, so each version generates a fixed
 template.
+
+## README images
+
+The logos in `.github/assets/` come from the brand package of the TurbineKit
+site (`packages/brand/assets/lockup/` in `turbinekit-web`), where its export
+script makes them. After a change to the brand, copy them again.
+`TEMPLATE_ONLY` keeps them out of projects.

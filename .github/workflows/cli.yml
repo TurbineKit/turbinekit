@@ -75,3 +75,16 @@ jobs:
           pnpm typecheck
           pnpm test
           pnpm build
+
+  # The one check of this workflow that branch protection requires, because
+  # the variant names change with the matrix. A skipped job counts as passed,
+  # so this one always runs, and fails unless every variant passed.
+  all:
+    name: All variants
+    needs: generate
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - if: needs.generate.result != 'success'
+        run: exit 1

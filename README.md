@@ -1,4 +1,9 @@
-# TurbineKit
+<h1>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/assets/lockup-dark.png">
+    <img alt="TurbineKit" src=".github/assets/lockup-light.png" width="360">
+  </picture>
+</h1>
 
 A lean, AI-first Turborepo boilerplate for Next.js products, built only on
 free and open tools.
