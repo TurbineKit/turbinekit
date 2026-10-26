@@ -1,0 +1,31 @@
+{
+	"name": "@repo/billing",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"description": "Payments with Stripe: plans and limits, Checkout, the customer portal, and webhooks that mirror subscriptions into Postgres.",
+	"exports": {
+		".": "./src/index.ts",
+		"./keys": "./src/keys.ts",
+		"./plans": "./src/plans.ts"
+	},
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run",
+		"stripe:setup": "node scripts/setup.ts"
+	},
+	"dependencies": {
+		"@repo/db": "workspace:*",
+		"@repo/site": "workspace:*",
+		"@t3-oss/env-core": "catalog:",
+		"drizzle-orm": "catalog:",
+		"stripe": "23.0.1",
+		"zod": "catalog:"
+	},
+	"devDependencies": {
+		"@repo/tsconfig": "workspace:*",
+		"@types/node": "catalog:",
+		"typescript": "catalog:",
+		"vitest": "catalog:"
+	}
+}

@@ -1,0 +1,14 @@
+---
+title: Versioning
+description: How the API changes without breaking your code.
+sidebar:
+  order: 6
+---
+
+The version is in the path: `/api/v1`. Within v1, changes only add things:
+
+- new endpoints, and new optional parameters;
+- new fields in responses (ignore the ones you don't know);
+- new error codes within the existing types.
+
+A change that could break your code (removing or renaming a field, changing a type) ships as `/api/v2`, next to v1. We announce it ahead, and keep v1 running while you move.

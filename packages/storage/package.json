@@ -1,0 +1,31 @@
+{
+	"name": "@repo/storage",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"description": "File storage through Files SDK: local disk in development, S3-compatible stores (R2, S3, MinIO) or Vercel Blob in production.",
+	"exports": {
+		".": "./src/index.ts",
+		"./keys": "./src/keys.ts"
+	},
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run"
+	},
+	"dependencies": {
+		"@aws-sdk/client-s3": "3.1156.0",
+		"@aws-sdk/lib-storage": "3.1156.0",
+		"@aws-sdk/s3-presigned-post": "3.1156.0",
+		"@aws-sdk/s3-request-presigner": "3.1156.0",
+		"@t3-oss/env-core": "catalog:",
+		"@vercel/blob": "2.8.2",
+		"files-sdk": "3.1.2",
+		"zod": "catalog:"
+	},
+	"devDependencies": {
+		"@repo/tsconfig": "workspace:*",
+		"@types/node": "catalog:",
+		"typescript": "catalog:",
+		"vitest": "catalog:"
+	}
+}

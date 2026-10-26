@@ -1,0 +1,51 @@
+import { site } from "@repo/site";
+
+export const updated = "2026-10-26";
+
+{/* Template text. Have it reviewed for your jurisdiction before launch (LAUNCH.md). */}
+
+# Privacy policy
+
+This policy explains what personal data {site.company.name} ("we") collects when you use {site.name}, why we collect it, and the choices you have.
+
+## Who we are
+
+{site.company.name} operates {site.name}. For any question about your data, write to <a href={`mailto:${site.company.email}`}>{site.company.email}</a>.
+
+## What we collect
+
+- **Account data**: your name, email address and a hash of your password, or the profile your sign-in provider (Google or GitHub) shares with us.
+- **Security data**: your passkeys, your two-factor settings, your active sessions with their IP address and browser, and the API keys you create.
+- **Connected apps**: the AI assistants you allow to act on your account, and what each may do.
+- **Content**: the data you create in the app.
+- **Files**: the images you upload, such as your avatar. {/* turbinekit:files */}
+- **Billing data**: your plan and payment history. Stripe processes your card; we never see the full card number. {/* turbinekit:payments */}
+- **Usage data**: the pages you view and the features you use, measured with PostHog. {/* turbinekit:analytics */}
+
+## Why we use it
+
+- To provide the service and keep your account secure.
+- To send the emails you need: email verification, password resets and security notices.
+- To prevent abuse, for example with rate limits on sign-in attempts.
+- To comply with the law.
+- To understand how the service is used and improve it, only with your consent where the law requires it. {/* turbinekit:analytics */}
+
+## Who receives it
+
+We share personal data only with providers that process it on our behalf: hosting, database, email delivery, and the services named above. They may use it only to provide their service to us.
+
+## How long we keep it
+
+We keep your account data while your account exists. When you delete your account, we delete your personal data within 30 days, except what the law requires us to keep.
+
+## Your rights
+
+You can access, correct, export or delete your data, and object to some uses of it. Most of this is available in your account settings. For anything else, write to <a href={`mailto:${site.company.email}`}>{site.company.email}</a>. You can also complain to your data protection authority.
+
+## Cookies
+
+See our [cookie policy](/legal/cookies).
+
+## Changes
+
+We will update the date at the bottom of this page when this policy changes, and tell you by email about any important change.

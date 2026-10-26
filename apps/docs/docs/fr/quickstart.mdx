@@ -1,0 +1,48 @@
+---
+title: Démarrage rapide
+description: Créez une clé d’API et faites votre première requête en deux minutes.
+sidebar:
+  order: 1
+---
+
+## 1. Créer une clé
+
+Connectez-vous, ouvrez **Compte → Clés d’API** et choisissez **Créer une clé**. Prenez **Lecture et écriture** pour ce guide. Copiez la clé : elle n’est affichée qu’une fois.
+
+## 2. Lister vos projets
+
+```bash
+export API_KEY="tk_…"
+
+curl https://example.com/api/v1/projects \
+  -H "Authorization: Bearer $API_KEY"
+```
+
+```json
+{ "data": [], "nextCursor": null }
+```
+
+## 3. Créer un projet
+
+```bash
+curl https://example.com/api/v1/projects \
+  -H "Authorization: Bearer $API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{ "name": "Mon premier projet" }'
+```
+
+```json
+{
+  "id": "prj_4fQ9pX2mN7kL1sTz",
+  "name": "Mon premier projet",
+  "description": null,
+  "createdAt": "2026-10-26T12:00:00.000Z",
+  "updatedAt": "2026-10-26T12:00:00.000Z"
+}
+```
+
+Le projet apparaît maintenant dans l’application, et un assistant IA connecté par [MCP](/mcp) le voit aussi.
+
+## Ensuite
+
+Lisez la page sur les [erreurs](/errors) et la [pagination](/pagination), ou parcourez la [référence de l’API](/reference).

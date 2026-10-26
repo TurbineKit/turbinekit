@@ -1,0 +1,46 @@
+---
+title: Authentification
+description: Des clés d’API pour le code, OAuth pour les assistants IA, et les permissions qu’ils portent.
+sidebar:
+  order: 2
+---
+
+## Clés d’API
+
+Envoyez votre clé comme jeton porteur à chaque requête :
+
+```bash
+curl https://example.com/api/v1/projects \
+  -H "Authorization: Bearer tk_…"
+```
+
+`X-Api-Key: tk_…` fonctionne aussi. Créez et supprimez vos clés dans **Compte → Clés d’API**. Traitez une clé comme un mot de passe : quiconque la possède agit en votre nom.
+
+## Permissions
+
+Chaque clé porte des permissions, choisies à sa création :
+
+| Accès | Permissions | Ce qu’elle peut faire |
+| --- | --- | --- |
+| Lecture seule | Chaque permission `…:read`, comme `projects:read` | Lister et lire |
+| Lecture et écriture | Chaque permission, comme `projects:write` | Aussi créer, modifier et supprimer |
+
+Une requête qui exige une permission que la clé n’a pas reçoit un `403` avec le code `insufficient_scope`. Chaque opération de la [référence de l’API](/reference) nomme la permission qu’elle exige (`x-required-permission`).
+
+{/* #region turbinekit:orgs */}
+
+## Équipes
+
+Une clé créée pendant qu’une équipe est active (le sélecteur en haut de la barre latérale) agit pour cette équipe : elle lit et modifie les données de l’équipe, pas vos données personnelles. Elle fonctionne tant que vous faites partie de l’équipe. Après votre départ, ou si quelqu’un vous retire, ses requêtes reçoivent un `403` avec le code `not_a_member`.
+
+Les assistants IA connectés avec OAuth agissent dans votre espace personnel.
+
+{/* #endregion turbinekit:orgs */}
+
+## Limites d’utilisation
+
+Chaque clé peut faire 120 requêtes par minute. Au-delà, les requêtes reçoivent un `429` avec un en-tête `Retry-After`. Attendez, puis réessayez.
+
+## OAuth pour les assistants IA
+
+Les assistants IA n’utilisent pas de clés d’API : ils se connectent au [serveur MCP](/mcp), et l’utilisateur se connecte et approuve l’assistant sur un écran de consentement. L’assistant reçoit un jeton avec les permissions approuvées (les mêmes noms, comme portées OAuth), lié au seul serveur MCP. L’utilisateur peut retirer l’accès d’un assistant en tout temps dans **Compte → Applications connectées** ; il cesse aussitôt.

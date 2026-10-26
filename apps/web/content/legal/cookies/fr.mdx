@@ -1,0 +1,57 @@
+import { site } from "@repo/site";
+
+export const updated = "2026-10-26";
+
+{/* Texte modèle. Listez chaque témoin que vous ajoutez. Faites-le relire avant le lancement (LAUNCH.md). */}
+
+# Politique relative aux témoins
+
+{site.name} utilise quelques témoins (cookies) et technologies semblables (stockage local). Cette page les énumère et explique comment les contrôler.
+
+## Strictement nécessaires
+
+Ils font fonctionner le service. Ils ne demandent aucun consentement.
+
+| Nom | Rôle | Durée |
+| --- | --- | --- |
+| `better-auth.session_token` | Vous garde connecté | 7 jours |
+| `NEXT_LOCALE` | Retient la langue choisie | 1 an |
+| `theme` (stockage local) | Retient le mode clair ou sombre | Jusqu’à ce que vous l’effaciez |
+
+{/* #region turbinekit:analytics */}
+
+## Mesure d’audience
+
+Nous mesurons l’utilisation du service avec PostHog.
+
+{/* #region turbinekit:consent */}
+
+Avant votre choix, et si vous refusez, PostHog ne garde aucun témoin et ne vous identifie pas. Si vous acceptez, il dépose ce témoin :
+
+| Nom | Rôle | Durée |
+| --- | --- | --- |
+| `ph_*_posthog` | Compte les visites et les relie à votre compte | 1 an |
+
+{/* #endregion turbinekit:consent */}
+
+{/* #region !turbinekit:consent
+PostHog fonctionne sans témoins : il n’enregistre rien sur votre appareil et ne vous identifie pas.
+#endregion !turbinekit:consent */}
+
+{/* #endregion turbinekit:analytics */}
+
+{/* #region turbinekit:consent */}
+
+## Vos choix
+
+Une bannière demande votre consentement lorsque la loi l’exige (par exemple dans l’Union européenne, au Royaume-Uni et au Québec). Vous pouvez changer votre choix en tout temps avec le lien « Paramètres des témoins » au bas de chaque page.
+
+{/* #endregion turbinekit:consent */}
+
+## Votre navigateur
+
+Vous pouvez bloquer ou supprimer les témoins dans les réglages de votre navigateur. Si vous bloquez ceux qui sont strictement nécessaires, vous ne pourrez pas vous connecter.
+
+## Contact
+
+Questions : <a href={`mailto:${site.company.email}`}>{site.company.email}</a>.

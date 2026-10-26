@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+
+# Builds and caches
+.next/
+.turbo/
+dist/
+out/
+build/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# Tests
+playwright-report/
+test-results/
+
+# Env files: commit only the examples
+.env
+.env.*
+!.env.example
+
+# Local data
+.pglite/
+# #region turbinekit:files
+.storage/
+# #endregion turbinekit:files
+
+# Generated
+apps/web/public/**/*.md
+# #region turbinekit:docs
+apps/docs/.blume/
+apps/docs/.blume-verify/
+apps/docs/openapi.json
+# #endregion turbinekit:docs
+
+# #region turbinekit:template
+# The CLI's bundle (pnpm --filter create-turbinekit build)
+tooling/create/template/
+tooling/create/modules.json
+# #endregion turbinekit:template
+
+# Deploy and OS
+.vercel/
+.DS_Store
+*.pem

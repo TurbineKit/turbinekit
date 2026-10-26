@@ -1,0 +1,47 @@
+{
+	"$schema": "https://turborepo.com/schema.json",
+	"ui": "tui",
+	"globalPassThroughEnv": [
+		"VERCEL",
+		"VERCEL_ENV",
+		"VERCEL_URL",
+		"VERCEL_BRANCH_URL",
+		"VERCEL_PROJECT_PRODUCTION_URL",
+		"VERCEL_GIT_COMMIT_SHA"
+	],
+	"tasks": {
+		"transit": {
+			"dependsOn": ["^transit"]
+		},
+		"build": {
+			"dependsOn": ["^build"],
+			"inputs": ["$TURBO_DEFAULT$", ".env*"],
+			"env": [
+				"NEXT_PUBLIC_*",
+				"SITE_URL",
+				"DOCS_ORIGIN",
+				"POSTHOG_API_KEY",
+				"POSTHOG_PROJECT_ID"
+			],
+			"outputs": [
+				".next/**",
+				"!.next/cache/**",
+				"!.next/dev/**",
+				"dist/**",
+				".vercel/output/**",
+				"public/**/*.md"
+			]
+		},
+		"typecheck": {
+			"dependsOn": ["transit"]
+		},
+		"test": {
+			"dependsOn": ["transit"],
+			"inputs": ["$TURBO_DEFAULT$", ".env*"]
+		},
+		"dev": {
+			"cache": false,
+			"persistent": true
+		}
+	}
+}

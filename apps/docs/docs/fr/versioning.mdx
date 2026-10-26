@@ -1,0 +1,14 @@
+---
+title: Versions
+description: Comment l’API évolue sans briser votre code.
+sidebar:
+  order: 6
+---
+
+La version est dans le chemin : `/api/v1`. Dans la v1, les changements ne font qu’ajouter :
+
+- de nouveaux points d’accès, et de nouveaux paramètres optionnels ;
+- de nouveaux champs dans les réponses (ignorez ceux que vous ne connaissez pas) ;
+- de nouveaux codes d’erreur dans les types existants.
+
+Un changement qui pourrait briser votre code (retirer ou renommer un champ, changer un type) sort comme `/api/v2`, à côté de la v1. Nous l’annonçons d’avance, et la v1 reste en service pendant votre migration.

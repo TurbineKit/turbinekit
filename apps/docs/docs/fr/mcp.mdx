@@ -1,0 +1,59 @@
+---
+title: Connecter un assistant IA
+description: Ajoutez le serveur MCP à Claude, ChatGPT, Cursor ou Claude Code.
+sidebar:
+  order: 3
+---
+
+Le serveur MCP est à :
+
+```txt
+https://example.com/mcp
+```
+
+Il utilise le transport Streamable HTTP et OAuth 2.1. Quand un assistant se connecte, il vous envoie vous connecter et approuver ce qu’il peut faire. Les outils qu’il reçoit correspondent aux permissions approuvées : un assistant autorisé en lecture ne voit que les outils de lecture.
+
+## Claude
+
+Dans Claude, ouvrez **Paramètres → Connecteurs → Ajouter un connecteur personnalisé**, et collez l’adresse ci-dessus. Claude ouvre la page de connexion ; approuvez l’accès, et les outils apparaissent dans la conversation.
+
+## Claude Code
+
+```bash
+claude mcp add --transport http my-app https://example.com/mcp
+```
+
+Lancez `/mcp` dans Claude Code pour vous connecter. Pour un script ou l’intégration continue, une clé d’API remplace OAuth :
+
+```bash
+claude mcp add --transport http my-app https://example.com/mcp \
+  --header "Authorization: Bearer $API_KEY"
+```
+
+## Cursor
+
+Ajoutez le serveur à `.cursor/mcp.json` :
+
+```json
+{
+  "mcpServers": {
+    "my-app": { "url": "https://example.com/mcp" }
+  }
+}
+```
+
+## ChatGPT
+
+Dans ChatGPT, ouvrez **Paramètres → Applications et connecteurs → Avancé**, activez le mode développeur, puis créez un connecteur avec l’adresse ci-dessus.
+
+## Outils
+
+| Outil | Permission | Ce qu’il fait |
+| --- | --- | --- |
+| `list_projects` | `projects:read` | Liste vos projets, du plus récent au plus ancien |
+| `get_project` | `projects:read` | Renvoie un projet |
+| `create_project` | `projects:write` | Crée un projet |
+| `update_project` | `projects:write` | Renomme un projet ou change sa description |
+| `delete_project` | `projects:write` | Supprime un projet (l’assistant demande d’abord) |
+
+Chaque outil est la même opération que son point d’accès REST, avec les mêmes règles et les mêmes erreurs.

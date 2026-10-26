@@ -1,0 +1,73 @@
+# Generates a project for each module choice and checks it: lint, types,
+# tests, and a build with no environment. Only in the TurbineKit repository.
+name: CLI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  generate:
+    name: ${{ matrix.name }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { name: all modules, flags: "--modules all" }
+          - { name: no module, flags: "--modules none" }
+          - { name: teams, flags: "--modules orgs" }
+          - { name: admin, flags: "--modules admin" }
+          - { name: payments, flags: "--modules payments" }
+          - { name: files, flags: "--modules files" }
+          - { name: docs, flags: "--modules docs" }
+          - { name: analytics, flags: "--modules analytics" }
+          - { name: consent, flags: "--modules consent" }
+          - {
+              name: analytics and consent,
+              flags: "--modules analytics,consent",
+            }
+          - {
+              name: email sdk,
+              flags: "--modules none --email-provider email-sdk",
+            }
+          - { name: files on s3, flags: "--modules files --files-driver s3" }
+          - {
+              name: files on vercel blob,
+              flags: "--modules files --files-driver vercel-blob",
+            }
+          - { name: english only, flags: "--modules all --locales en" }
+          - {
+              name: french first,
+              flags: "--modules all --locales en,fr --default-locale fr",
+            }
+          - { name: ultracite, flags: "--modules all --lint ultracite" }
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Generate
+        run: >
+          node tooling/create/src/index.ts "$RUNNER_TEMP/app" --template . --json
+          --no-git --skills none ${{ matrix.flags }}
+      - name: Check
+        working-directory: ${{ runner.temp }}/app
+        run: |
+          rm apps/web/.env.local
+          pnpm exec biome ci
+          pnpm typecheck
+          pnpm test
+          pnpm build

@@ -1,0 +1,57 @@
+import { site } from "@repo/site";
+
+export const updated = "2026-10-26";
+
+{/* Template text. List every cookie you add. Have it reviewed before launch (LAUNCH.md). */}
+
+# Cookie policy
+
+{site.name} uses a few cookies and similar technologies (local storage). This page lists them and explains how to control them.
+
+## Strictly necessary
+
+These make the service work. They need no consent.
+
+| Name | Purpose | Duration |
+| --- | --- | --- |
+| `better-auth.session_token` | Keeps you signed in | 7 days |
+| `NEXT_LOCALE` | Remembers the language you chose | 1 year |
+| `theme` (local storage) | Remembers light or dark mode | Until you clear it |
+
+{/* #region turbinekit:analytics */}
+
+## Measurement
+
+We measure how the service is used with PostHog.
+
+{/* #region turbinekit:consent */}
+
+Before you choose, and if you refuse, PostHog keeps no cookie and does not identify you. If you accept, it sets this cookie:
+
+| Name | Purpose | Duration |
+| --- | --- | --- |
+| `ph_*_posthog` | Counts visits and connects them to your account | 1 year |
+
+{/* #endregion turbinekit:consent */}
+
+{/* #region !turbinekit:consent
+PostHog runs without cookies: it stores nothing on your device and does not identify you.
+#endregion !turbinekit:consent */}
+
+{/* #endregion turbinekit:analytics */}
+
+{/* #region turbinekit:consent */}
+
+## Your choices
+
+A banner asks for your consent where the law requires it (for example in the European Union, the United Kingdom and Quebec). You can change your choice at any time from the link "Cookie settings" at the bottom of every page.
+
+{/* #endregion turbinekit:consent */}
+
+## Your browser
+
+You can block or delete cookies in your browser settings. If you block the strictly necessary ones, you cannot sign in.
+
+## Contact
+
+Questions: <a href={`mailto:${site.company.email}`}>{site.company.email}</a>.

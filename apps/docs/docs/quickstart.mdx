@@ -1,0 +1,48 @@
+---
+title: Quickstart
+description: Create an API key and make your first request in two minutes.
+sidebar:
+  order: 1
+---
+
+## 1. Create a key
+
+Sign in, open **Account → API keys** and select **Create a key**. Pick **Read and write** for this guide. Copy the key: it is shown only once.
+
+## 2. List your projects
+
+```bash
+export API_KEY="tk_…"
+
+curl https://example.com/api/v1/projects \
+  -H "Authorization: Bearer $API_KEY"
+```
+
+```json
+{ "data": [], "nextCursor": null }
+```
+
+## 3. Create a project
+
+```bash
+curl https://example.com/api/v1/projects \
+  -H "Authorization: Bearer $API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{ "name": "My first project" }'
+```
+
+```json
+{
+  "id": "prj_4fQ9pX2mN7kL1sTz",
+  "name": "My first project",
+  "description": null,
+  "createdAt": "2026-10-26T12:00:00.000Z",
+  "updatedAt": "2026-10-26T12:00:00.000Z"
+}
+```
+
+The project now shows in the app, and an AI assistant connected through [MCP](/mcp) can see it too.
+
+## Next
+
+Read about [errors](/errors) and [pagination](/pagination), or browse the [API reference](/reference).

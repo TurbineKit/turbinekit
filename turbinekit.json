@@ -1,0 +1,16 @@
+{
+	"$comment": "Written by create-turbinekit. The add-module skill reads it to bring a module back at this version.",
+	"version": "0.1.0",
+	"modules": [
+		"files",
+		"docs",
+		"analytics",
+		"consent",
+		"orgs",
+		"admin",
+		"payments"
+	],
+	"providers": { "email": "resend", "files": "local" },
+	"locales": ["en", "fr"],
+	"lint": "biome"
+}

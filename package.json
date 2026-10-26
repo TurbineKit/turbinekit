@@ -1,0 +1,37 @@
+{
+	"name": "turbinekit",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"description": "TurbineKit: a lean, AI-first Turborepo + Next.js boilerplate. Free and open tools only.",
+	"license": "MIT",
+	"packageManager": "pnpm@10.27.0",
+	"engines": {
+		"node": ">=24"
+	},
+	"scripts": {
+		"dev": "turbo run dev",
+		"build": "turbo run build",
+		"typecheck": "turbo run typecheck",
+		"test": "turbo run test",
+		"lint": "biome check",
+		"format": "biome check --write",
+		"db:generate": "pnpm --filter @repo/db generate",
+		"db:migrate": "pnpm --filter @repo/db migrate",
+		"db:studio": "pnpm --filter @repo/db studio",
+		"db:local": "pnpm --filter @repo/db local",
+		"auth:generate": "pnpm --filter @repo/auth generate",
+		"email:dev": "pnpm --filter @repo/email dev",
+		"admin:grant": "pnpm --filter @repo/auth grant-admin",
+		"stripe:setup": "pnpm --filter @repo/billing stripe:setup",
+		"changeset": "changeset"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "catalog:",
+		"@changesets/changelog-github": "1.0.1",
+		"@changesets/cli": "3.0.3",
+		"tsx": "4.23.15",
+		"turbo": "catalog:",
+		"typescript": "catalog:"
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"name": "@repo/site",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"description": "Who the site is: name, description, company and origin. Read by the web app, auth, emails, docs and the MCP server.",
+	"exports": {
+		".": "./src/index.ts"
+	},
+	"scripts": {
+		"typecheck": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@repo/tsconfig": "workspace:*",
+		"@types/node": "catalog:",
+		"typescript": "catalog:"
+	}
+}

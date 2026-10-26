@@ -1,0 +1,38 @@
+{
+	"name": "@repo/db",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"description": "Postgres through Drizzle: the schema, a lazy client, migrations, PGlite for tests, and a zero-install local Postgres (pnpm db:local).",
+	"exports": {
+		".": "./src/index.ts",
+		"./schema": "./src/schema/index.ts",
+		"./testing": "./src/testing.ts",
+		"./id": "./src/id.ts",
+		"./keys": "./src/keys.ts",
+		"./load-env": "./src/load-env.ts"
+	},
+	"scripts": {
+		"generate": "drizzle-kit generate",
+		"migrate": "node src/migrate.ts",
+		"studio": "drizzle-kit studio",
+		"local": "pglite-server --db=../../.pglite --port=5432 --max-connections=10",
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run"
+	},
+	"dependencies": {
+		"@t3-oss/env-core": "catalog:",
+		"drizzle-orm": "catalog:",
+		"postgres": "catalog:",
+		"zod": "catalog:"
+	},
+	"devDependencies": {
+		"@electric-sql/pglite": "catalog:",
+		"@electric-sql/pglite-socket": "catalog:",
+		"@repo/tsconfig": "workspace:*",
+		"@types/node": "catalog:",
+		"drizzle-kit": "catalog:",
+		"typescript": "catalog:",
+		"vitest": "catalog:"
+	}
+}

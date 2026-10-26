@@ -1,0 +1,30 @@
+{
+	"name": "docs",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"description": "The API docs, built by Blume from MDX guides and the OpenAPI document of @repo/api. Served at /docs on the main domain.",
+	"engines": {
+		"node": ">=24"
+	},
+	"scripts": {
+		"spec": "node scripts/build-openapi.ts",
+		"dev": "pnpm spec && blume dev --port 4321",
+		"build": "pnpm spec && blume build",
+		"check": "pnpm spec && blume check",
+		"translate": "pnpm spec && blume translate --claude",
+		"typecheck": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@repo/api": "workspace:*",
+		"@repo/i18n": "workspace:*",
+		"@repo/site": "workspace:*",
+		"blume": "2.2.6"
+	},
+	"devDependencies": {
+		"@repo/tsconfig": "workspace:*",
+		"@types/node": "catalog:",
+		"@vercel/config": "catalog:",
+		"typescript": "catalog:"
+	}
+}
