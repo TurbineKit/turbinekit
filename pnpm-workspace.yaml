@@ -1,0 +1,54 @@
+packages:
+  - apps/*
+  - packages/*
+  - tooling/*
+
+# Wait one hour after a version is published before installing it.
+# It gives the registry time to pull a compromised release.
+minimumReleaseAge: 60
+
+# Install scripts that pnpm may run. Everything else is skipped.
+onlyBuiltDependencies:
+  - esbuild
+  - sharp
+
+# One version per shared dependency. Packages refer to it with "catalog:".
+catalog:
+  "@base-ui/react": 1.9.0
+  "@biomejs/biome": 2.6.3
+  "@electric-sql/pglite": 0.5.11
+  "@electric-sql/pglite-socket": 0.2.14
+  "@next/env": 16.4.3
+  "@next/mdx": 16.4.3
+  "@playwright/test": 1.64.1
+  "@t3-oss/env-core": 0.13.11
+  "@t3-oss/env-nextjs": 0.13.11
+  "@tailwindcss/postcss": 4.3.3
+  "@types/mdx": 2.0.14
+  "@types/node": 24.19.2
+  "@types/react": 19.3.0
+  "@types/react-dom": 19.3.0
+  "@vercel/config": 0.13.0
+  better-auth: 1.7.13
+  "@better-auth/api-key": 1.7.13
+  "@better-auth/cimd": 1.7.13
+  "@better-auth/mcp": 1.7.13
+  "@better-auth/passkey": 1.7.13
+  auth: 1.7.13
+  drizzle-kit: 0.31.11
+  drizzle-orm: 0.45.4
+  next: 16.4.3
+  next-intl: 4.14.9
+  postgres: 3.4.9
+  react: 19.3.1
+  react-dom: 19.3.1
+  tailwindcss: 4.3.3
+  turbo: 2.11.10
+  typescript: 7.0.2
+  vitest: 5.0.5
+  zod: 4.6.7
+
+# Install scripts skipped on purpose (they ship prebuilt binaries).
+ignoredBuiltDependencies:
+  - "@parcel/watcher"
+  - "@swc/core"

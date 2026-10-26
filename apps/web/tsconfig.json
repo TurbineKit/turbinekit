@@ -1,0 +1,23 @@
+{
+	"extends": "@repo/tsconfig/nextjs.json",
+	"compilerOptions": {
+		"paths": {
+			"@/*": ["./src/*"],
+			"@/content/*": ["./content/*"],
+			"@repo/ui/*": ["../../packages/ui/src/*"]
+		}
+	},
+	"include": [
+		"next-env.d.ts",
+		"next.config.ts",
+		"mdx-components.tsx",
+		"src/**/*.ts",
+		"src/**/*.tsx",
+		"scripts/**/*.ts",
+		"e2e/**/*.ts",
+		"*.config.ts",
+		".next/types/**/*.ts",
+		".next/dev/types/**/*.ts"
+	],
+	"exclude": ["node_modules"]
+}

@@ -1,0 +1,14 @@
+---
+title: Versionierung
+description: Wie sich die API ändert und dein Code trotzdem weiter funktioniert.
+sidebar:
+  order: 6
+---
+
+Die Version steht im Pfad: `/api/v1`. Innerhalb von v1 fügen Änderungen nur etwas hinzu:
+
+- neue Endpunkte und neue optionale Parameter;
+- neue Felder in Antworten (ignoriere die, die du nicht kennst);
+- neue Fehlercodes innerhalb der bestehenden Typen.
+
+Eine Änderung, nach der dein Code nicht mehr funktionieren könnte (ein Feld entfernen oder umbenennen, einen Typ ändern), erscheint als `/api/v2` neben v1. Wir kündigen sie vorab an und betreiben v1 weiter, während du umsteigst.

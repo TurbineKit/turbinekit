@@ -1,0 +1,32 @@
+{
+	"name": "@repo/analytics",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"description": "Product analytics with PostHog: a typed event catalog, the browser client, server capture and feature flags, and the first-party /ingest proxy.",
+	"exports": {
+		"./client": "./src/client.ts",
+		"./events": "./src/events.ts",
+		"./proxy": "./src/proxy.ts",
+		"./server": "./src/server.ts"
+	},
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run"
+	},
+	"dependencies": {
+		"posthog-js": "1.438.21",
+		"posthog-node": "5.57.2"
+	},
+	"devDependencies": {
+		"@repo/tsconfig": "workspace:*",
+		"@types/node": "catalog:",
+		"next": "catalog:",
+		"react": "catalog:",
+		"typescript": "catalog:",
+		"vitest": "catalog:"
+	},
+	"peerDependencies": {
+		"next": "*"
+	}
+}

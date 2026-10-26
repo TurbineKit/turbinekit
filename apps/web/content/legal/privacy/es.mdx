@@ -1,0 +1,51 @@
+import { site } from "@repo/site";
+
+export const updated = "2026-10-26";
+
+{/* Texto de plantilla. Haz que lo revisen para tu jurisdicción antes del lanzamiento (LAUNCH.md). */}
+
+# Política de privacidad
+
+Esta política explica qué datos personales recopila {site.company.name} («nosotros») cuando usas {site.name}, por qué los recopilamos y qué opciones tienes.
+
+## Quiénes somos
+
+{site.company.name} opera {site.name}. Para cualquier pregunta sobre tus datos, escribe a <a href={`mailto:${site.company.email}`}>{site.company.email}</a>.
+
+## Qué recopilamos
+
+- **Datos de la cuenta**: tu nombre, tu dirección de correo electrónico y un hash de tu contraseña, o el perfil que tu proveedor de inicio de sesión (Google o GitHub) comparte con nosotros.
+- **Datos de seguridad**: tus llaves de acceso, tu configuración de verificación en dos pasos, tus sesiones activas con su dirección IP y su navegador, y las claves de API que creas.
+- **Aplicaciones conectadas**: los asistentes de IA a los que permites actuar en tu cuenta y lo que puede hacer cada uno.
+- **Contenido**: los datos que creas en la aplicación.
+- **Archivos**: las imágenes que subes, como tu foto de perfil. {/* turbinekit:files */}
+- **Datos de facturación**: tu plan y tu historial de pagos. Stripe procesa tu tarjeta; nunca vemos su número completo. {/* turbinekit:payments */}
+- **Datos de uso**: las páginas que visitas y las funciones que usas, medidas con PostHog. {/* turbinekit:analytics */}
+
+## Para qué los usamos
+
+- Para prestar el servicio y mantener tu cuenta segura.
+- Para enviarte los correos que necesitas: verificación del correo electrónico, restablecimiento de la contraseña y avisos de seguridad.
+- Para prevenir abusos, por ejemplo, limitando los intentos de inicio de sesión.
+- Para cumplir la ley.
+- Para entender cómo se usa el servicio y mejorarlo, solo con tu consentimiento cuando la ley lo exija. {/* turbinekit:analytics */}
+
+## Quién los recibe
+
+Solo compartimos datos personales con proveedores que los tratan en nuestro nombre: alojamiento, base de datos, envío de correos y los servicios mencionados arriba. Solo pueden usarlos para prestarnos su servicio.
+
+## Cuánto tiempo los conservamos
+
+Conservamos los datos de tu cuenta mientras esta exista. Cuando eliminas tu cuenta, eliminamos tus datos personales en un plazo de 30 días, salvo los que la ley nos obligue a conservar.
+
+## Tus derechos
+
+Puedes acceder a tus datos, corregirlos, exportarlos o eliminarlos, y oponerte a algunos de sus usos. Casi todo esto está disponible en la configuración de tu cuenta. Para cualquier otra cosa, escribe a <a href={`mailto:${site.company.email}`}>{site.company.email}</a>. También puedes presentar una reclamación ante tu autoridad de protección de datos.
+
+## Cookies
+
+Consulta nuestra [política de cookies](/legal/cookies).
+
+## Cambios
+
+Cuando esta política cambie, actualizaremos la fecha que aparece al final de esta página y te avisaremos por correo electrónico de cualquier cambio importante.

@@ -1,0 +1,34 @@
+{
+	"name": "@repo/email",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"description": "Localized React Email templates and one sendEmail() over the chosen provider. Logs to the console in development without a key.",
+	"exports": {
+		".": "./src/index.ts",
+		"./keys": "./src/keys.ts"
+	},
+	"scripts": {
+		"dev": "email dev --dir src/templates --port 3001",
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run"
+	},
+	"dependencies": {
+		"@opencoredev/email-sdk": "3.0.1",
+		"@repo/i18n": "workspace:*",
+		"@repo/site": "workspace:*",
+		"@t3-oss/env-core": "catalog:",
+		"react": "catalog:",
+		"react-dom": "catalog:",
+		"react-email": "6.11.3",
+		"resend": "6.34.1",
+		"zod": "catalog:"
+	},
+	"devDependencies": {
+		"@repo/tsconfig": "workspace:*",
+		"@types/node": "catalog:",
+		"@types/react": "catalog:",
+		"typescript": "catalog:",
+		"vitest": "catalog:"
+	}
+}

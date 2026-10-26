@@ -1,0 +1,57 @@
+import { site } from "@repo/site";
+
+export const updated = "2026-10-26";
+
+{/* Mustertext. Führe jedes Cookie auf, das du hinzufügst. Lass ihn vor dem Start prüfen (LAUNCH.md). */}
+
+# Cookie-Richtlinie
+
+{site.name} verwendet einige Cookies und ähnliche Technologien (lokaler Speicher). Diese Seite führt sie auf und erklärt, wie du sie steuerst.
+
+## Unbedingt erforderlich
+
+Diese sorgen dafür, dass der Dienst funktioniert. Eine Einwilligung ist nicht erforderlich.
+
+| Name | Zweck | Dauer |
+| --- | --- | --- |
+| `better-auth.session_token` | Hält dich angemeldet | 7 Tage |
+| `NEXT_LOCALE` | Merkt sich die gewählte Sprache | 1 Jahr |
+| `theme` (lokaler Speicher) | Merkt sich den hellen oder dunklen Modus | Bis zum Löschen |
+
+{/* #region turbinekit:analytics */}
+
+## Reichweitenmessung
+
+Wir messen mit PostHog, wie der Dienst genutzt wird.
+
+{/* #region turbinekit:consent */}
+
+Bevor du eine Wahl triffst und wenn du ablehnst, setzt PostHog kein Cookie und identifiziert dich nicht. Wenn du zustimmst, setzt PostHog dieses Cookie:
+
+| Name | Zweck | Dauer |
+| --- | --- | --- |
+| `ph_*_posthog` | Zählt Besuche und verknüpft sie mit deinem Konto | 1 Jahr |
+
+{/* #endregion turbinekit:consent */}
+
+{/* #region !turbinekit:consent
+PostHog läuft ohne Cookies: Es speichert nichts auf deinem Gerät und identifiziert dich nicht.
+#endregion !turbinekit:consent */}
+
+{/* #endregion turbinekit:analytics */}
+
+{/* #region turbinekit:consent */}
+
+## Deine Wahl
+
+Ein Banner bittet um deine Einwilligung, wo das Gesetz es verlangt (zum Beispiel in der Europäischen Union, im Vereinigten Königreich und in Québec). Du kannst deine Wahl jederzeit über den Link „Cookie-Einstellungen“ unten auf jeder Seite ändern.
+
+{/* #endregion turbinekit:consent */}
+
+## Dein Browser
+
+Du kannst Cookies in den Einstellungen deines Browsers blockieren oder löschen. Wenn du die unbedingt erforderlichen blockierst, kannst du dich nicht anmelden.
+
+## Kontakt
+
+Fragen: <a href={`mailto:${site.company.email}`}>{site.company.email}</a>.

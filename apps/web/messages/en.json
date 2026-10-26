@@ -1,0 +1,501 @@
+{
+	"Nav": {
+		"main": "Main",
+		"home": "Home",
+		"pricing": "Pricing",
+		"docs": "Docs",
+		"signIn": "Sign in",
+		"getStarted": "Get started",
+		"dashboard": "Dashboard",
+		"openMenu": "Open menu"
+	},
+	"Footer": {
+		"copyright": "© {year} {company}",
+		"product": "Product",
+		"legal": "Legal",
+		"privacy": "Privacy",
+		"terms": "Terms",
+		"cookies": "Cookies",
+		"cookieSettings": "Cookie settings",
+		"agents": "For AI agents"
+	},
+	"LocaleSwitcher": {
+		"label": "Language"
+	},
+	"Theme": {
+		"label": "Theme",
+		"light": "Light",
+		"dark": "Dark",
+		"system": "System"
+	},
+	"Home": {
+		"badge": "Open source · MIT",
+		"primary": "Get started",
+		"secondary": "Read the docs",
+		"featuresTitle": "Everything a new app needs, nothing it doesn't",
+		"featuresIntro": "Replace this page with your own story. The parts below are already working.",
+		"features": {
+			"i18n": {
+				"title": "Speaks every language you pick",
+				"body": "Localized pages, emails and legal text, with hreflang and a language switcher."
+			},
+			"seo": {
+				"title": "Found by search and AI",
+				"body": "Sitemap, canonical URLs, structured data, share cards, llms.txt and a Markdown copy of every page."
+			},
+			"auth": {
+				"title": "Secure sign-in",
+				"body": "Email and password, Google and GitHub, passkeys and two-factor authentication."
+			},
+			"api": {
+				"title": "One API, three doors",
+				"body": "Each operation serves the app, a documented REST API and an MCP server for AI clients."
+			},
+			"agents": {
+				"title": "Built for coding agents",
+				"body": "AGENTS.md, a setup runbook and skills teach agents how to extend the app safely."
+			},
+			"open": {
+				"title": "Free and open tools",
+				"body": "No paid service is required. Each one is optional and has a free fallback."
+			}
+		}
+	},
+	"Pricing": {
+		"title": "Pricing",
+		"subtitle": "Start free. Upgrade when you need more.",
+		"monthly": "{price} / month",
+		"yearly": "or {price} / year",
+		"free": {
+			"name": "Free",
+			"description": "To try the product and run small projects.",
+			"price": "Free",
+			"cta": "Get started",
+			"features": {
+				"projects": "Up to 3 projects",
+				"api": "The REST API and the MCP server",
+				"support": "Help by email"
+			}
+		},
+		"pro": {
+			"name": "Pro",
+			"description": "For people who rely on it every day.",
+			"cta": "Upgrade to Pro",
+			"features": {
+				"projects": "Unlimited projects",
+				"api": "The REST API and the MCP server",
+				"support": "Priority help by email"
+			}
+		},
+		"cancel": "Cancel at any time from your account. Prices exclude taxes."
+	},
+	"Pages": {
+		"home": {
+			"title": "{name}",
+			"description": "A lean, AI-first Next.js boilerplate built on free and open tools."
+		},
+		"pricing": {
+			"title": "Pricing",
+			"description": "Plans and prices."
+		},
+		"signIn": {
+			"title": "Sign in"
+		},
+		"signUp": {
+			"title": "Create your account"
+		}
+	},
+	"Legal": {
+		"updated": "Last updated: {date}",
+		"notTranslated": "This page is not translated yet. You are reading the English version.",
+		"privacy": {
+			"title": "Privacy policy",
+			"description": "What personal data we collect, why, and your rights."
+		},
+		"terms": {
+			"title": "Terms of service",
+			"description": "The rules for using the service."
+		},
+		"cookies": {
+			"title": "Cookie policy",
+			"description": "The cookies and similar technologies we use, and how to control them."
+		}
+	},
+	"NotFound": {
+		"title": "Page not found",
+		"body": "This page does not exist, or it has moved.",
+		"home": "Back to the home page"
+	},
+	"Auth": {
+		"email": "Email",
+		"password": "Password",
+		"name": "Name",
+		"newPassword": "New password",
+		"or": "or",
+		"continueWith": "Continue with {provider}",
+		"signIn": {
+			"title": "Sign in",
+			"description": "Welcome back. Sign in to continue.",
+			"submit": "Sign in",
+			"passkey": "Sign in with a passkey",
+			"forgot": "Forgot your password?",
+			"noAccount": "No account yet?",
+			"signUp": "Create one"
+		},
+		"signUp": {
+			"title": "Create your account",
+			"description": "It takes a minute. We will send you an email to confirm your address.",
+			"submit": "Create account",
+			"terms": "By creating an account, you accept the <terms>terms of service</terms> and acknowledge the <privacy>privacy policy</privacy>.",
+			"hasAccount": "Already have an account?",
+			"signIn": "Sign in"
+		},
+		"verify": {
+			"title": "Check your inbox",
+			"description": "We sent a link to {email}. Open it to confirm your address.",
+			"descriptionNoEmail": "We sent you a link. Open it to confirm your address.",
+			"resend": "Send the link again",
+			"sent": "Sent. Check your inbox.",
+			"invalid": "This link is invalid or has expired. Sign in to get a new one."
+		},
+		"forgot": {
+			"title": "Reset your password",
+			"description": "Enter your email. If an account uses it, we will send you a link.",
+			"submit": "Send the link",
+			"sent": "If an account uses this address, a link is on its way.",
+			"back": "Back to sign in"
+		},
+		"reset": {
+			"title": "Choose a new password",
+			"description": "Your other sessions will be signed out.",
+			"submit": "Save the password",
+			"done": "Your password changed. You can sign in now.",
+			"invalid": "This link is invalid or has expired. Ask for a new one."
+		},
+		"twoFactor": {
+			"title": "Two-factor authentication",
+			"description": "Enter the 6-digit code from your authenticator app.",
+			"code": "Code",
+			"submit": "Verify",
+			"trustDevice": "Trust this device for 30 days",
+			"emailCode": "Send me a code by email instead",
+			"emailSent": "We sent a code to your email.",
+			"emailDescription": "Enter the 6-digit code we sent to your email.",
+			"backupCode": "Use a backup code",
+			"backupDescription": "Enter one of your backup codes. Each works once.",
+			"useApp": "Use my authenticator app"
+		},
+		"consent": {
+			"title": "Allow {client} to access your account?",
+			"description": "{client} wants to use {product} on your behalf.",
+			"scopesTitle": "It will be able to:",
+			"allow": "Allow",
+			"deny": "Deny",
+			"signedInAs": "Signed in as {email}",
+			"scope": {
+				"offline_access": "Stay connected until you remove it",
+				"projects:read": "Read your projects",
+				"projects:write": "Create, change and delete your projects"
+			},
+			"invalid": "This authorization request is not valid or has expired. Start again from your AI assistant.",
+			"error": "Something went wrong. Try again from your AI assistant.",
+			"redirectsTo": "You will return to {host}."
+		},
+		"errors": {
+			"generic": "Something went wrong. Try again.",
+			"invalidCredentials": "The email or the password is wrong.",
+			"emailNotVerified": "Confirm your email address first. We sent you a new link.",
+			"userExists": "An account already uses this email.",
+			"passwordShort": "Use at least 8 characters.",
+			"rateLimited": "Too many attempts. Wait a minute, then try again.",
+			"invalidCode": "This code is wrong or has expired.",
+			"passkeyFailed": "The passkey did not work. Try again or use your password."
+		}
+	},
+	"App": {
+		"nav": {
+			"dashboard": "Dashboard",
+			"projects": "Projects",
+			"account": "Account",
+			"organization": "Team",
+			"admin": "Admin",
+			"docs": "Docs",
+			"home": "Home"
+		},
+		"userMenu": {
+			"account": "Account settings",
+			"signOut": "Sign out",
+			"toggle": "Account menu"
+		},
+		"dashboard": {
+			"title": "Dashboard",
+			"welcome": "Welcome, {name}",
+			"intro": "This is your dashboard. Replace it with what your users need first.",
+			"projects": "Your projects",
+			"projectsCount": "{count, plural, =0 {No project yet} one {# project} other {# projects}}",
+			"openProjects": "Open projects",
+			"apiTitle": "Use the API",
+			"apiBody": "Create an API key to call the REST API, or connect an AI assistant to the MCP server.",
+			"apiKeys": "API keys",
+			"connectedApps": "Connected apps"
+		}
+	},
+	"Account": {
+		"title": "Account",
+		"tabs": {
+			"profile": "Profile",
+			"security": "Security",
+			"apiKeys": "API keys",
+			"connectedApps": "Connected apps",
+			"billing": "Billing"
+		},
+		"save": "Save",
+		"saved": "Saved.",
+		"cancel": "Cancel",
+		"delete": "Delete",
+		"remove": "Remove",
+		"copy": "Copy",
+		"copied": "Copied.",
+		"close": "Close",
+		"profile": {
+			"title": "Profile",
+			"description": "Your name and the language of your emails.",
+			"name": "Name",
+			"email": "Email",
+			"emailHelp": "Contact us to change your email address.",
+			"language": "Email language",
+			"avatar": "Picture",
+			"avatarUpload": "Upload a picture",
+			"avatarHelp": "PNG, JPEG or WebP, up to 4 MB."
+		},
+		"danger": {
+			"title": "Delete your account",
+			"description": "This deletes your account and all its data. It cannot be undone.",
+			"confirm": "Enter your password to confirm.",
+			"button": "Delete my account"
+		},
+		"password": {
+			"title": "Password",
+			"description": "Changing it signs out your other sessions.",
+			"current": "Current password",
+			"new": "New password",
+			"submit": "Change the password",
+			"done": "Your password changed."
+		},
+		"passkeys": {
+			"title": "Passkeys",
+			"description": "Sign in with your fingerprint, face or device PIN instead of a password.",
+			"add": "Add a passkey",
+			"empty": "No passkey yet.",
+			"added": "Passkey added.",
+			"unnamed": "Passkey",
+			"createdAt": "Added {date}"
+		},
+		"twoFactor": {
+			"title": "Two-factor authentication",
+			"description": "Ask for a code from an authenticator app at sign-in.",
+			"enabled": "On",
+			"disabled": "Off",
+			"enable": "Turn on",
+			"disable": "Turn off",
+			"passwordPrompt": "Enter your password to continue.",
+			"scan": "Scan this QR code with your authenticator app, then enter the code it shows.",
+			"verify": "Confirm",
+			"backupTitle": "Save your backup codes",
+			"backupDescription": "Each code works once if you lose your device. Keep them somewhere safe.",
+			"done": "Two-factor authentication is on.",
+			"off": "Two-factor authentication is off."
+		},
+		"sessions": {
+			"title": "Sessions",
+			"description": "The devices signed in to your account.",
+			"current": "This device",
+			"revoke": "Sign out",
+			"revokeOthers": "Sign out of all other devices",
+			"unknown": "Unknown device",
+			"lastActive": "Started {date}"
+		},
+		"apiKeys": {
+			"title": "API keys",
+			"description": "Keys let your code call the REST API and the MCP server. Treat them like passwords.",
+			"create": "Create a key",
+			"name": "Name",
+			"namePlaceholder": "My script",
+			"access": "Access",
+			"read": "Read only",
+			"readWrite": "Read and write",
+			"empty": "No key yet.",
+			"createdTitle": "Copy your new key",
+			"createdDescription": "This is the only time it is shown. Store it in a safe place.",
+			"lastUsed": "Last used {date}",
+			"neverUsed": "Never used",
+			"deleteConfirm": "Delete the key \"{name}\"? Code that uses it stops working at once.",
+			"team": "Team: {team}",
+			"forTeam": "This key acts for the team {team}: it reads and changes the team's data, not yours."
+		},
+		"connectedApps": {
+			"title": "Connected apps",
+			"description": "AI assistants you allowed to use your account through the MCP server.",
+			"empty": "No connected app. Connect an assistant to {url} to see it here.",
+			"connected": "Connected {date}",
+			"lastUsed": "Last used {date}",
+			"remove": "Remove access",
+			"removeConfirm": "Remove the access of {name}? It stops at once."
+		},
+		"billing": {
+			"title": "Billing",
+			"description": "Your plan, your payment method and your invoices.",
+			"teamDescription": "The plan of {team}. All its members share it.",
+			"free": "You are on the free plan.",
+			"pro": "You are on the Pro plan.",
+			"renews": "It renews on {date}.",
+			"ends": "It ends on {date}. You keep Pro until then.",
+			"pastDue": "The last payment failed. Update your payment method to keep Pro.",
+			"upgradeMonthly": "Upgrade: {price} / month",
+			"upgradeYearly": "Upgrade: {price} / year",
+			"manage": "Manage billing",
+			"managers": "Only the team's owners and admins manage its billing.",
+			"unavailable": "Billing isn't set up on this site yet.",
+			"error": "That didn't work: {message}"
+		}
+	},
+	"Projects": {
+		"title": "Projects",
+		"description": "The example resource. The same projects are available through the REST API and the MCP server.",
+		"empty": "No project yet. Create the first one.",
+		"create": "New project",
+		"name": "Name",
+		"descriptionLabel": "Description",
+		"save": "Save",
+		"cancel": "Cancel",
+		"created": "Project created.",
+		"saved": "Project saved.",
+		"deleted": "Project deleted.",
+		"edit": "Edit",
+		"delete": "Delete",
+		"deleteConfirm": "Delete \"{name}\" for good?",
+		"updatedAt": "Updated {date}",
+		"apiHint": "Developers: GET /api/v1/projects with an API key, or the list_projects tool over MCP."
+	},
+	"Org": {
+		"title": "Team",
+		"description": "Work with others. Projects and API keys made in a team belong to the team.",
+		"personal": "Personal",
+		"switcher": {
+			"label": "Switch between your teams",
+			"create": "Create a team"
+		},
+		"create": {
+			"title": "Create a team",
+			"description": "You become its owner. Then invite people by email.",
+			"name": "Team name",
+			"namePlaceholder": "Acme",
+			"submit": "Create the team",
+			"created": "Team created."
+		},
+		"none": {
+			"title": "You are in your personal space",
+			"body": "Your projects and API keys here are yours alone. Create a team to share them, or switch to a team you belong to.",
+			"teams": "Your teams",
+			"switch": "Switch"
+		},
+		"general": {
+			"title": "General",
+			"description": "Members and invitations show this name.",
+			"name": "Name",
+			"save": "Save",
+			"saved": "Saved."
+		},
+		"members": {
+			"title": "Members",
+			"description": "Owners and admins can invite people, change roles and remove members.",
+			"you": "you",
+			"role": "Role of {name}",
+			"remove": "Remove",
+			"removeConfirm": "Remove {name} from the team? They lose access to its projects at once.",
+			"leave": "Leave the team",
+			"leaveConfirm": "Leave {team}? You lose access to its projects at once.",
+			"roles": {
+				"owner": "Owner",
+				"admin": "Admin",
+				"member": "Member"
+			}
+		},
+		"invitations": {
+			"title": "Invitations",
+			"description": "The person gets an email with a link. The link works for 48 hours.",
+			"email": "Email",
+			"role": "Role",
+			"send": "Invite",
+			"sent": "Invitation sent to {email}.",
+			"expires": "Expires {date}",
+			"cancel": "Cancel the invitation",
+			"empty": "No invitation is waiting for an answer."
+		},
+		"danger": {
+			"title": "Delete the team",
+			"description": "This deletes the team, its memberships and its projects. You can't undo it.",
+			"delete": "Delete the team",
+			"confirm": "Delete {team} and all its projects? You can't undo it."
+		},
+		"invitation": {
+			"title": "Join {team}",
+			"body": "{inviter} invited you to join {team} as {role}.",
+			"accept": "Accept",
+			"decline": "Decline",
+			"declined": "You declined the invitation.",
+			"invalid": "This invitation is not valid. It expired, it was cancelled, or it was sent to another email address than {email}."
+		},
+		"error": "That didn't work. Try again."
+	},
+	"Admin": {
+		"title": "Admin",
+		"tabs": {
+			"users": "Users",
+			"audit": "Audit log"
+		},
+		"users": {
+			"search": "Search by email",
+			"searchButton": "Search",
+			"empty": "No user matches.",
+			"user": "User",
+			"created": "Signed up",
+			"status": "Status",
+			"menu": "Actions for {name}",
+			"admin": "Admin",
+			"banned": "Banned",
+			"unverified": "Email not verified",
+			"active": "Active",
+			"viewAs": "View the app as this user",
+			"makeAdmin": "Make admin",
+			"removeAdmin": "Remove admin",
+			"ban": "Ban",
+			"unban": "Unban",
+			"banTitle": "Ban {name}?",
+			"banDescription": "They are signed out at once and can't sign in again until you unban them. Their API keys and connected apps stop working.",
+			"banReason": "Reason (only admins see it)",
+			"previous": "Previous",
+			"next": "Next",
+			"count": "{count, plural, one {# user} other {# users}}"
+		},
+		"audit": {
+			"empty": "Nothing yet. What admins do appears here.",
+			"when": "When",
+			"who": "Admin",
+			"what": "Action",
+			"target": "User",
+			"deleted": "deleted user",
+			"actions": {
+				"banned": "Banned",
+				"unbanned": "Unbanned",
+				"roleChanged": "Changed the role to {role}",
+				"impersonated": "Viewed the app as"
+			}
+		},
+		"impersonating": {
+			"banner": "You are viewing the app as {name} ({email}).",
+			"stop": "Back to your account"
+		},
+		"error": "That didn't work: {message}"
+	}
+}

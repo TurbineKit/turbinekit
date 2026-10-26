@@ -1,0 +1,51 @@
+---
+title: Fehler
+description: Ein einheitliches Format für alle Fehler, mit Codes, auf die du dich verlassen kannst.
+sidebar:
+  order: 4
+---
+
+Jeder Fehler hat dieselbe Struktur:
+
+```json
+{
+  "error": {
+    "type": "invalid_request_error",
+    "code": "invalid_parameter",
+    "message": "name: Too small: expected string to have >=1 characters",
+    "param": "name"
+  }
+}
+```
+
+Werte in deinem Code `type` und `code` aus: Diese Werte ändern sich nicht. `message` richtet sich an Menschen und kann sich ändern. `param` nennt das fehlerhafte Feld, falls es eines gibt.
+
+| Status | Typ | Häufige Codes |
+| --- | --- | --- |
+| 400 | `invalid_request_error` | `invalid_parameter`, `invalid_json`, `invalid_cursor` |
+| 401 | `authentication_error` | `missing_api_key`, `invalid_api_key` |
+| 403 | `permission_error` | `insufficient_scope` |
+| 404 | `not_found_error` | `resource_missing` |
+| 413 | `invalid_request_error` | `body_too_large` |
+| 429 | `rate_limit_error` | `rate_limited` |
+| 500 | `api_error` | `api_error` |
+
+{/* #region turbinekit:orgs|admin|payments */}
+
+## Weitere Codes
+
+{/* #region turbinekit:orgs */}
+- `403` `not_a_member`: Der API-Schlüssel handelt im Namen eines Teams, dem du nicht mehr angehörst.
+{/* #endregion turbinekit:orgs */}
+{/* #region turbinekit:admin */}
+- `403` `account_banned`: Ein Admin hat das Konto gesperrt. Seine Schlüssel und Tokens funktionieren nicht mehr.
+{/* #endregion turbinekit:admin */}
+{/* #region turbinekit:payments */}
+- `403` `plan_limit_reached`: Das Limit des Tarifs ist erreicht. Wechsle zu einem höheren Tarif oder lösche zuerst etwas.
+{/* #endregion turbinekit:payments */}
+
+{/* #endregion turbinekit:orgs|admin|payments */}
+
+## Anfrage-IDs
+
+Jede Antwort hat einen `Request-Id`-Header (`req_…`). Gib ihn an, wenn du den Support kontaktierst: Damit lässt sich deine Anfrage in den Logs finden.

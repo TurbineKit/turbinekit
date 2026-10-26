@@ -1,0 +1,51 @@
+import { site } from "@repo/site";
+
+export const updated = "2026-10-26";
+
+{/* Texte modèle. Fais-le relire pour ta juridiction avant le lancement (LAUNCH.md). */}
+
+# Politique de confidentialité
+
+Cette politique explique quelles données personnelles {site.company.name} (« nous ») recueille quand tu utilises {site.name}, pourquoi nous les recueillons et quels choix tu as.
+
+## Qui nous sommes
+
+{site.company.name} exploite {site.name}. Pour toute question sur tes données, écris à <a href={`mailto:${site.company.email}`}>{site.company.email}</a>.
+
+## Ce que nous recueillons
+
+- **Données de compte** : ton nom, ton adresse courriel et une empreinte de ton mot de passe, ou le profil que ton fournisseur de connexion (Google ou GitHub) nous transmet.
+- **Données de sécurité** : tes clés d’accès, tes réglages de double authentification, tes sessions actives avec leur adresse IP et leur navigateur, et les clés d’API que tu crées.
+- **Applications connectées** : les assistants IA que tu autorises à agir sur ton compte, et ce que chacun peut faire.
+- **Contenu** : les données que tu crées dans l’application.
+- **Fichiers** : les images que tu téléverses, comme ton avatar. {/* turbinekit:files */}
+- **Données de facturation** : ton forfait et ton historique de paiement. Stripe traite ta carte; nous ne voyons jamais son numéro complet. {/* turbinekit:payments */}
+- **Données d’utilisation** : les pages que tu consultes et les fonctions que tu utilises, mesurées avec PostHog. {/* turbinekit:analytics */}
+
+## Pourquoi nous les utilisons
+
+- Pour fournir le service et protéger ton compte.
+- Pour envoyer les courriels nécessaires : vérification de l’adresse, réinitialisation du mot de passe et avis de sécurité.
+- Pour prévenir les abus, par exemple en limitant les tentatives de connexion.
+- Pour respecter la loi.
+- Pour comprendre l’utilisation du service et l’améliorer, avec ton consentement lorsque la loi l’exige. {/* turbinekit:analytics */}
+
+## Qui les reçoit
+
+Nous ne transmettons des données personnelles qu’aux fournisseurs qui les traitent pour notre compte : hébergement, base de données, envoi de courriels et les services nommés ci-dessus. Ils ne peuvent les utiliser que pour nous fournir leur service.
+
+## Durée de conservation
+
+Nous conservons les données de ton compte tant qu’il existe. Quand tu supprimes ton compte, nous supprimons tes données personnelles dans les 30 jours, sauf ce que la loi nous oblige à garder.
+
+## Tes droits
+
+Tu peux consulter, corriger, exporter ou supprimer tes données, et t’opposer à certains usages. La plupart de ces actions sont offertes dans les paramètres de ton compte. Pour le reste, écris à <a href={`mailto:${site.company.email}`}>{site.company.email}</a>. Tu peux aussi porter plainte auprès de ton autorité de protection des données.
+
+## Témoins
+
+Consulte notre [politique relative aux témoins](/legal/cookies).
+
+## Modifications
+
+Nous mettons à jour la date au bas de cette page quand cette politique change, et nous t’avisons par courriel de tout changement important.

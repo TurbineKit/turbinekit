@@ -1,0 +1,46 @@
+---
+title: Authentication
+description: API keys for code, OAuth for AI assistants, and the permissions both carry.
+sidebar:
+  order: 2
+---
+
+## API keys
+
+Send your key as a bearer token on every request:
+
+```bash
+curl https://example.com/api/v1/projects \
+  -H "Authorization: Bearer tk_…"
+```
+
+`X-Api-Key: tk_…` works too. Create and delete keys in **Account → API keys**. Treat a key like a password: anyone who has it acts as you.
+
+## Permissions
+
+Each key carries permissions, chosen when you create it:
+
+| Access | Permissions | What it can do |
+| --- | --- | --- |
+| Read only | Every `…:read` permission, like `projects:read` | List and read |
+| Read and write | Every permission, like `projects:write` | Also create, change and delete |
+
+A request that needs a permission the key lacks gets a `403` with the code `insufficient_scope`. Each operation in the [API reference](/reference) names the permission it needs (`x-required-permission`).
+
+{/* #region turbinekit:orgs */}
+
+## Teams
+
+A key made while a team is active (the switcher at the top of the sidebar) acts for that team: it reads and changes the team's data, not your personal data. It works while you belong to the team. After you leave the team, or someone removes you, its requests get a `403` with the code `not_a_member`.
+
+AI assistants connected with OAuth act in your personal space.
+
+{/* #endregion turbinekit:orgs */}
+
+## Rate limits
+
+Each key can make 120 requests a minute. Past that, requests get a `429` with a `Retry-After` header. Wait, then retry.
+
+## OAuth for AI assistants
+
+AI assistants don't use API keys: they connect to the [MCP server](/mcp), and the user signs in and approves the assistant on a consent screen. The assistant gets a token with the permissions the user approved (the same names, as OAuth scopes), bound to the MCP server only. Users can remove an assistant's access at any time in **Account → Connected apps**; it stops at once.

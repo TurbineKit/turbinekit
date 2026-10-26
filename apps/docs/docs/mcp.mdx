@@ -1,0 +1,59 @@
+---
+title: Connect an AI assistant
+description: Add the MCP server to Claude, ChatGPT, Cursor or Claude Code.
+sidebar:
+  order: 3
+---
+
+The MCP server is at:
+
+```txt
+https://example.com/mcp
+```
+
+It uses the Streamable HTTP transport and OAuth 2.1. When an assistant connects, it sends you to sign in and to approve what it may do. The tools it gets match the permissions you approve: an assistant you allow to read sees only the read tools.
+
+## Claude
+
+In Claude, open **Customize → Connectors**, add a custom connector, and paste the URL above. Claude opens the sign-in page; approve the access, and the tools appear in the chat. [Anthropic’s guide](https://support.claude.com/en/articles/11175166) shows each step.
+
+## Claude Code
+
+```bash
+claude mcp add --transport http my-app https://example.com/mcp
+```
+
+Run `/mcp` in Claude Code to sign in. For a script or CI, an API key works instead of OAuth:
+
+```bash
+claude mcp add --transport http my-app https://example.com/mcp \
+  --header "Authorization: Bearer $API_KEY"
+```
+
+## Cursor
+
+Add the server to `.cursor/mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "my-app": { "url": "https://example.com/mcp" }
+  }
+}
+```
+
+## ChatGPT
+
+In ChatGPT, open [Plugins](https://chatgpt.com/plugins), select the plus button, then **Add custom MCP server**, and paste the URL above as the server URL. Create the plugin, then install it. [OpenAI’s guide](https://developers.openai.com/api/docs/guides/custom-mcp-server) shows each step.
+
+## Tools
+
+| Tool | Permission | What it does |
+| --- | --- | --- |
+| `list_projects` | `projects:read` | Lists your projects, newest first |
+| `get_project` | `projects:read` | Returns one project |
+| `create_project` | `projects:write` | Creates a project |
+| `update_project` | `projects:write` | Renames a project or changes its description |
+| `delete_project` | `projects:write` | Deletes a project (the assistant asks first) |
+
+Each tool is the same operation as its REST endpoint, with the same rules and errors.

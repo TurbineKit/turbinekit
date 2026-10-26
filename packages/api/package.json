@@ -1,0 +1,37 @@
+{
+	"name": "@repo/api",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"description": "The API contract: operations defined once, served as REST (/api/v1), described as OpenAPI, and offered as MCP tools.",
+	"exports": {
+		".": "./src/index.ts",
+		"./http": "./src/http.ts",
+		"./mcp": "./src/mcp.ts",
+		"./openapi": "./src/openapi.ts",
+		"./services/*": "./src/services/*.ts"
+	},
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run"
+	},
+	"dependencies": {
+		"@better-auth/core": "1.7.13",
+		"@modelcontextprotocol/server": "2.4.0",
+		"@repo/auth": "workspace:*",
+		"@repo/billing": "workspace:*",
+		"@repo/db": "workspace:*",
+		"@repo/site": "workspace:*",
+		"drizzle-orm": "catalog:",
+		"mcp-handler": "2.3.0",
+		"zod": "catalog:"
+	},
+	"devDependencies": {
+		"@electric-sql/pglite": "catalog:",
+		"@repo/tsconfig": "workspace:*",
+		"@types/node": "catalog:",
+		"next": "catalog:",
+		"typescript": "catalog:",
+		"vitest": "catalog:"
+	}
+}

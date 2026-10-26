@@ -1,0 +1,46 @@
+---
+title: Autenticación
+description: Claves de API para el código, OAuth para los asistentes de IA y los permisos que tienen ambos.
+sidebar:
+  order: 2
+---
+
+## Claves de API
+
+Envía tu clave como token de portador en cada solicitud:
+
+```bash
+curl https://example.com/api/v1/projects \
+  -H "Authorization: Bearer tk_…"
+```
+
+`X-Api-Key: tk_…` también funciona. Crea y elimina claves en **Cuenta → Claves de API**. Trata cada clave como una contraseña: quien la tenga actúa en tu nombre.
+
+## Permisos
+
+Cada clave tiene permisos, que eliges al crearla:
+
+| Acceso | Permisos | Qué puede hacer |
+| --- | --- | --- |
+| Solo lectura | Todos los permisos `…:read`, como `projects:read` | Listar y leer |
+| Lectura y escritura | Todos los permisos, como `projects:write` | Además, crear, modificar y eliminar |
+
+Una solicitud que requiere un permiso que la clave no tiene recibe un `403` con el código `insufficient_scope`. Cada operación de la [referencia de la API](/reference) indica el permiso que requiere (`x-required-permission`).
+
+{/* #region turbinekit:orgs */}
+
+## Equipos
+
+Una clave creada mientras un equipo está activo (el selector de la parte superior de la barra lateral) actúa en nombre de ese equipo: lee y modifica los datos del equipo, no tus datos personales. Funciona mientras formes parte del equipo. Si sales del equipo o alguien te quita de él, sus solicitudes reciben un `403` con el código `not_a_member`.
+
+Los asistentes de IA conectados con OAuth actúan en tu espacio personal.
+
+{/* #endregion turbinekit:orgs */}
+
+## Límites de solicitudes
+
+Cada clave puede hacer 120 solicitudes por minuto. Por encima de ese límite, las solicitudes reciben un `429` con un encabezado `Retry-After`. Espera y vuelve a intentarlo.
+
+## OAuth para asistentes de IA
+
+Los asistentes de IA no usan claves de API: se conectan al [servidor MCP](/mcp), y el usuario inicia sesión y aprueba al asistente en una pantalla de consentimiento. El asistente recibe un token con los permisos que aprobó el usuario (con los mismos nombres, como ámbitos de OAuth), vinculado solo al servidor MCP. Los usuarios pueden quitar el acceso de un asistente en cualquier momento en **Cuenta → Aplicaciones conectadas**; el acceso se corta de inmediato.

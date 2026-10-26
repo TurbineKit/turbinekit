@@ -1,0 +1,501 @@
+{
+	"Nav": {
+		"main": "Hauptmenü",
+		"home": "Startseite",
+		"pricing": "Preise",
+		"docs": "Dokumentation",
+		"signIn": "Anmelden",
+		"getStarted": "Jetzt starten",
+		"dashboard": "Dashboard",
+		"openMenu": "Menü öffnen"
+	},
+	"Footer": {
+		"copyright": "© {year} {company}",
+		"product": "Produkt",
+		"legal": "Rechtliches",
+		"privacy": "Datenschutz",
+		"terms": "Nutzungsbedingungen",
+		"cookies": "Cookies",
+		"cookieSettings": "Cookie-Einstellungen",
+		"agents": "Für KI-Agenten"
+	},
+	"LocaleSwitcher": {
+		"label": "Sprache"
+	},
+	"Theme": {
+		"label": "Design",
+		"light": "Hell",
+		"dark": "Dunkel",
+		"system": "System"
+	},
+	"Home": {
+		"badge": "Open Source · MIT",
+		"primary": "Jetzt starten",
+		"secondary": "Dokumentation lesen",
+		"featuresTitle": "Alles, was eine neue App braucht – und nichts Überflüssiges",
+		"featuresIntro": "Ersetze diese Seite durch deine eigene Geschichte. Die Bausteine unten funktionieren bereits.",
+		"features": {
+			"i18n": {
+				"title": "Spricht jede Sprache, die du wählst",
+				"body": "Lokalisierte Seiten, E-Mails und Rechtstexte, mit hreflang und Sprachauswahl."
+			},
+			"seo": {
+				"title": "Auffindbar für Suchmaschinen und KI",
+				"body": "Sitemap, kanonische URLs, strukturierte Daten, Link-Vorschauen, llms.txt und eine Markdown-Kopie jeder Seite."
+			},
+			"auth": {
+				"title": "Sichere Anmeldung",
+				"body": "E-Mail-Adresse und Passwort, Google und GitHub, Passkeys und Zwei-Faktor-Authentifizierung."
+			},
+			"api": {
+				"title": "Eine API, drei Zugänge",
+				"body": "Jede Operation bedient die App, eine dokumentierte REST-API und einen MCP-Server für KI-Clients."
+			},
+			"agents": {
+				"title": "Gebaut für Coding-Agenten",
+				"body": "AGENTS.md, eine Einrichtungsanleitung und Skills zeigen Agenten, wie sie die App sicher erweitern."
+			},
+			"open": {
+				"title": "Kostenlose und offene Tools",
+				"body": "Kostenpflichtige Dienste sind nicht nötig: Jeder ist optional und hat eine kostenlose Alternative."
+			}
+		}
+	},
+	"Pricing": {
+		"title": "Preise",
+		"subtitle": "Starte kostenlos. Erweitere deinen Tarif, wenn du mehr brauchst.",
+		"monthly": "{price} / Monat",
+		"yearly": "oder {price} / Jahr",
+		"free": {
+			"name": "Kostenlos",
+			"description": "Zum Ausprobieren des Produkts und für kleine Projekte.",
+			"price": "Kostenlos",
+			"cta": "Jetzt starten",
+			"features": {
+				"projects": "Bis zu 3 Projekte",
+				"api": "REST-API und MCP-Server",
+				"support": "Hilfe per E-Mail"
+			}
+		},
+		"pro": {
+			"name": "Pro",
+			"description": "Für alle, die sich jeden Tag darauf verlassen.",
+			"cta": "Auf Pro upgraden",
+			"features": {
+				"projects": "Unbegrenzt viele Projekte",
+				"api": "REST-API und MCP-Server",
+				"support": "Bevorzugte Hilfe per E-Mail"
+			}
+		},
+		"cancel": "Jederzeit in deinem Konto kündbar. Preise zuzüglich Steuern."
+	},
+	"Pages": {
+		"home": {
+			"title": "{name}",
+			"description": "Ein schlankes, KI-orientiertes Next.js-Boilerplate auf Basis kostenloser und offener Tools."
+		},
+		"pricing": {
+			"title": "Preise",
+			"description": "Tarife und Preise."
+		},
+		"signIn": {
+			"title": "Anmelden"
+		},
+		"signUp": {
+			"title": "Konto erstellen"
+		}
+	},
+	"Legal": {
+		"updated": "Zuletzt aktualisiert: {date}",
+		"notTranslated": "Diese Seite ist noch nicht übersetzt. Du liest die englische Version.",
+		"privacy": {
+			"title": "Datenschutzerklärung",
+			"description": "Welche personenbezogenen Daten wir warum erheben und welche Rechte du hast."
+		},
+		"terms": {
+			"title": "Nutzungsbedingungen",
+			"description": "Die Regeln für die Nutzung des Dienstes."
+		},
+		"cookies": {
+			"title": "Cookie-Richtlinie",
+			"description": "Welche Cookies und ähnlichen Technologien wir verwenden und wie du sie steuerst."
+		}
+	},
+	"NotFound": {
+		"title": "Seite nicht gefunden",
+		"body": "Diese Seite existiert nicht oder wurde verschoben.",
+		"home": "Zurück zur Startseite"
+	},
+	"Auth": {
+		"email": "E-Mail-Adresse",
+		"password": "Passwort",
+		"name": "Name",
+		"newPassword": "Neues Passwort",
+		"or": "oder",
+		"continueWith": "Weiter mit {provider}",
+		"signIn": {
+			"title": "Anmelden",
+			"description": "Willkommen zurück. Melde dich an, um fortzufahren.",
+			"submit": "Anmelden",
+			"passkey": "Mit Passkey anmelden",
+			"forgot": "Passwort vergessen?",
+			"noAccount": "Noch kein Konto?",
+			"signUp": "Jetzt erstellen"
+		},
+		"signUp": {
+			"title": "Konto erstellen",
+			"description": "Das dauert nur eine Minute. Wir senden dir eine E-Mail, um deine Adresse zu bestätigen.",
+			"submit": "Konto erstellen",
+			"terms": "Mit der Erstellung eines Kontos akzeptierst du die <terms>Nutzungsbedingungen</terms> und nimmst die <privacy>Datenschutzerklärung</privacy> zur Kenntnis.",
+			"hasAccount": "Du hast bereits ein Konto?",
+			"signIn": "Anmelden"
+		},
+		"verify": {
+			"title": "Prüfe deinen Posteingang",
+			"description": "Wir haben einen Link an {email} gesendet. Öffne ihn, um deine Adresse zu bestätigen.",
+			"descriptionNoEmail": "Wir haben dir einen Link gesendet. Öffne ihn, um deine Adresse zu bestätigen.",
+			"resend": "Link erneut senden",
+			"sent": "Gesendet. Prüfe deinen Posteingang.",
+			"invalid": "Dieser Link ist ungültig oder abgelaufen. Melde dich an, um einen neuen zu erhalten."
+		},
+		"forgot": {
+			"title": "Passwort zurücksetzen",
+			"description": "Gib deine E-Mail-Adresse ein. Wenn sie zu einem Konto gehört, senden wir dir einen Link.",
+			"submit": "Link senden",
+			"sent": "Wenn diese Adresse zu einem Konto gehört, ist ein Link unterwegs.",
+			"back": "Zurück zur Anmeldung"
+		},
+		"reset": {
+			"title": "Neues Passwort festlegen",
+			"description": "Deine anderen Sitzungen werden abgemeldet.",
+			"submit": "Passwort speichern",
+			"done": "Dein Passwort wurde geändert. Du kannst dich jetzt anmelden.",
+			"invalid": "Dieser Link ist ungültig oder abgelaufen. Fordere einen neuen an."
+		},
+		"twoFactor": {
+			"title": "Zwei-Faktor-Authentifizierung",
+			"description": "Gib den 6-stelligen Code aus deiner Authenticator-App ein.",
+			"code": "Code",
+			"submit": "Bestätigen",
+			"trustDevice": "Diesem Gerät 30 Tage lang vertrauen",
+			"emailCode": "Stattdessen einen Code per E-Mail erhalten",
+			"emailSent": "Wir haben einen Code an deine E-Mail-Adresse gesendet.",
+			"emailDescription": "Gib den 6-stelligen Code ein, den wir an deine E-Mail-Adresse gesendet haben.",
+			"backupCode": "Backup-Code verwenden",
+			"backupDescription": "Gib einen deiner Backup-Codes ein. Jeder Code funktioniert nur einmal.",
+			"useApp": "Meine Authenticator-App verwenden"
+		},
+		"consent": {
+			"title": "{client} Zugriff auf dein Konto erlauben?",
+			"description": "{client} möchte {product} in deinem Namen nutzen.",
+			"scopesTitle": "Die App kann dann:",
+			"allow": "Zulassen",
+			"deny": "Ablehnen",
+			"signedInAs": "Angemeldet als {email}",
+			"scope": {
+				"offline_access": "Verbunden bleiben, bis du den Zugriff entfernst",
+				"projects:read": "Deine Projekte lesen",
+				"projects:write": "Deine Projekte erstellen, ändern und löschen"
+			},
+			"invalid": "Diese Autorisierungsanfrage ist ungültig oder abgelaufen. Starte den Vorgang in deinem KI-Assistenten neu.",
+			"error": "Etwas ist schiefgelaufen. Versuche es in deinem KI-Assistenten erneut.",
+			"redirectsTo": "Du wirst zu {host} zurückgeleitet."
+		},
+		"errors": {
+			"generic": "Etwas ist schiefgelaufen. Versuche es erneut.",
+			"invalidCredentials": "E-Mail-Adresse oder Passwort ist falsch.",
+			"emailNotVerified": "Bestätige zuerst deine E-Mail-Adresse. Wir haben dir einen neuen Link gesendet.",
+			"userExists": "Es gibt bereits ein Konto mit dieser E-Mail-Adresse.",
+			"passwordShort": "Verwende mindestens 8 Zeichen.",
+			"rateLimited": "Zu viele Versuche. Warte eine Minute und versuche es dann erneut.",
+			"invalidCode": "Dieser Code ist falsch oder abgelaufen.",
+			"passkeyFailed": "Der Passkey hat nicht funktioniert. Versuche es erneut oder verwende dein Passwort."
+		}
+	},
+	"App": {
+		"nav": {
+			"dashboard": "Dashboard",
+			"projects": "Projekte",
+			"account": "Konto",
+			"organization": "Team",
+			"admin": "Admin",
+			"docs": "Dokumentation",
+			"home": "Startseite"
+		},
+		"userMenu": {
+			"account": "Kontoeinstellungen",
+			"signOut": "Abmelden",
+			"toggle": "Kontomenü"
+		},
+		"dashboard": {
+			"title": "Dashboard",
+			"welcome": "Willkommen, {name}",
+			"intro": "Das ist dein Dashboard. Ersetze es durch das, was deine Zielgruppe zuerst braucht.",
+			"projects": "Deine Projekte",
+			"projectsCount": "{count, plural, =0 {Noch kein Projekt} one {# Projekt} other {# Projekte}}",
+			"openProjects": "Projekte öffnen",
+			"apiTitle": "API nutzen",
+			"apiBody": "Erstelle einen API-Schlüssel, um die REST-API aufzurufen, oder verbinde einen KI-Assistenten mit dem MCP-Server.",
+			"apiKeys": "API-Schlüssel",
+			"connectedApps": "Verbundene Apps"
+		}
+	},
+	"Account": {
+		"title": "Konto",
+		"tabs": {
+			"profile": "Profil",
+			"security": "Sicherheit",
+			"apiKeys": "API-Schlüssel",
+			"connectedApps": "Verbundene Apps",
+			"billing": "Abrechnung"
+		},
+		"save": "Speichern",
+		"saved": "Gespeichert.",
+		"cancel": "Abbrechen",
+		"delete": "Löschen",
+		"remove": "Entfernen",
+		"copy": "Kopieren",
+		"copied": "Kopiert.",
+		"close": "Schließen",
+		"profile": {
+			"title": "Profil",
+			"description": "Dein Name und die Sprache deiner E-Mails.",
+			"name": "Name",
+			"email": "E-Mail-Adresse",
+			"emailHelp": "Kontaktiere uns, um deine E-Mail-Adresse zu ändern.",
+			"language": "E-Mail-Sprache",
+			"avatar": "Profilbild",
+			"avatarUpload": "Bild hochladen",
+			"avatarHelp": "PNG, JPEG oder WebP, bis zu 4 MB."
+		},
+		"danger": {
+			"title": "Konto löschen",
+			"description": "Dadurch werden dein Konto und alle zugehörigen Daten gelöscht. Das kann nicht rückgängig gemacht werden.",
+			"confirm": "Gib zur Bestätigung dein Passwort ein.",
+			"button": "Mein Konto löschen"
+		},
+		"password": {
+			"title": "Passwort",
+			"description": "Wenn du es änderst, werden deine anderen Sitzungen abgemeldet.",
+			"current": "Aktuelles Passwort",
+			"new": "Neues Passwort",
+			"submit": "Passwort ändern",
+			"done": "Dein Passwort wurde geändert."
+		},
+		"passkeys": {
+			"title": "Passkeys",
+			"description": "Melde dich statt mit einem Passwort mit Fingerabdruck, Gesichtserkennung oder der PIN deines Geräts an.",
+			"add": "Passkey hinzufügen",
+			"empty": "Noch kein Passkey.",
+			"added": "Passkey hinzugefügt.",
+			"unnamed": "Passkey",
+			"createdAt": "Hinzugefügt am {date}"
+		},
+		"twoFactor": {
+			"title": "Zwei-Faktor-Authentifizierung",
+			"description": "Bei der Anmeldung einen Code aus einer Authenticator-App abfragen.",
+			"enabled": "Aktiviert",
+			"disabled": "Deaktiviert",
+			"enable": "Aktivieren",
+			"disable": "Deaktivieren",
+			"passwordPrompt": "Gib dein Passwort ein, um fortzufahren.",
+			"scan": "Scanne diesen QR-Code mit deiner Authenticator-App und gib dann den angezeigten Code ein.",
+			"verify": "Bestätigen",
+			"backupTitle": "Backup-Codes speichern",
+			"backupDescription": "Falls du dein Gerät verlierst, kannst du jeden Code einmal verwenden. Bewahre die Codes an einem sicheren Ort auf.",
+			"done": "Die Zwei-Faktor-Authentifizierung ist aktiviert.",
+			"off": "Die Zwei-Faktor-Authentifizierung ist deaktiviert."
+		},
+		"sessions": {
+			"title": "Sitzungen",
+			"description": "Die Geräte, die bei deinem Konto angemeldet sind.",
+			"current": "Dieses Gerät",
+			"revoke": "Abmelden",
+			"revokeOthers": "Alle anderen Geräte abmelden",
+			"unknown": "Unbekanntes Gerät",
+			"lastActive": "Angemeldet seit {date}"
+		},
+		"apiKeys": {
+			"title": "API-Schlüssel",
+			"description": "Mit Schlüsseln kann dein Code die REST-API und den MCP-Server aufrufen. Behandle sie wie Passwörter.",
+			"create": "Schlüssel erstellen",
+			"name": "Name",
+			"namePlaceholder": "Mein Skript",
+			"access": "Zugriff",
+			"read": "Nur lesen",
+			"readWrite": "Lesen und schreiben",
+			"empty": "Noch kein Schlüssel.",
+			"createdTitle": "Neuen Schlüssel kopieren",
+			"createdDescription": "Er wird nur dieses eine Mal angezeigt. Bewahre ihn an einem sicheren Ort auf.",
+			"lastUsed": "Zuletzt verwendet am {date}",
+			"neverUsed": "Nie verwendet",
+			"deleteConfirm": "Schlüssel „{name}“ löschen? Code, der ihn verwendet, funktioniert sofort nicht mehr.",
+			"team": "Team: {team}",
+			"forTeam": "Dieser Schlüssel handelt im Namen des Teams {team}: Er liest und ändert die Daten des Teams, nicht deine eigenen."
+		},
+		"connectedApps": {
+			"title": "Verbundene Apps",
+			"description": "KI-Assistenten, denen du erlaubt hast, dein Konto über den MCP-Server zu nutzen.",
+			"empty": "Keine verbundenen Apps. Verbinde einen Assistenten mit {url}, damit er hier erscheint.",
+			"connected": "Verbunden am {date}",
+			"lastUsed": "Zuletzt verwendet am {date}",
+			"remove": "Zugriff entfernen",
+			"removeConfirm": "Zugriff von {name} entfernen? Er endet sofort."
+		},
+		"billing": {
+			"title": "Abrechnung",
+			"description": "Dein Tarif, deine Zahlungsmethode und deine Rechnungen.",
+			"teamDescription": "Der Tarif von {team}. Alle Mitglieder des Teams teilen ihn.",
+			"free": "Du nutzt den kostenlosen Tarif.",
+			"pro": "Du nutzt den Pro-Tarif.",
+			"renews": "Er verlängert sich am {date}.",
+			"ends": "Er endet am {date}. Bis dahin behältst du Pro.",
+			"pastDue": "Die letzte Zahlung ist fehlgeschlagen. Aktualisiere deine Zahlungsmethode, um Pro zu behalten.",
+			"upgradeMonthly": "Upgrade: {price} / Monat",
+			"upgradeYearly": "Upgrade: {price} / Jahr",
+			"manage": "Abrechnung verwalten",
+			"managers": "Nur Inhaber und Admins des Teams können die Abrechnung verwalten.",
+			"unavailable": "Die Abrechnung ist auf dieser Website noch nicht eingerichtet.",
+			"error": "Das hat nicht funktioniert: {message}"
+		}
+	},
+	"Projects": {
+		"title": "Projekte",
+		"description": "Die Beispielressource. Dieselben Projekte sind auch über die REST-API und den MCP-Server verfügbar.",
+		"empty": "Noch kein Projekt. Erstelle das erste.",
+		"create": "Neues Projekt",
+		"name": "Name",
+		"descriptionLabel": "Beschreibung",
+		"save": "Speichern",
+		"cancel": "Abbrechen",
+		"created": "Projekt erstellt.",
+		"saved": "Projekt gespeichert.",
+		"deleted": "Projekt gelöscht.",
+		"edit": "Bearbeiten",
+		"delete": "Löschen",
+		"deleteConfirm": "„{name}“ endgültig löschen?",
+		"updatedAt": "Aktualisiert am {date}",
+		"apiHint": "Für die Entwicklung: GET /api/v1/projects mit einem API-Schlüssel oder das Tool list_projects über MCP."
+	},
+	"Org": {
+		"title": "Team",
+		"description": "Arbeite mit anderen zusammen. Projekte und API-Schlüssel, die in einem Team erstellt werden, gehören dem Team.",
+		"personal": "Persönlich",
+		"switcher": {
+			"label": "Zwischen deinen Teams wechseln",
+			"create": "Team erstellen"
+		},
+		"create": {
+			"title": "Team erstellen",
+			"description": "Das Team gehört dann dir. Lade anschließend Personen per E-Mail ein.",
+			"name": "Teamname",
+			"namePlaceholder": "Acme",
+			"submit": "Team erstellen",
+			"created": "Team erstellt."
+		},
+		"none": {
+			"title": "Du bist in deinem persönlichen Bereich",
+			"body": "Deine Projekte und API-Schlüssel hier gehören nur dir. Erstelle ein Team, um sie zu teilen, oder wechsle zu einem Team, dem du angehörst.",
+			"teams": "Deine Teams",
+			"switch": "Wechseln"
+		},
+		"general": {
+			"title": "Allgemein",
+			"description": "Dieser Name erscheint bei Mitgliedern und in Einladungen.",
+			"name": "Name",
+			"save": "Speichern",
+			"saved": "Gespeichert."
+		},
+		"members": {
+			"title": "Mitglieder",
+			"description": "Inhaber und Admins können Personen einladen, Rollen ändern und Mitglieder entfernen.",
+			"you": "du",
+			"role": "Rolle von {name}",
+			"remove": "Entfernen",
+			"removeConfirm": "{name} aus dem Team entfernen? Die Person verliert sofort den Zugriff auf die Projekte des Teams.",
+			"leave": "Team verlassen",
+			"leaveConfirm": "{team} verlassen? Du verlierst sofort den Zugriff auf die Projekte des Teams.",
+			"roles": {
+				"owner": "Inhaber",
+				"admin": "Admin",
+				"member": "Mitglied"
+			}
+		},
+		"invitations": {
+			"title": "Einladungen",
+			"description": "Die Person erhält eine E-Mail mit einem Link. Der Link ist 48 Stunden gültig.",
+			"email": "E-Mail-Adresse",
+			"role": "Rolle",
+			"send": "Einladen",
+			"sent": "Einladung an {email} gesendet.",
+			"expires": "Gültig bis {date}",
+			"cancel": "Einladung zurückziehen",
+			"empty": "Keine offenen Einladungen."
+		},
+		"danger": {
+			"title": "Team löschen",
+			"description": "Dadurch werden das Team, seine Mitgliedschaften und seine Projekte gelöscht. Das kann nicht rückgängig gemacht werden.",
+			"delete": "Team löschen",
+			"confirm": "{team} und alle zugehörigen Projekte löschen? Das kann nicht rückgängig gemacht werden."
+		},
+		"invitation": {
+			"title": "{team} beitreten",
+			"body": "{inviter} hat dich eingeladen, {team} als {role} beizutreten.",
+			"accept": "Annehmen",
+			"decline": "Ablehnen",
+			"declined": "Du hast die Einladung abgelehnt.",
+			"invalid": "Diese Einladung ist ungültig. Sie ist abgelaufen, wurde zurückgezogen oder wurde an eine andere E-Mail-Adresse als {email} gesendet."
+		},
+		"error": "Das hat nicht funktioniert. Versuche es erneut."
+	},
+	"Admin": {
+		"title": "Admin",
+		"tabs": {
+			"users": "Konten",
+			"audit": "Audit-Log"
+		},
+		"users": {
+			"search": "Nach E-Mail-Adresse suchen",
+			"searchButton": "Suchen",
+			"empty": "Keine passenden Konten.",
+			"user": "Konto",
+			"created": "Registriert",
+			"status": "Status",
+			"menu": "Aktionen für {name}",
+			"admin": "Admin",
+			"banned": "Gesperrt",
+			"unverified": "E-Mail-Adresse nicht bestätigt",
+			"active": "Aktiv",
+			"viewAs": "App als diese Person ansehen",
+			"makeAdmin": "Admin-Rechte erteilen",
+			"removeAdmin": "Admin-Rechte entziehen",
+			"ban": "Sperren",
+			"unban": "Entsperren",
+			"banTitle": "{name} sperren?",
+			"banDescription": "Die Person wird sofort abgemeldet und kann sich erst wieder anmelden, wenn du sie entsperrst. Ihre API-Schlüssel und verbundenen Apps funktionieren nicht mehr.",
+			"banReason": "Grund (nur für Admins sichtbar)",
+			"previous": "Zurück",
+			"next": "Weiter",
+			"count": "{count, plural, one {# Konto} other {# Konten}}"
+		},
+		"audit": {
+			"empty": "Noch nichts. Hier erscheint, was Admins tun.",
+			"when": "Zeitpunkt",
+			"who": "Admin",
+			"what": "Aktion",
+			"target": "Konto",
+			"deleted": "gelöschtes Konto",
+			"actions": {
+				"banned": "Gesperrt",
+				"unbanned": "Entsperrt",
+				"roleChanged": "Rolle auf {role} geändert",
+				"impersonated": "App angesehen als"
+			}
+		},
+		"impersonating": {
+			"banner": "Du siehst die App als {name} ({email}).",
+			"stop": "Zurück zu deinem Konto"
+		},
+		"error": "Das hat nicht funktioniert: {message}"
+	}
+}

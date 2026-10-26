@@ -1,0 +1,57 @@
+import { site } from "@repo/site";
+
+export const updated = "2026-10-26";
+
+{/* Texte modèle. Liste chaque témoin que tu ajoutes. Fais-le relire avant le lancement (LAUNCH.md). */}
+
+# Politique relative aux témoins
+
+{site.name} utilise quelques témoins (cookies) et technologies semblables (stockage local). Cette page les énumère et explique comment les contrôler.
+
+## Strictement nécessaires
+
+Ils font fonctionner le service. Ils ne demandent aucun consentement.
+
+| Nom | Rôle | Durée |
+| --- | --- | --- |
+| `better-auth.session_token` | Te garde connecté | 7 jours |
+| `NEXT_LOCALE` | Retient la langue choisie | 1 an |
+| `theme` (stockage local) | Retient le mode clair ou sombre | Jusqu’à ce que tu l’effaces |
+
+{/* #region turbinekit:analytics */}
+
+## Mesure d’audience
+
+Nous mesurons l’utilisation du service avec PostHog.
+
+{/* #region turbinekit:consent */}
+
+Avant ton choix, et si tu refuses, PostHog ne garde aucun témoin et ne t’identifie pas. Si tu acceptes, il dépose ce témoin :
+
+| Nom | Rôle | Durée |
+| --- | --- | --- |
+| `ph_*_posthog` | Compte les visites et les relie à ton compte | 1 an |
+
+{/* #endregion turbinekit:consent */}
+
+{/* #region !turbinekit:consent
+PostHog fonctionne sans témoins : il n’enregistre rien sur ton appareil et ne t’identifie pas.
+#endregion !turbinekit:consent */}
+
+{/* #endregion turbinekit:analytics */}
+
+{/* #region turbinekit:consent */}
+
+## Tes choix
+
+Une bannière demande ton consentement lorsque la loi l’exige (par exemple dans l’Union européenne, au Royaume-Uni et au Québec). Tu peux changer ton choix en tout temps avec le lien « Paramètres des témoins » au bas de chaque page.
+
+{/* #endregion turbinekit:consent */}
+
+## Ton navigateur
+
+Tu peux bloquer ou supprimer les témoins dans les réglages de ton navigateur. Si tu bloques ceux qui sont strictement nécessaires, tu ne pourras pas te connecter.
+
+## Contact
+
+Questions : <a href={`mailto:${site.company.email}`}>{site.company.email}</a>.

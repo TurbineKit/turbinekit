@@ -1,0 +1,51 @@
+---
+title: Errores
+description: Una misma estructura de error para cada fallo, con códigos fiables.
+sidebar:
+  order: 4
+---
+
+Todos los errores tienen la misma estructura:
+
+```json
+{
+  "error": {
+    "type": "invalid_request_error",
+    "code": "invalid_parameter",
+    "message": "name: Too small: expected string to have >=1 characters",
+    "param": "name"
+  }
+}
+```
+
+Basa tu lógica en `type` y `code`: no cambian. `message` está pensado para personas y puede cambiar. `param` indica el campo que causó el error, si lo hay.
+
+| Estado | Tipo | Códigos habituales |
+| --- | --- | --- |
+| 400 | `invalid_request_error` | `invalid_parameter`, `invalid_json`, `invalid_cursor` |
+| 401 | `authentication_error` | `missing_api_key`, `invalid_api_key` |
+| 403 | `permission_error` | `insufficient_scope` |
+| 404 | `not_found_error` | `resource_missing` |
+| 413 | `invalid_request_error` | `body_too_large` |
+| 429 | `rate_limit_error` | `rate_limited` |
+| 500 | `api_error` | `api_error` |
+
+{/* #region turbinekit:orgs|admin|payments */}
+
+## Otros códigos
+
+{/* #region turbinekit:orgs */}
+- `403` `not_a_member`: la clave de API actúa en nombre de un equipo del que ya no formas parte.
+{/* #endregion turbinekit:orgs */}
+{/* #region turbinekit:admin */}
+- `403` `account_banned`: un administrador bloqueó la cuenta. Sus claves y sus tokens dejan de funcionar.
+{/* #endregion turbinekit:admin */}
+{/* #region turbinekit:payments */}
+- `403` `plan_limit_reached`: se alcanzó el límite del plan. Pasa a un plan superior o elimina algo antes.
+{/* #endregion turbinekit:payments */}
+
+{/* #endregion turbinekit:orgs|admin|payments */}
+
+## ID de solicitud
+
+Cada respuesta tiene un encabezado `Request-Id` (`req_…`). Indícalo cuando te pongas en contacto con el soporte técnico: sirve para encontrar tu solicitud en los registros.

@@ -1,0 +1,46 @@
+{
+	"name": "create-turbinekit",
+	"version": "0.1.0",
+	"description": "Create a TurbineKit project: a lean, AI-first Turborepo + Next.js boilerplate on free and open tools.",
+	"license": "MIT",
+	"type": "module",
+	"bin": {
+		"create-turbinekit": "dist/index.js"
+	},
+	"files": [
+		"dist",
+		"template",
+		"modules.json"
+	],
+	"engines": {
+		"node": ">=24"
+	},
+	"keywords": [
+		"turborepo",
+		"nextjs",
+		"boilerplate",
+		"starter",
+		"mcp",
+		"better-auth"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/TurbineKit/turbinekit.git",
+		"directory": "tooling/create"
+	},
+	"scripts": {
+		"build": "tsc -p tsconfig.build.json && node scripts/bundle.ts",
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run"
+	},
+	"dependencies": {
+		"@clack/prompts": "1.8.1",
+		"picocolors": "1.1.1"
+	},
+	"devDependencies": {
+		"@repo/tsconfig": "workspace:*",
+		"@types/node": "catalog:",
+		"typescript": "catalog:",
+		"vitest": "catalog:"
+	}
+}

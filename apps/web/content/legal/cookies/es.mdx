@@ -1,0 +1,57 @@
+import { site } from "@repo/site";
+
+export const updated = "2026-10-26";
+
+{/* Texto de plantilla. Enumera cada cookie que añadas. Haz que lo revisen antes del lanzamiento (LAUNCH.md). */}
+
+# Política de cookies
+
+{site.name} usa algunas cookies y tecnologías similares (almacenamiento local). Esta página las enumera y explica cómo controlarlas.
+
+## Estrictamente necesarias
+
+Hacen que el servicio funcione. No requieren consentimiento.
+
+| Nombre | Finalidad | Duración |
+| --- | --- | --- |
+| `better-auth.session_token` | Mantiene tu sesión iniciada | 7 días |
+| `NEXT_LOCALE` | Recuerda el idioma elegido | 1 año |
+| `theme` (almacenamiento local) | Recuerda el modo claro u oscuro | Hasta que lo borres |
+
+{/* #region turbinekit:analytics */}
+
+## Medición
+
+Medimos el uso del servicio con PostHog.
+
+{/* #region turbinekit:consent */}
+
+Antes de que elijas, y si rechazas, PostHog no guarda ninguna cookie y no te identifica. Si aceptas, guarda esta cookie:
+
+| Nombre | Finalidad | Duración |
+| --- | --- | --- |
+| `ph_*_posthog` | Contabiliza las visitas y las vincula a tu cuenta | 1 año |
+
+{/* #endregion turbinekit:consent */}
+
+{/* #region !turbinekit:consent
+PostHog funciona sin cookies: no guarda nada en tu dispositivo y no te identifica.
+#endregion !turbinekit:consent */}
+
+{/* #endregion turbinekit:analytics */}
+
+{/* #region turbinekit:consent */}
+
+## Tus opciones
+
+Un aviso te pide tu consentimiento donde la ley lo exige (por ejemplo, en la Unión Europea, el Reino Unido y Quebec). Puedes cambiar tu elección en cualquier momento con el enlace «Configuración de cookies» que aparece al pie de cada página.
+
+{/* #endregion turbinekit:consent */}
+
+## Tu navegador
+
+Puedes bloquear o eliminar las cookies en la configuración de tu navegador. Si bloqueas las estrictamente necesarias, no podrás iniciar sesión.
+
+## Contacto
+
+Preguntas: <a href={`mailto:${site.company.email}`}>{site.company.email}</a>.

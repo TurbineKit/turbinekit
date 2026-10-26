@@ -1,0 +1,51 @@
+import { site } from "@repo/site";
+
+export const updated = "2026-10-26";
+
+{/* Texto modelo. Peça uma revisão para a sua jurisdição antes do lançamento (LAUNCH.md). */}
+
+# Política de privacidade
+
+Esta política explica quais dados pessoais {site.company.name} (“nós”) coleta quando você usa {site.name}, por que os coletamos e quais escolhas você tem.
+
+## Quem somos
+
+{site.company.name} opera {site.name}. Para qualquer dúvida sobre seus dados, escreva para <a href={`mailto:${site.company.email}`}>{site.company.email}</a>.
+
+## O que coletamos
+
+- **Dados da conta**: seu nome, seu endereço de e-mail e um hash da sua senha, ou o perfil que seu provedor de login (Google ou GitHub) compartilha conosco.
+- **Dados de segurança**: suas chaves de acesso, suas configurações de autenticação de dois fatores, suas sessões ativas com o endereço IP e o navegador de cada uma, e as chaves de API que você cria.
+- **Apps conectados**: os assistentes de IA que você autoriza a agir na sua conta, e o que cada um pode fazer.
+- **Conteúdo**: os dados que você cria no app.
+- **Arquivos**: as imagens que você envia, como sua foto de perfil. {/* turbinekit:files */}
+- **Dados de faturamento**: seu plano e seu histórico de pagamentos. A Stripe processa seu cartão; nós nunca vemos o número completo do cartão. {/* turbinekit:payments */}
+- **Dados de uso**: as páginas que você visita e os recursos que você usa, medidos com o PostHog. {/* turbinekit:analytics */}
+
+## Por que usamos esses dados
+
+- Para fornecer o serviço e manter sua conta segura.
+- Para enviar os e-mails de que você precisa: verificação de e-mail, redefinição de senha e avisos de segurança.
+- Para evitar abusos, por exemplo, com limites para as tentativas de login.
+- Para cumprir a lei.
+- Para entender como o serviço é usado e melhorá-lo, somente com o seu consentimento quando a lei o exigir. {/* turbinekit:analytics */}
+
+## Quem recebe esses dados
+
+Compartilhamos dados pessoais somente com fornecedores que os tratam em nosso nome: hospedagem, banco de dados, envio de e-mails e os serviços citados acima. Eles só podem usá-los para nos prestar seus serviços.
+
+## Por quanto tempo mantemos esses dados
+
+Mantemos os dados da sua conta enquanto ela existir. Quando você exclui sua conta, excluímos seus dados pessoais em até 30 dias, exceto o que a lei nos obriga a manter.
+
+## Seus direitos
+
+Você pode acessar, corrigir, exportar ou excluir seus dados, e se opor a alguns usos deles. A maior parte disso está disponível nas configurações da sua conta. Para qualquer outra coisa, escreva para <a href={`mailto:${site.company.email}`}>{site.company.email}</a>. Você também pode apresentar uma reclamação à autoridade de proteção de dados competente.
+
+## Cookies
+
+Veja nossa [política de cookies](/legal/cookies).
+
+## Alterações
+
+Quando esta política mudar, atualizaremos a data no final desta página e avisaremos você por e-mail sobre qualquer alteração importante.

@@ -1,0 +1,20 @@
+---
+title: Introducción
+description: La API REST y el servidor MCP, y cómo encajan.
+sidebar:
+  order: 0
+---
+
+La API permite que tu código y tus asistentes de IA trabajen con los mismos datos que tus usuarios ven en la aplicación. Tiene dos puertas a un mismo conjunto de operaciones:
+
+- **La API REST** en `https://example.com/api/v1`, para scripts, backends e integraciones. Habla JSON y se autentica con una clave de API.
+- **El servidor MCP** en `https://example.com/mcp`, para asistentes de IA como Claude, ChatGPT y Cursor. Los usuarios inician sesión con OAuth y eligen lo que el asistente puede hacer.
+
+Las dos ejecutan las mismas operaciones con las mismas reglas, así que un proyecto creado por una aparece en la otra y en la aplicación.
+
+## Próximos pasos
+
+- [Inicio rápido](/quickstart): crea una clave y haz tu primera solicitud.
+- [Autenticación](/authentication): claves de API, permisos y OAuth.
+- [Conectar un asistente de IA](/mcp): añade el servidor MCP a Claude, ChatGPT o Cursor.
+- [Referencia de la API](/reference): todos los endpoints, generados a partir de la propia API.

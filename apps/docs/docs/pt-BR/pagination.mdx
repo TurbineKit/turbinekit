@@ -1,0 +1,21 @@
+---
+title: Paginação
+description: As listas vêm uma página por vez, com um cursor para a próxima página.
+sidebar:
+  order: 5
+---
+
+Os endpoints de listagem retornam uma página de resultados e um cursor:
+
+```json
+{ "data": [ … ], "nextCursor": "MjAyNi0xMC0yNlQxMjowMDowMC4wMDBafHByal8…" }
+```
+
+Para obter a próxima página, envie o cursor de volta:
+
+```bash
+curl "https://example.com/api/v1/projects?limit=50&cursor=$NEXT_CURSOR" \
+  -H "Authorization: Bearer $API_KEY"
+```
+
+`nextCursor` é `null` na última página. `limit` é 20 por padrão e no máximo 100. Trate o cursor como opaco: o formato dele pode mudar.

@@ -1,0 +1,48 @@
+---
+title: Início rápido
+description: Crie uma chave de API e faça sua primeira requisição em dois minutos.
+sidebar:
+  order: 1
+---
+
+## 1. Criar uma chave
+
+Entre, abra **Conta → Chaves de API** e selecione **Criar chave**. Escolha **Leitura e escrita** para este guia. Copie a chave: ela só aparece uma vez.
+
+## 2. Listar seus projetos
+
+```bash
+export API_KEY="tk_…"
+
+curl https://example.com/api/v1/projects \
+  -H "Authorization: Bearer $API_KEY"
+```
+
+```json
+{ "data": [], "nextCursor": null }
+```
+
+## 3. Criar um projeto
+
+```bash
+curl https://example.com/api/v1/projects \
+  -H "Authorization: Bearer $API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{ "name": "Meu primeiro projeto" }'
+```
+
+```json
+{
+  "id": "prj_4fQ9pX2mN7kL1sTz",
+  "name": "Meu primeiro projeto",
+  "description": null,
+  "createdAt": "2026-10-26T12:00:00.000Z",
+  "updatedAt": "2026-10-26T12:00:00.000Z"
+}
+```
+
+O projeto agora aparece no app, e um assistente de IA conectado por [MCP](/mcp) também pode vê-lo.
+
+## A seguir
+
+Leia sobre [erros](/errors) e [paginação](/pagination), ou navegue pela [referência da API](/reference).

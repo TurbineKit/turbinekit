@@ -1,0 +1,24 @@
+{
+	"name": "turbinekit",
+	"version": "0.1.0",
+	"description": "Create a TurbineKit project: `npx turbinekit my-app`. The same as `pnpm create turbinekit`.",
+	"license": "MIT",
+	"type": "module",
+	"bin": {
+		"turbinekit": "bin.js"
+	},
+	"files": [
+		"bin.js"
+	],
+	"engines": {
+		"node": ">=24"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/TurbineKit/turbinekit.git",
+		"directory": "tooling/turbinekit"
+	},
+	"dependencies": {
+		"create-turbinekit": "workspace:*"
+	}
+}

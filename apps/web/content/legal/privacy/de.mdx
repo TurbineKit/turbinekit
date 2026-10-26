@@ -1,0 +1,51 @@
+import { site } from "@repo/site";
+
+export const updated = "2026-10-26";
+
+{/* Mustertext. Lass ihn vor dem Start für deine Rechtsordnung prüfen (LAUNCH.md). */}
+
+# Datenschutzerklärung
+
+Diese Erklärung beschreibt, welche personenbezogenen Daten {site.company.name} („wir“) erhebt, wenn du {site.name} nutzt, warum wir sie erheben und welche Wahlmöglichkeiten du hast.
+
+## Wer wir sind
+
+{site.company.name} betreibt {site.name}. Bei Fragen zu deinen Daten schreibe an <a href={`mailto:${site.company.email}`}>{site.company.email}</a>.
+
+## Was wir erheben
+
+- **Kontodaten**: dein Name, deine E-Mail-Adresse und ein Hashwert deines Passworts oder das Profil, das dein Anmeldeanbieter (Google oder GitHub) mit uns teilt.
+- **Sicherheitsdaten**: deine Passkeys, deine Einstellungen zur Zwei-Faktor-Authentifizierung, deine aktiven Sitzungen mit IP-Adresse und Browser sowie die API-Schlüssel, die du erstellst.
+- **Verbundene Apps**: die KI-Assistenten, denen du erlaubst, in deinem Konto zu handeln, und was jeder davon tun darf.
+- **Inhalte**: die Daten, die du in der App erstellst.
+- **Dateien**: die Bilder, die du hochlädst, etwa dein Profilbild. {/* turbinekit:files */}
+- **Abrechnungsdaten**: dein Tarif und deine Zahlungshistorie. Stripe verarbeitet deine Karte; wir sehen nie die vollständige Kartennummer. {/* turbinekit:payments */}
+- **Nutzungsdaten**: die Seiten, die du aufrufst, und die Funktionen, die du nutzt, gemessen mit PostHog. {/* turbinekit:analytics */}
+
+## Wozu wir sie verwenden
+
+- Um den Dienst bereitzustellen und dein Konto zu schützen.
+- Um die E-Mails zu senden, die du brauchst: Bestätigung der E-Mail-Adresse, Zurücksetzen des Passworts und Sicherheitshinweise.
+- Um Missbrauch zu verhindern, zum Beispiel mit Ratenbegrenzungen für Anmeldeversuche.
+- Um gesetzliche Pflichten zu erfüllen.
+- Um zu verstehen, wie der Dienst genutzt wird, und um ihn zu verbessern – wo das Gesetz es verlangt, nur mit deiner Einwilligung. {/* turbinekit:analytics */}
+
+## Wer sie erhält
+
+Wir geben personenbezogene Daten nur an Anbieter weiter, die sie in unserem Auftrag verarbeiten: Hosting, Datenbank, E-Mail-Versand und die oben genannten Dienste. Diese Anbieter dürfen die Daten nur nutzen, um ihren Dienst für uns zu erbringen.
+
+## Wie lange wir sie speichern
+
+Wir speichern deine Kontodaten, solange dein Konto besteht. Wenn du dein Konto löschst, löschen wir deine personenbezogenen Daten innerhalb von 30 Tagen, außer den Daten, die wir gesetzlich aufbewahren müssen.
+
+## Deine Rechte
+
+Du kannst deine Daten einsehen, berichtigen, exportieren oder löschen und bestimmten Verwendungen widersprechen. Das meiste davon ist in deinen Kontoeinstellungen möglich. Für alles andere schreibe an <a href={`mailto:${site.company.email}`}>{site.company.email}</a>. Du kannst dich auch bei deiner Datenschutzbehörde beschweren.
+
+## Cookies
+
+Siehe unsere [Cookie-Richtlinie](/legal/cookies).
+
+## Änderungen
+
+Wenn sich diese Erklärung ändert, aktualisieren wir das Datum unten auf dieser Seite und informieren dich per E-Mail über jede wichtige Änderung.

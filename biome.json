@@ -1,0 +1,124 @@
+{
+	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true,
+		"defaultBranch": "main"
+	},
+	"files": {
+		"ignoreUnknown": true,
+		"includes": [
+			"**",
+			"!**/drizzle/meta",
+			"!**/next-env.d.ts",
+			"!.agents",
+			"!.changeset",
+			"!.claude",
+			"!pnpm-lock.yaml",
+			"!skills-lock.json",
+			"!tooling/*/CHANGELOG.md",
+			"!tooling/create/template"
+		]
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab"
+	},
+	"tailwind": {
+		"mergeFunctions": ["cn", "clsx", "cva"],
+		"stylesheet": "packages/ui/src/styles/globals.css"
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"preset": "recommended",
+			"suspicious": {
+				"noArrayIndexKey": "off"
+			},
+			"style": {
+				"noRestrictedImports": {
+					"level": "error",
+					"options": {
+						"paths": {
+							"next/link": "Import Link from @/i18n/navigation: it keeps the visitor's locale."
+						}
+					}
+				}
+			},
+			"nursery": {
+				"useTailwindSortedClasses": {
+					"level": "error",
+					"fix": "safe"
+				}
+			}
+		},
+		"domains": {
+			"next": "recommended",
+			"react": "recommended"
+		}
+	},
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
+		}
+	},
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": "on"
+			}
+		}
+	},
+	"overrides": [
+		{
+			"includes": ["packages/**", "tooling/**", "apps/docs/scripts/**"],
+			"linter": {
+				"rules": {
+					"correctness": {
+						"useImportExtensions": "error"
+					}
+				}
+			}
+		},
+		{
+			"includes": ["apps/web/src/i18n/navigation.ts"],
+			"linter": {
+				"rules": {
+					"style": {
+						"noRestrictedImports": "off"
+					}
+				}
+			}
+		},
+		{
+			"includes": ["packages/ui/src/components/**"],
+			"linter": {
+				"rules": {
+					"a11y": {
+						"useSemanticElements": "off",
+						"useFocusableInteractive": "off",
+						"noLabelWithoutControl": "off"
+					},
+					"correctness": {
+						"useExhaustiveDependencies": "off"
+					},
+					"suspicious": {
+						"noDocumentCookie": "off",
+						"noDoubleEquals": "off"
+					}
+				}
+			}
+		},
+		{
+			"includes": ["**/*.svg"],
+			"linter": {
+				"rules": {
+					"a11y": {
+						"noSvgWithoutTitle": "off"
+					}
+				}
+			}
+		}
+	]
+}

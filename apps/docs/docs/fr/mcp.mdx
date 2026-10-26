@@ -1,0 +1,59 @@
+---
+title: Connecter un assistant IA
+description: Ajoute le serveur MCP à Claude, ChatGPT, Cursor ou Claude Code.
+sidebar:
+  order: 3
+---
+
+Le serveur MCP est à :
+
+```txt
+https://example.com/mcp
+```
+
+Il utilise le transport Streamable HTTP et OAuth 2.1. Quand un assistant se connecte, il t’envoie te connecter et approuver ce qu’il peut faire. Les outils qu’il reçoit correspondent aux permissions approuvées : un assistant autorisé en lecture ne voit que les outils de lecture.
+
+## Claude
+
+Dans Claude, ouvre **Personnaliser → Connecteurs**, ajoute un connecteur personnalisé et colle l’adresse ci-dessus. Claude ouvre la page de connexion ; approuve l’accès, et les outils apparaissent dans la conversation. Le [guide d’Anthropic](https://support.claude.com/fr/articles/11175166) détaille chaque étape.
+
+## Claude Code
+
+```bash
+claude mcp add --transport http my-app https://example.com/mcp
+```
+
+Lance `/mcp` dans Claude Code pour te connecter. Pour un script ou l’intégration continue, une clé d’API remplace OAuth :
+
+```bash
+claude mcp add --transport http my-app https://example.com/mcp \
+  --header "Authorization: Bearer $API_KEY"
+```
+
+## Cursor
+
+Ajoute le serveur à `.cursor/mcp.json` :
+
+```json
+{
+  "mcpServers": {
+    "my-app": { "url": "https://example.com/mcp" }
+  }
+}
+```
+
+## ChatGPT
+
+Dans ChatGPT, ouvre la page [Plugins](https://chatgpt.com/plugins), ajoute un serveur MCP personnalisé et colle l’adresse ci-dessus comme adresse du serveur. Crée ensuite le plugin, puis installe-le. Le [guide d’OpenAI](https://developers.openai.com/api/docs/guides/custom-mcp-server) (en anglais) détaille chaque étape.
+
+## Outils
+
+| Outil | Permission | Ce qu’il fait |
+| --- | --- | --- |
+| `list_projects` | `projects:read` | Liste tes projets, du plus récent au plus ancien |
+| `get_project` | `projects:read` | Renvoie un projet |
+| `create_project` | `projects:write` | Crée un projet |
+| `update_project` | `projects:write` | Renomme un projet ou change sa description |
+| `delete_project` | `projects:write` | Supprime un projet (l’assistant demande d’abord) |
+
+Chaque outil est la même opération que son point d’accès REST, avec les mêmes règles et les mêmes erreurs.
