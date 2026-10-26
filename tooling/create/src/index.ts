@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { readdir, readFile } from "node:fs/promises";
-import { relative, resolve } from "node:path";
+import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import * as p from "@clack/prompts";
 import color from "picocolors";
@@ -23,6 +23,13 @@ async function version(): Promise<string> {
 		await readFile(new URL("../package.json", import.meta.url), "utf8"),
 	) as { version: string };
 	return pkg.version;
+}
+
+/** A path as one shell word: quoted when it has spaces or symbols. */
+function shellWord(path: string): string {
+	return /^[\w@%+=:,./-]+$/.test(path)
+		? path
+		: `'${path.replaceAll("'", `'\\''`)}'`;
 }
 
 async function isEmptyDirectory(path: string): Promise<boolean> {
@@ -110,10 +117,9 @@ async function main(): Promise<void> {
 		return;
 	}
 
-	const where = relative(process.cwd(), answers.directory) || ".";
 	p.note(
 		[
-			`cd ${where}`,
+			`cd ${shellWord(answers.directory)}`,
 			...(answers.install ? [] : ["pnpm install"]),
 			"pnpm db:local       # or: docker compose up -d",
 			"pnpm db:migrate     # in another terminal",

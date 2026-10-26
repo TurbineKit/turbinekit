@@ -1,0 +1,59 @@
+---
+title: Conectar un asistente de IA
+description: Añade el servidor MCP a Claude, ChatGPT, Cursor o Claude Code.
+sidebar:
+  order: 3
+---
+
+El servidor MCP está en:
+
+```txt
+https://example.com/mcp
+```
+
+Usa el transporte Streamable HTTP y OAuth 2.1. Cuando un asistente se conecta, te lleva a iniciar sesión y a aprobar lo que puede hacer. Las herramientas que recibe corresponden a los permisos que apruebas: un asistente al que permites leer solo ve las herramientas de lectura.
+
+## Claude
+
+En Claude, abre **Personalizar → Conectores**, añade un conector personalizado y pega la URL de arriba. Claude abre la página de inicio de sesión; aprueba el acceso y las herramientas aparecerán en el chat. La [guía de Anthropic](https://support.claude.com/es/articles/11175166) detalla cada paso.
+
+## Claude Code
+
+```bash
+claude mcp add --transport http my-app https://example.com/mcp
+```
+
+Ejecuta `/mcp` en Claude Code para iniciar sesión. Para un script o la integración continua, puedes usar una clave de API en lugar de OAuth:
+
+```bash
+claude mcp add --transport http my-app https://example.com/mcp \
+  --header "Authorization: Bearer $API_KEY"
+```
+
+## Cursor
+
+Añade el servidor a `.cursor/mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "my-app": { "url": "https://example.com/mcp" }
+  }
+}
+```
+
+## ChatGPT
+
+En ChatGPT, abre la página de [plugins](https://chatgpt.com/plugins), añade un servidor MCP personalizado y pega la URL de arriba como URL del servidor. Luego crea el plugin e instálalo. La [guía de OpenAI](https://developers.openai.com/api/docs/guides/custom-mcp-server) (en inglés) detalla cada paso.
+
+## Herramientas
+
+| Herramienta | Permiso | Qué hace |
+| --- | --- | --- |
+| `list_projects` | `projects:read` | Lista tus proyectos, del más reciente al más antiguo |
+| `get_project` | `projects:read` | Devuelve un proyecto |
+| `create_project` | `projects:write` | Crea un proyecto |
+| `update_project` | `projects:write` | Cambia el nombre o la descripción de un proyecto |
+| `delete_project` | `projects:write` | Elimina un proyecto (el asistente pide confirmación antes) |
+
+Cada herramienta es la misma operación que su endpoint REST, con las mismas reglas y los mismos errores.

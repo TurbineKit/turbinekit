@@ -146,7 +146,7 @@
 			"title": "Create your account",
 			"description": "It takes a minute. We will send you an email to confirm your address.",
 			"submit": "Create account",
-			"terms": "By creating an account, you accept the <terms>terms of service</terms> and the <privacy>privacy policy</privacy>.",
+			"terms": "By creating an account, you accept the <terms>terms of service</terms> and acknowledge the <privacy>privacy policy</privacy>.",
 			"hasAccount": "Already have an account?",
 			"signIn": "Sign in"
 		},

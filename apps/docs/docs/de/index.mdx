@@ -1,0 +1,20 @@
+---
+title: Einführung
+description: Die REST-API und der MCP-Server und wie beide zusammenspielen.
+sidebar:
+  order: 0
+---
+
+Über die API arbeiten dein Code und deine KI-Assistenten mit denselben Daten, die auch in der App zu sehen sind. Sie bietet zwei Zugänge zu denselben Operationen:
+
+- **Die REST-API** unter `https://example.com/api/v1`, für Skripte, Backends und Integrationen. Sie spricht JSON; die Authentifizierung erfolgt mit einem API-Schlüssel.
+- **Der MCP-Server** unter `https://example.com/mcp`, für KI-Assistenten wie Claude, ChatGPT und Cursor. Die Anmeldung läuft über OAuth, und dabei wird festgelegt, was der Assistent darf.
+
+Beide führen dieselben Operationen mit denselben Regeln aus: Ein Projekt, das über den einen Zugang erstellt wird, erscheint auch im anderen und in der App.
+
+## Nächste Schritte
+
+- [Schnellstart](/quickstart): einen Schlüssel erstellen und die erste Anfrage senden.
+- [Authentifizierung](/authentication): API-Schlüssel, Berechtigungen und OAuth.
+- [KI-Assistenten verbinden](/mcp): den MCP-Server zu Claude, ChatGPT oder Cursor hinzufügen.
+- [API-Referenz](/reference): alle Endpunkte, direkt aus der API generiert.

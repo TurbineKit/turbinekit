@@ -11,11 +11,11 @@ Les points d’accès de liste renvoient une page de résultats et un curseur :
 { "data": [ … ], "nextCursor": "MjAyNi0xMC0yNlQxMjowMDowMC4wMDBafHByal8…" }
 ```
 
-Pour obtenir la page suivante, renvoyez le curseur :
+Pour obtenir la page suivante, renvoie le curseur :
 
 ```bash
 curl "https://example.com/api/v1/projects?limit=50&cursor=$NEXT_CURSOR" \
   -H "Authorization: Bearer $API_KEY"
 ```
 
-`nextCursor` vaut `null` à la dernière page. `limit` vaut 20 par défaut et au plus 100. Traitez le curseur comme opaque : son format peut changer.
+`nextCursor` vaut `null` à la dernière page. `limit` vaut 20 par défaut et au plus 100. Traite le curseur comme opaque : son format peut changer.

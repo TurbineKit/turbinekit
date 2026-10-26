@@ -1,0 +1,59 @@
+---
+title: Conectar um assistente de IA
+description: Adicione o servidor MCP ao Claude, ChatGPT, Cursor ou Claude Code.
+sidebar:
+  order: 3
+---
+
+O servidor MCP fica em:
+
+```txt
+https://example.com/mcp
+```
+
+Ele usa o transporte Streamable HTTP e OAuth 2.1. Quando um assistente se conecta, ele leva você a entrar e a aprovar o que ele pode fazer. As ferramentas que ele recebe correspondem às permissões que você aprova: um assistente que você autoriza só a ler vê apenas as ferramentas de leitura.
+
+## Claude
+
+No Claude, abra **Personalizar → Conectores**, adicione um conector personalizado e cole a URL acima. O Claude abre a página de login; aprove o acesso, e as ferramentas aparecem na conversa. O [guia da Anthropic](https://support.claude.com/pt/articles/11175166) detalha cada etapa.
+
+## Claude Code
+
+```bash
+claude mcp add --transport http my-app https://example.com/mcp
+```
+
+Execute `/mcp` no Claude Code para entrar. Para um script ou CI, uma chave de API funciona no lugar do OAuth:
+
+```bash
+claude mcp add --transport http my-app https://example.com/mcp \
+  --header "Authorization: Bearer $API_KEY"
+```
+
+## Cursor
+
+Adicione o servidor ao `.cursor/mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "my-app": { "url": "https://example.com/mcp" }
+  }
+}
+```
+
+## ChatGPT
+
+No ChatGPT, abra a página de [plugins](https://chatgpt.com/plugins), adicione um servidor MCP personalizado e cole a URL acima como URL do servidor. Depois crie o plugin e instale-o. O [guia da OpenAI](https://developers.openai.com/api/docs/guides/custom-mcp-server) (em inglês) detalha cada etapa.
+
+## Ferramentas
+
+| Ferramenta | Permissão | O que faz |
+| --- | --- | --- |
+| `list_projects` | `projects:read` | Lista seus projetos, do mais recente ao mais antigo |
+| `get_project` | `projects:read` | Retorna um projeto |
+| `create_project` | `projects:write` | Cria um projeto |
+| `update_project` | `projects:write` | Renomeia um projeto ou altera a descrição dele |
+| `delete_project` | `projects:write` | Exclui um projeto (o assistente pergunta antes) |
+
+Cada ferramenta é a mesma operação que o endpoint REST correspondente, com as mesmas regras e os mesmos erros.

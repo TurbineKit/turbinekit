@@ -1,0 +1,46 @@
+---
+title: Authentifizierung
+description: API-Schlüssel für Code, OAuth für KI-Assistenten und die Berechtigungen, die beide mitbringen.
+sidebar:
+  order: 2
+---
+
+## API-Schlüssel
+
+Sende deinen Schlüssel bei jeder Anfrage als Bearer-Token:
+
+```bash
+curl https://example.com/api/v1/projects \
+  -H "Authorization: Bearer tk_…"
+```
+
+`X-Api-Key: tk_…` funktioniert ebenfalls. Schlüssel erstellst und löschst du unter **Konto → API-Schlüssel**. Behandle einen Schlüssel wie ein Passwort: Wer ihn hat, handelt in deinem Namen.
+
+## Berechtigungen
+
+Jeder Schlüssel hat Berechtigungen, die du beim Erstellen festlegst:
+
+| Zugriff | Berechtigungen | Was er darf |
+| --- | --- | --- |
+| Nur lesen | Jede `…:read`-Berechtigung, etwa `projects:read` | Auflisten und lesen |
+| Lesen und schreiben | Alle Berechtigungen, etwa `projects:write` | Zusätzlich erstellen, ändern und löschen |
+
+Eine Anfrage, die eine Berechtigung braucht, die dem Schlüssel fehlt, erhält den Status `403` mit dem Code `insufficient_scope`. Jede Operation in der [API-Referenz](/reference) nennt die Berechtigung, die sie braucht (`x-required-permission`).
+
+{/* #region turbinekit:orgs */}
+
+## Teams
+
+Ein Schlüssel, der erstellt wird, während ein Team aktiv ist (die Teamauswahl oben in der Seitenleiste), handelt im Namen dieses Teams: Er liest und ändert die Daten des Teams, nicht deine persönlichen Daten. Er funktioniert, solange du dem Team angehörst. Wenn du das Team verlässt oder jemand dich entfernt, erhalten seine Anfragen den Status `403` mit dem Code `not_a_member`.
+
+Über OAuth verbundene KI-Assistenten handeln in deinem persönlichen Bereich.
+
+{/* #endregion turbinekit:orgs */}
+
+## Ratenbegrenzung
+
+Jeder Schlüssel kann 120 Anfragen pro Minute senden. Darüber hinaus erhalten Anfragen den Status `429` mit einem `Retry-After`-Header. Warte und versuche es dann erneut.
+
+## OAuth für KI-Assistenten
+
+KI-Assistenten verwenden keine API-Schlüssel, sondern verbinden sich mit dem [MCP-Server](/mcp); nach der Anmeldung wird der Assistent auf einem Zustimmungsbildschirm genehmigt. Der Assistent erhält ein Token mit den genehmigten Berechtigungen (dieselben Namen, als OAuth-Scopes), das nur für den MCP-Server gilt. Der Zugriff eines Assistenten lässt sich jederzeit unter **Konto → Verbundene Apps** entfernen; er endet sofort.

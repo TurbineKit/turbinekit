@@ -33,7 +33,7 @@
 		"primary": "Commencer",
 		"secondary": "Lire la documentation",
 		"featuresTitle": "Tout ce qu’il faut à une nouvelle application, rien de plus",
-		"featuresIntro": "Remplacez cette page par votre propre histoire. Les éléments ci-dessous fonctionnent déjà.",
+		"featuresIntro": "Remplace cette page par ta propre histoire. Les éléments ci-dessous fonctionnent déjà.",
 		"features": {
 			"i18n": {
 				"title": "Parle toutes les langues choisies",
@@ -63,7 +63,7 @@
 	},
 	"Pricing": {
 		"title": "Tarifs",
-		"subtitle": "Commencez gratuitement. Passez à Pro quand il vous en faut plus.",
+		"subtitle": "Commence gratuitement. Passe à Pro quand il t’en faut plus.",
 		"monthly": "{price} / mois",
 		"yearly": "ou {price} / an",
 		"free": {
@@ -87,7 +87,7 @@
 				"support": "Aide prioritaire par courriel"
 			}
 		},
-		"cancel": "Annulez en tout temps depuis votre compte. Prix hors taxes."
+		"cancel": "Annule en tout temps depuis ton compte. Prix hors taxes."
 	},
 	"Pages": {
 		"home": {
@@ -102,15 +102,15 @@
 			"title": "Se connecter"
 		},
 		"signUp": {
-			"title": "Créez votre compte"
+			"title": "Crée ton compte"
 		}
 	},
 	"Legal": {
 		"updated": "Dernière mise à jour : {date}",
-		"notTranslated": "Cette page n’est pas encore traduite. Vous lisez la version anglaise.",
+		"notTranslated": "Cette page n’est pas encore traduite. Tu lis la version anglaise.",
 		"privacy": {
 			"title": "Politique de confidentialité",
-			"description": "Les données personnelles que nous recueillons, pourquoi, et vos droits."
+			"description": "Les données personnelles que nous recueillons, pourquoi, et tes droits."
 		},
 		"terms": {
 			"title": "Conditions d’utilisation",
@@ -135,7 +135,7 @@
 		"continueWith": "Continuer avec {provider}",
 		"signIn": {
 			"title": "Se connecter",
-			"description": "Bon retour. Connectez-vous pour continuer.",
+			"description": "Bon retour. Connecte-toi pour continuer.",
 			"submit": "Se connecter",
 			"passkey": "Se connecter avec une clé d’accès",
 			"forgot": "Mot de passe oublié?",
@@ -143,73 +143,73 @@
 			"signUp": "En créer un"
 		},
 		"signUp": {
-			"title": "Créez votre compte",
-			"description": "Ça prend une minute. Nous vous enverrons un courriel pour confirmer votre adresse.",
+			"title": "Crée ton compte",
+			"description": "Ça prend une minute. Nous t’enverrons un courriel pour confirmer ton adresse.",
 			"submit": "Créer le compte",
-			"terms": "En créant un compte, vous acceptez les <terms>conditions d’utilisation</terms> et la <privacy>politique de confidentialité</privacy>.",
-			"hasAccount": "Vous avez déjà un compte?",
+			"terms": "En créant un compte, tu acceptes les <terms>conditions d’utilisation</terms> et tu reconnais avoir pris connaissance de la <privacy>politique de confidentialité</privacy>.",
+			"hasAccount": "Tu as déjà un compte?",
 			"signIn": "Se connecter"
 		},
 		"verify": {
-			"title": "Vérifiez votre boîte de réception",
-			"description": "Nous avons envoyé un lien à {email}. Ouvrez-le pour confirmer votre adresse.",
-			"descriptionNoEmail": "Nous vous avons envoyé un lien. Ouvrez-le pour confirmer votre adresse.",
+			"title": "Vérifie ta boîte de réception",
+			"description": "Nous avons envoyé un lien à {email}. Ouvre-le pour confirmer ton adresse.",
+			"descriptionNoEmail": "Nous t’avons envoyé un lien. Ouvre-le pour confirmer ton adresse.",
 			"resend": "Renvoyer le lien",
-			"sent": "Envoyé. Vérifiez votre boîte de réception.",
-			"invalid": "Ce lien est invalide ou expiré. Connectez-vous pour en recevoir un nouveau."
+			"sent": "Envoyé. Vérifie ta boîte de réception.",
+			"invalid": "Ce lien est invalide ou expiré. Connecte-toi pour en recevoir un nouveau."
 		},
 		"forgot": {
-			"title": "Réinitialisez votre mot de passe",
-			"description": "Entrez votre courriel. Si un compte l’utilise, nous vous enverrons un lien.",
+			"title": "Réinitialise ton mot de passe",
+			"description": "Entre ton courriel. Si un compte l’utilise, nous t’enverrons un lien.",
 			"submit": "Envoyer le lien",
 			"sent": "Si un compte utilise cette adresse, un lien est en route.",
 			"back": "Retour à la connexion"
 		},
 		"reset": {
-			"title": "Choisissez un nouveau mot de passe",
-			"description": "Vos autres sessions seront déconnectées.",
+			"title": "Choisis un nouveau mot de passe",
+			"description": "Tes autres sessions seront déconnectées.",
 			"submit": "Enregistrer le mot de passe",
-			"done": "Votre mot de passe a changé. Vous pouvez vous connecter.",
-			"invalid": "Ce lien est invalide ou expiré. Demandez-en un nouveau."
+			"done": "Ton mot de passe a changé. Tu peux te connecter.",
+			"invalid": "Ce lien est invalide ou expiré. Demandes-en un nouveau."
 		},
 		"twoFactor": {
 			"title": "Authentification à deux facteurs",
-			"description": "Entrez le code à 6 chiffres de votre application d’authentification.",
+			"description": "Entre le code à 6 chiffres de ton application d’authentification.",
 			"code": "Code",
 			"submit": "Vérifier",
 			"trustDevice": "Faire confiance à cet appareil pendant 30 jours",
 			"emailCode": "M’envoyer plutôt un code par courriel",
-			"emailSent": "Nous avons envoyé un code à votre courriel.",
-			"emailDescription": "Entrez le code à 6 chiffres envoyé à votre courriel.",
+			"emailSent": "Nous avons envoyé un code à ton courriel.",
+			"emailDescription": "Entre le code à 6 chiffres envoyé à ton courriel.",
 			"backupCode": "Utiliser un code de secours",
-			"backupDescription": "Entrez un de vos codes de secours. Chacun ne sert qu’une fois.",
+			"backupDescription": "Entre un de tes codes de secours. Chacun ne sert qu’une fois.",
 			"useApp": "Utiliser mon application d’authentification"
 		},
 		"consent": {
-			"title": "Autoriser {client} à accéder à votre compte?",
-			"description": "{client} veut utiliser {product} en votre nom.",
+			"title": "Autoriser {client} à accéder à ton compte?",
+			"description": "{client} veut utiliser {product} en ton nom.",
 			"scopesTitle": "Il pourra :",
 			"allow": "Autoriser",
 			"deny": "Refuser",
 			"signedInAs": "Connecté en tant que {email}",
 			"scope": {
-				"offline_access": "Rester connecté jusqu’à ce que vous le retiriez",
-				"projects:read": "Lire vos projets",
-				"projects:write": "Créer, modifier et supprimer vos projets"
+				"offline_access": "Rester connecté jusqu’à ce que tu le retires",
+				"projects:read": "Lire tes projets",
+				"projects:write": "Créer, modifier et supprimer tes projets"
 			},
-			"invalid": "Cette demande d’autorisation est invalide ou expirée. Recommencez depuis votre assistant IA.",
-			"error": "Une erreur s’est produite. Réessayez depuis votre assistant IA.",
-			"redirectsTo": "Vous reviendrez à {host}."
+			"invalid": "Cette demande d’autorisation est invalide ou expirée. Recommence depuis ton assistant IA.",
+			"error": "Une erreur s’est produite. Réessaie depuis ton assistant IA.",
+			"redirectsTo": "Tu reviendras à {host}."
 		},
 		"errors": {
-			"generic": "Une erreur s’est produite. Réessayez.",
+			"generic": "Une erreur s’est produite. Réessaie.",
 			"invalidCredentials": "Le courriel ou le mot de passe est incorrect.",
-			"emailNotVerified": "Confirmez d’abord votre adresse courriel. Nous vous avons envoyé un nouveau lien.",
+			"emailNotVerified": "Confirme d’abord ton adresse courriel. Nous t’avons envoyé un nouveau lien.",
 			"userExists": "Un compte utilise déjà ce courriel.",
-			"passwordShort": "Utilisez au moins 8 caractères.",
-			"rateLimited": "Trop de tentatives. Attendez une minute, puis réessayez.",
+			"passwordShort": "Utilise au moins 8 caractères.",
+			"rateLimited": "Trop de tentatives. Attends une minute, puis réessaie.",
 			"invalidCode": "Ce code est incorrect ou expiré.",
-			"passkeyFailed": "La clé d’accès n’a pas fonctionné. Réessayez ou utilisez votre mot de passe."
+			"passkeyFailed": "La clé d’accès n’a pas fonctionné. Réessaie ou utilise ton mot de passe."
 		}
 	},
 	"App": {
@@ -230,12 +230,12 @@
 		"dashboard": {
 			"title": "Tableau de bord",
 			"welcome": "Bienvenue, {name}",
-			"intro": "Voici votre tableau de bord. Remplacez-le par ce dont vos utilisateurs ont besoin en premier.",
-			"projects": "Vos projets",
+			"intro": "Voici ton tableau de bord. Remplace-le par ce dont tes utilisateurs ont besoin en premier.",
+			"projects": "Tes projets",
 			"projectsCount": "{count, plural, =0 {Aucun projet} one {# projet} other {# projets}}",
 			"openProjects": "Ouvrir les projets",
 			"apiTitle": "Utiliser l’API",
-			"apiBody": "Créez une clé d’API pour appeler l’API REST, ou connectez un assistant IA au serveur MCP.",
+			"apiBody": "Crée une clé d’API pour appeler l’API REST, ou connecte un assistant IA au serveur MCP.",
 			"apiKeys": "Clés d’API",
 			"connectedApps": "Applications connectées"
 		}
@@ -259,32 +259,32 @@
 		"close": "Fermer",
 		"profile": {
 			"title": "Profil",
-			"description": "Votre nom et la langue de vos courriels.",
+			"description": "Ton nom et la langue de tes courriels.",
 			"name": "Nom",
 			"email": "Courriel",
-			"emailHelp": "Écrivez-nous pour changer votre adresse courriel.",
+			"emailHelp": "Écris-nous pour changer ton adresse courriel.",
 			"language": "Langue des courriels",
 			"avatar": "Photo",
 			"avatarUpload": "Téléverser une photo",
 			"avatarHelp": "PNG, JPEG ou WebP, jusqu’à 4 Mo."
 		},
 		"danger": {
-			"title": "Supprimer votre compte",
-			"description": "Cela supprime votre compte et toutes ses données. C’est irréversible.",
-			"confirm": "Entrez votre mot de passe pour confirmer.",
+			"title": "Supprimer ton compte",
+			"description": "Cela supprime ton compte et toutes ses données. C’est irréversible.",
+			"confirm": "Entre ton mot de passe pour confirmer.",
 			"button": "Supprimer mon compte"
 		},
 		"password": {
 			"title": "Mot de passe",
-			"description": "Le changer déconnecte vos autres sessions.",
+			"description": "Le changer déconnecte tes autres sessions.",
 			"current": "Mot de passe actuel",
 			"new": "Nouveau mot de passe",
 			"submit": "Changer le mot de passe",
-			"done": "Votre mot de passe a changé."
+			"done": "Ton mot de passe a changé."
 		},
 		"passkeys": {
 			"title": "Clés d’accès",
-			"description": "Connectez-vous avec votre empreinte, votre visage ou le NIP de votre appareil plutôt qu’avec un mot de passe.",
+			"description": "Connecte-toi avec ton empreinte, ton visage ou le NIP de ton appareil plutôt qu’avec un mot de passe.",
 			"add": "Ajouter une clé d’accès",
 			"empty": "Aucune clé d’accès.",
 			"added": "Clé d’accès ajoutée.",
@@ -298,17 +298,17 @@
 			"disabled": "Désactivée",
 			"enable": "Activer",
 			"disable": "Désactiver",
-			"passwordPrompt": "Entrez votre mot de passe pour continuer.",
-			"scan": "Balayez ce code QR avec votre application d’authentification, puis entrez le code affiché.",
+			"passwordPrompt": "Entre ton mot de passe pour continuer.",
+			"scan": "Balaie ce code QR avec ton application d’authentification, puis entre le code affiché.",
 			"verify": "Confirmer",
-			"backupTitle": "Gardez vos codes de secours",
-			"backupDescription": "Chaque code sert une fois si vous perdez votre appareil. Gardez-les en lieu sûr.",
+			"backupTitle": "Garde tes codes de secours",
+			"backupDescription": "Chaque code sert une fois si tu perds ton appareil. Garde-les en lieu sûr.",
 			"done": "L’authentification à deux facteurs est activée.",
 			"off": "L’authentification à deux facteurs est désactivée."
 		},
 		"sessions": {
 			"title": "Sessions",
-			"description": "Les appareils connectés à votre compte.",
+			"description": "Les appareils connectés à ton compte.",
 			"current": "Cet appareil",
 			"revoke": "Déconnecter",
 			"revokeOthers": "Déconnecter tous les autres appareils",
@@ -317,7 +317,7 @@
 		},
 		"apiKeys": {
 			"title": "Clés d’API",
-			"description": "Les clés permettent à votre code d’appeler l’API REST et le serveur MCP. Traitez-les comme des mots de passe.",
+			"description": "Les clés permettent à ton code d’appeler l’API REST et le serveur MCP. Traite-les comme des mots de passe.",
 			"create": "Créer une clé",
 			"name": "Nom",
 			"namePlaceholder": "Mon script",
@@ -325,18 +325,18 @@
 			"read": "Lecture seule",
 			"readWrite": "Lecture et écriture",
 			"empty": "Aucune clé.",
-			"createdTitle": "Copiez votre nouvelle clé",
-			"createdDescription": "Elle n’est affichée qu’une seule fois. Gardez-la en lieu sûr.",
+			"createdTitle": "Copie ta nouvelle clé",
+			"createdDescription": "Elle n’est affichée qu’une seule fois. Garde-la en lieu sûr.",
 			"lastUsed": "Utilisée le {date}",
 			"neverUsed": "Jamais utilisée",
 			"deleteConfirm": "Supprimer la clé « {name} »? Le code qui l’utilise cesse de fonctionner aussitôt.",
 			"team": "Équipe : {team}",
-			"forTeam": "Cette clé agit pour l’équipe {team} : elle lit et modifie les données de l’équipe, pas les vôtres."
+			"forTeam": "Cette clé agit pour l’équipe {team} : elle lit et modifie les données de l’équipe, pas les tiennes."
 		},
 		"connectedApps": {
 			"title": "Applications connectées",
-			"description": "Les assistants IA que vous avez autorisés à utiliser votre compte par le serveur MCP.",
-			"empty": "Aucune application connectée. Connectez un assistant à {url} pour la voir ici.",
+			"description": "Les assistants IA que tu as autorisés à utiliser ton compte par le serveur MCP.",
+			"empty": "Aucune application connectée. Connecte un assistant à {url} pour la voir ici.",
 			"connected": "Connectée le {date}",
 			"lastUsed": "Utilisée le {date}",
 			"remove": "Retirer l’accès",
@@ -344,13 +344,13 @@
 		},
 		"billing": {
 			"title": "Facturation",
-			"description": "Votre forfait, votre moyen de paiement et vos factures.",
+			"description": "Ton forfait, ton moyen de paiement et tes factures.",
 			"teamDescription": "Le forfait de {team}. Tous ses membres le partagent.",
-			"free": "Vous avez le forfait gratuit.",
-			"pro": "Vous avez le forfait Pro.",
+			"free": "Tu as le forfait gratuit.",
+			"pro": "Tu as le forfait Pro.",
 			"renews": "Il se renouvelle le {date}.",
-			"ends": "Il prend fin le {date}. Vous gardez Pro jusque-là.",
-			"pastDue": "Le dernier paiement a échoué. Mettez à jour votre moyen de paiement pour garder Pro.",
+			"ends": "Il prend fin le {date}. Tu gardes Pro jusque-là.",
+			"pastDue": "Le dernier paiement a échoué. Mets à jour ton moyen de paiement pour garder Pro.",
 			"upgradeMonthly": "Passer à Pro : {price} / mois",
 			"upgradeYearly": "Passer à Pro : {price} / an",
 			"manage": "Gérer la facturation",
@@ -362,7 +362,7 @@
 	"Projects": {
 		"title": "Projets",
 		"description": "La ressource d’exemple. Les mêmes projets sont offerts par l’API REST et le serveur MCP.",
-		"empty": "Aucun projet. Créez le premier.",
+		"empty": "Aucun projet. Crée le premier.",
 		"create": "Nouveau projet",
 		"name": "Nom",
 		"descriptionLabel": "Description",
@@ -379,7 +379,7 @@
 	},
 	"Org": {
 		"title": "Équipe",
-		"description": "Travaillez à plusieurs. Les projets et les clés d’API créés dans une équipe appartiennent à l’équipe.",
+		"description": "Travaille à plusieurs. Les projets et les clés d’API créés dans une équipe appartiennent à l’équipe.",
 		"personal": "Personnel",
 		"switcher": {
 			"label": "Changer d’équipe",
@@ -387,16 +387,16 @@
 		},
 		"create": {
 			"title": "Créer une équipe",
-			"description": "Vous en devenez propriétaire. Invitez ensuite des personnes par courriel.",
+			"description": "Tu en deviens propriétaire. Invite ensuite des personnes par courriel.",
 			"name": "Nom de l’équipe",
 			"namePlaceholder": "Acme",
 			"submit": "Créer l’équipe",
 			"created": "Équipe créée."
 		},
 		"none": {
-			"title": "Vous êtes dans votre espace personnel",
-			"body": "Vos projets et vos clés d’API ici n’appartiennent qu’à vous. Créez une équipe pour les partager, ou passez à une équipe dont vous êtes membre.",
-			"teams": "Vos équipes",
+			"title": "Tu es dans ton espace personnel",
+			"body": "Tes projets et tes clés d’API ici n’appartiennent qu’à toi. Crée une équipe pour les partager, ou passe à une équipe dont tu es membre.",
+			"teams": "Tes équipes",
 			"switch": "Ouvrir"
 		},
 		"general": {
@@ -409,12 +409,12 @@
 		"members": {
 			"title": "Membres",
 			"description": "Les propriétaires et les administrateurs peuvent inviter des personnes, changer les rôles et retirer des membres.",
-			"you": "vous",
+			"you": "toi",
 			"role": "Rôle de {name}",
 			"remove": "Retirer",
 			"removeConfirm": "Retirer {name} de l’équipe ? Cette personne perd aussitôt l’accès à ses projets.",
 			"leave": "Quitter l’équipe",
-			"leaveConfirm": "Quitter {team} ? Vous perdez aussitôt l’accès à ses projets.",
+			"leaveConfirm": "Quitter {team} ? Tu perds aussitôt l’accès à ses projets.",
 			"roles": {
 				"owner": "Propriétaire",
 				"admin": "Administrateur",
@@ -434,19 +434,19 @@
 		},
 		"danger": {
 			"title": "Supprimer l’équipe",
-			"description": "Cela supprime l’équipe, ses adhésions et ses projets. Vous ne pourrez pas revenir en arrière.",
+			"description": "Cela supprime l’équipe, ses adhésions et ses projets. Tu ne pourras pas revenir en arrière.",
 			"delete": "Supprimer l’équipe",
-			"confirm": "Supprimer {team} et tous ses projets ? Vous ne pourrez pas revenir en arrière."
+			"confirm": "Supprimer {team} et tous ses projets ? Tu ne pourras pas revenir en arrière."
 		},
 		"invitation": {
 			"title": "Rejoindre {team}",
-			"body": "{inviter} vous invite à rejoindre {team} en tant que {role}.",
+			"body": "{inviter} t’invite à rejoindre {team} en tant que {role}.",
 			"accept": "Accepter",
 			"decline": "Refuser",
-			"declined": "Vous avez refusé l’invitation.",
+			"declined": "Tu as refusé l’invitation.",
 			"invalid": "Cette invitation n’est pas valide. Elle a expiré, elle a été annulée, ou elle a été envoyée à une autre adresse que {email}."
 		},
-		"error": "Ça n’a pas marché. Réessayez."
+		"error": "Ça n’a pas marché. Réessaie."
 	},
 	"Admin": {
 		"title": "Admin",
@@ -472,7 +472,7 @@
 			"ban": "Bannir",
 			"unban": "Lever le bannissement",
 			"banTitle": "Bannir {name} ?",
-			"banDescription": "Cette personne est aussitôt déconnectée et ne peut plus se connecter avant que vous leviez le bannissement. Ses clés d’API et ses applications connectées cessent de fonctionner.",
+			"banDescription": "Cette personne est aussitôt déconnectée et ne peut plus se connecter avant que tu lèves le bannissement. Ses clés d’API et ses applications connectées cessent de fonctionner.",
 			"banReason": "Motif (seuls les admins le voient)",
 			"previous": "Précédent",
 			"next": "Suivant",
@@ -493,8 +493,8 @@
 			}
 		},
 		"impersonating": {
-			"banner": "Vous voyez l’application comme {name} ({email}).",
-			"stop": "Revenir à votre compte"
+			"banner": "Tu vois l’application comme {name} ({email}).",
+			"stop": "Revenir à ton compte"
 		},
 		"error": "Ça n’a pas marché : {message}"
 	}

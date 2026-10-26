@@ -27,6 +27,11 @@ export const MARKER_IDS = [
 	"payments",
 	"resend",
 	"email-sdk",
+	// Languages other than English (packages/i18n).
+	"fr",
+	"es",
+	"pt-BR",
+	"de",
 	"template",
 ] as const;
 

@@ -10,7 +10,13 @@ import {
 } from "./modules.ts";
 import { availableSkills, findSkill } from "./skills.ts";
 
-export const LOCALES = { en: "English", fr: "Français" } as const;
+export const LOCALES = {
+	en: "English",
+	fr: "Français",
+	es: "Español",
+	"pt-BR": "Português (Brasil)",
+	de: "Deutsch",
+} as const;
 export type Locale = keyof typeof LOCALES;
 
 export type Answers = {
@@ -45,7 +51,7 @@ Options:
   --company <text>          Company or legal name (legal pages, emails)
   --email <address>         Contact email
   --url <https://…>         Production URL, when you know it
-  --locales <list>          en, or en,fr (English is required)
+  --locales <list>          all, or some of: ${Object.keys(LOCALES).join(", ")} (default and required: en)
   --default-locale <code>   The language of bare URLs (default: en)
   --modules <list>          all, none, or some of: ${MODULE_IDS.join(", ")}
   --email-provider <id>     ${Object.keys(EMAIL_PROVIDERS).join(" or ")} (default: resend)
@@ -139,6 +145,13 @@ function list(value: string | undefined): string[] | undefined {
 		.filter(Boolean);
 }
 
+/** A template language from its code in any case: `pt-br` → `pt-BR`. */
+function toLocale(code: string): Locale | undefined {
+	return (Object.keys(LOCALES) as Locale[]).find(
+		(locale) => locale.toLowerCase() === code.toLowerCase(),
+	);
+}
+
 /** Answers from the options alone, with defaults for the rest. */
 export function answersFromFlags(flags: Flags): Answers {
 	const directory = resolve(flags.directory ?? "my-app");
@@ -160,21 +173,27 @@ export function answersFromFlags(flags: Flags): Answers {
 						return id as ModuleId;
 					});
 
-	const locales = (list(flags.locales) ?? ["en", "fr"]).map((code) => {
-		if (!(code in LOCALES)) {
-			throw new Error(
-				`Unknown locale "${code}". Locales: ${Object.keys(LOCALES).join(", ")}.`,
-			);
-		}
-		return code as Locale;
-	});
+	const requestedLocales = list(flags.locales);
+	const locales: Locale[] = !requestedLocales
+		? ["en"]
+		: requestedLocales.includes("all")
+			? (Object.keys(LOCALES) as Locale[])
+			: requestedLocales.map((code) => {
+					const locale = toLocale(code);
+					if (!locale) {
+						throw new Error(
+							`Unknown locale "${code}". Locales: ${Object.keys(LOCALES).join(", ")}.`,
+						);
+					}
+					return locale;
+				});
 	if (!locales.includes("en")) {
 		throw new Error("English (en) is required: it is the reference catalog.");
 	}
-	const defaultLocale = (flags["default-locale"] ?? "en") as Locale;
-	if (!locales.includes(defaultLocale)) {
+	const defaultLocale = toLocale(flags["default-locale"] ?? "en");
+	if (!defaultLocale || !locales.includes(defaultLocale)) {
 		throw new Error(
-			`The default locale "${defaultLocale}" is not in --locales.`,
+			`The default locale "${flags["default-locale"]}" is not in --locales.`,
 		);
 	}
 

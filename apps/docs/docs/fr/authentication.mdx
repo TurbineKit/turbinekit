@@ -7,14 +7,14 @@ sidebar:
 
 ## Clés d’API
 
-Envoyez votre clé comme jeton porteur à chaque requête :
+Envoie ta clé comme jeton porteur à chaque requête :
 
 ```bash
 curl https://example.com/api/v1/projects \
   -H "Authorization: Bearer tk_…"
 ```
 
-`X-Api-Key: tk_…` fonctionne aussi. Créez et supprimez vos clés dans **Compte → Clés d’API**. Traitez une clé comme un mot de passe : quiconque la possède agit en votre nom.
+`X-Api-Key: tk_…` fonctionne aussi. Crée et supprime tes clés dans **Compte → Clés d’API**. Traite une clé comme un mot de passe : quiconque la possède agit en ton nom.
 
 ## Permissions
 
@@ -31,15 +31,15 @@ Une requête qui exige une permission que la clé n’a pas reçoit un `403` ave
 
 ## Équipes
 
-Une clé créée pendant qu’une équipe est active (le sélecteur en haut de la barre latérale) agit pour cette équipe : elle lit et modifie les données de l’équipe, pas vos données personnelles. Elle fonctionne tant que vous faites partie de l’équipe. Après votre départ, ou si quelqu’un vous retire, ses requêtes reçoivent un `403` avec le code `not_a_member`.
+Une clé créée pendant qu’une équipe est active (le sélecteur en haut de la barre latérale) agit pour cette équipe : elle lit et modifie les données de l’équipe, pas tes données personnelles. Elle fonctionne tant que tu fais partie de l’équipe. Après ton départ, ou si quelqu’un te retire, ses requêtes reçoivent un `403` avec le code `not_a_member`.
 
-Les assistants IA connectés avec OAuth agissent dans votre espace personnel.
+Les assistants IA connectés avec OAuth agissent dans ton espace personnel.
 
 {/* #endregion turbinekit:orgs */}
 
 ## Limites d’utilisation
 
-Chaque clé peut faire 120 requêtes par minute. Au-delà, les requêtes reçoivent un `429` avec un en-tête `Retry-After`. Attendez, puis réessayez.
+Chaque clé peut faire 120 requêtes par minute. Au-delà, les requêtes reçoivent un `429` avec un en-tête `Retry-After`. Attends, puis réessaie.
 
 ## OAuth pour les assistants IA
 

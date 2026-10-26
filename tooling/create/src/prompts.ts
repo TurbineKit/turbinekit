@@ -113,7 +113,7 @@ export async function ask(flags: Flags, defaults: Answers): Promise<Answers> {
 					label,
 					hint: value === "en" ? "required" : undefined,
 				})),
-				initialValues: ["en", "fr"],
+				initialValues: defaults.locales,
 				required: true,
 			}),
 		);

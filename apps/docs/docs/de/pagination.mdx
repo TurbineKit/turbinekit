@@ -1,0 +1,21 @@
+---
+title: Paginierung
+description: Listen kommen seitenweise, mit einem Cursor zur nächsten Seite.
+sidebar:
+  order: 5
+---
+
+Listen-Endpunkte geben eine Seite mit Ergebnissen und einen Cursor zurück:
+
+```json
+{ "data": [ … ], "nextCursor": "MjAyNi0xMC0yNlQxMjowMDowMC4wMDBafHByal8…" }
+```
+
+Für die nächste Seite sendest du den Cursor zurück:
+
+```bash
+curl "https://example.com/api/v1/projects?limit=50&cursor=$NEXT_CURSOR" \
+  -H "Authorization: Bearer $API_KEY"
+```
+
+Auf der letzten Seite ist `nextCursor` gleich `null`. `limit` ist standardmäßig 20 und höchstens 100. Behandle den Cursor als opaken Wert: Sein Format kann sich ändern.

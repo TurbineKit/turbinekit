@@ -18,7 +18,7 @@ Chaque erreur a la même forme :
 }
 ```
 
-Branchez votre code sur `type` et `code` : ils ne changent pas. `message` s’adresse aux personnes et peut changer. `param` nomme le champ en cause, quand il y en a un.
+Branche ton code sur `type` et `code` : ils ne changent pas. `message` s’adresse aux personnes et peut changer. `param` nomme le champ en cause, quand il y en a un.
 
 | Statut | Type | Codes courants |
 | --- | --- | --- |
@@ -35,17 +35,17 @@ Branchez votre code sur `type` et `code` : ils ne changent pas. `message` s’ad
 ## Autres codes
 
 {/* #region turbinekit:orgs */}
-- `403` `not_a_member` : la clé d’API agit pour une équipe dont vous ne faites plus partie.
+- `403` `not_a_member` : la clé d’API agit pour une équipe dont tu ne fais plus partie.
 {/* #endregion turbinekit:orgs */}
 {/* #region turbinekit:admin */}
 - `403` `account_banned` : un admin a banni le compte. Ses clés et ses jetons cessent de fonctionner.
 {/* #endregion turbinekit:admin */}
 {/* #region turbinekit:payments */}
-- `403` `plan_limit_reached` : la limite du forfait est atteinte. Passez à un forfait supérieur, ou supprimez d’abord un élément.
+- `403` `plan_limit_reached` : la limite du forfait est atteinte. Passe à un forfait supérieur, ou supprime d’abord un élément.
 {/* #endregion turbinekit:payments */}
 
 {/* #endregion turbinekit:orgs|admin|payments */}
 
 ## Identifiants de requête
 
-Chaque réponse a un en-tête `Request-Id` (`req_…`). Citez-le quand vous écrivez au soutien : il retrouve votre requête dans les journaux.
+Chaque réponse a un en-tête `Request-Id` (`req_…`). Cite-le quand tu écris au soutien : il retrouve ta requête dans les journaux.

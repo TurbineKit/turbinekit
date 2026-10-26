@@ -1,0 +1,14 @@
+---
+title: Versionamento
+description: Como a API muda sem quebrar seu código.
+sidebar:
+  order: 6
+---
+
+A versão fica no caminho: `/api/v1`. Dentro da v1, as mudanças só acrescentam coisas:
+
+- novos endpoints e novos parâmetros opcionais;
+- novos campos nas respostas (ignore os que você não conhece);
+- novos códigos de erro dentro dos tipos existentes.
+
+Uma mudança que possa quebrar seu código (remover ou renomear um campo, mudar um tipo) sai como `/api/v2`, ao lado da v1. Nós a anunciamos com antecedência e mantemos a v1 funcionando enquanto você migra.

@@ -11,6 +11,7 @@ import {
 	PAIRS,
 	TEMPLATE_ONLY,
 } from "./modules.ts";
+import { LOCALES } from "./options.ts";
 
 /** The repository is the template. */
 const root = resolve(import.meta.dirname, "../../..");
@@ -102,5 +103,41 @@ describe("the manifests", () => {
 
 	it("keep template-only paths out of projects", () => {
 		expect(TEMPLATE_ONLY).toContain("tooling");
+	});
+});
+
+describe("the languages", () => {
+	it("are the ones packages/i18n lists, each with its files", async () => {
+		const codes = Object.keys(LOCALES);
+		const i18n = await readFile(
+			join(root, "packages/i18n/src/index.ts"),
+			"utf8",
+		);
+		const listed = i18n
+			.match(/export const locales = \[([^\]]*)\] as const;/)?.[1]
+			?.match(/"[^"]+"/g)
+			?.map((code) => code.slice(1, -1));
+		expect(listed).toEqual(codes);
+		expect(MARKER_IDS).toEqual(
+			expect.arrayContaining(codes.filter((code) => code !== "en")),
+		);
+
+		const files = await templateFiles(source);
+		const legal = new Set(
+			files
+				.filter((file) => file.startsWith("apps/web/content/legal/"))
+				.map((file) => file.split("/")[4]),
+		);
+		const missing = codes.flatMap((code) =>
+			[
+				`apps/web/messages/${code}.json`,
+				`packages/email/src/strings/${code}.ts`,
+				...[...legal].map(
+					(slug) => `apps/web/content/legal/${slug}/${code}.mdx`,
+				),
+				...(code === "en" ? [] : [`apps/docs/docs/${code}/index.mdx`]),
+			].filter((path) => !files.includes(path)),
+		);
+		expect(missing).toEqual([]);
 	});
 });

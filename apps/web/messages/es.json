@@ -1,0 +1,501 @@
+{
+	"Nav": {
+		"main": "Principal",
+		"home": "Inicio",
+		"pricing": "Precios",
+		"docs": "Documentación",
+		"signIn": "Iniciar sesión",
+		"getStarted": "Empezar",
+		"dashboard": "Panel",
+		"openMenu": "Abrir menú"
+	},
+	"Footer": {
+		"copyright": "© {year} {company}",
+		"product": "Producto",
+		"legal": "Legal",
+		"privacy": "Privacidad",
+		"terms": "Términos",
+		"cookies": "Cookies",
+		"cookieSettings": "Configuración de cookies",
+		"agents": "Para agentes de IA"
+	},
+	"LocaleSwitcher": {
+		"label": "Idioma"
+	},
+	"Theme": {
+		"label": "Tema",
+		"light": "Claro",
+		"dark": "Oscuro",
+		"system": "Sistema"
+	},
+	"Home": {
+		"badge": "Código abierto · MIT",
+		"primary": "Empezar",
+		"secondary": "Leer la documentación",
+		"featuresTitle": "Todo lo que necesita una aplicación nueva, y nada más",
+		"featuresIntro": "Reemplaza esta página por tu propia historia. Todo lo que sigue ya funciona.",
+		"features": {
+			"i18n": {
+				"title": "Habla los idiomas que elijas",
+				"body": "Páginas, correos y textos legales traducidos, con hreflang y un selector de idioma."
+			},
+			"seo": {
+				"title": "Visible para buscadores e IA",
+				"body": "Mapa del sitio, URL canónicas, datos estructurados, tarjetas para compartir, llms.txt y una copia en Markdown de cada página."
+			},
+			"auth": {
+				"title": "Inicio de sesión seguro",
+				"body": "Correo electrónico y contraseña, Google y GitHub, llaves de acceso y verificación en dos pasos."
+			},
+			"api": {
+				"title": "Una API, tres puertas",
+				"body": "Cada operación sirve a la aplicación, a una API REST documentada y a un servidor MCP para clientes de IA."
+			},
+			"agents": {
+				"title": "Pensado para agentes de programación",
+				"body": "AGENTS.md, una guía de configuración y un conjunto de habilidades enseñan a los agentes a ampliar la aplicación de forma segura."
+			},
+			"open": {
+				"title": "Herramientas libres y gratuitas",
+				"body": "No hace falta ningún servicio de pago. Todos son opcionales y tienen una alternativa gratuita."
+			}
+		}
+	},
+	"Pricing": {
+		"title": "Precios",
+		"subtitle": "Empieza gratis. Mejora tu plan cuando necesites más.",
+		"monthly": "{price} / mes",
+		"yearly": "o {price} / año",
+		"free": {
+			"name": "Gratis",
+			"description": "Para probar el producto y para proyectos pequeños.",
+			"price": "Gratis",
+			"cta": "Empezar",
+			"features": {
+				"projects": "Hasta 3 proyectos",
+				"api": "La API REST y el servidor MCP",
+				"support": "Ayuda por correo electrónico"
+			}
+		},
+		"pro": {
+			"name": "Pro",
+			"description": "Para quienes lo necesitan a diario.",
+			"cta": "Pasar a Pro",
+			"features": {
+				"projects": "Proyectos ilimitados",
+				"api": "La API REST y el servidor MCP",
+				"support": "Ayuda prioritaria por correo electrónico"
+			}
+		},
+		"cancel": "Cancela cuando quieras desde tu cuenta. Los precios no incluyen impuestos."
+	},
+	"Pages": {
+		"home": {
+			"title": "{name}",
+			"description": "Una plantilla de Next.js ligera, pensada para la IA y construida con herramientas libres y gratuitas."
+		},
+		"pricing": {
+			"title": "Precios",
+			"description": "Planes y precios."
+		},
+		"signIn": {
+			"title": "Iniciar sesión"
+		},
+		"signUp": {
+			"title": "Crea tu cuenta"
+		}
+	},
+	"Legal": {
+		"updated": "Última actualización: {date}",
+		"notTranslated": "Esta página aún no está traducida. Estás leyendo la versión en inglés.",
+		"privacy": {
+			"title": "Política de privacidad",
+			"description": "Qué datos personales recopilamos, por qué y cuáles son tus derechos."
+		},
+		"terms": {
+			"title": "Términos del servicio",
+			"description": "Las normas de uso del servicio."
+		},
+		"cookies": {
+			"title": "Política de cookies",
+			"description": "Las cookies y tecnologías similares que usamos, y cómo controlarlas."
+		}
+	},
+	"NotFound": {
+		"title": "Página no encontrada",
+		"body": "Esta página no existe o cambió de dirección.",
+		"home": "Volver a la página de inicio"
+	},
+	"Auth": {
+		"email": "Correo electrónico",
+		"password": "Contraseña",
+		"name": "Nombre",
+		"newPassword": "Nueva contraseña",
+		"or": "o",
+		"continueWith": "Continuar con {provider}",
+		"signIn": {
+			"title": "Iniciar sesión",
+			"description": "Hola de nuevo. Inicia sesión para continuar.",
+			"submit": "Iniciar sesión",
+			"passkey": "Iniciar sesión con una llave de acceso",
+			"forgot": "¿Olvidaste tu contraseña?",
+			"noAccount": "¿Aún no tienes cuenta?",
+			"signUp": "Crea una"
+		},
+		"signUp": {
+			"title": "Crea tu cuenta",
+			"description": "Solo tardarás un minuto. Te enviaremos un correo para confirmar tu dirección.",
+			"submit": "Crear cuenta",
+			"terms": "Al crear una cuenta, aceptas los <terms>términos del servicio</terms> y reconoces haber leído la <privacy>política de privacidad</privacy>.",
+			"hasAccount": "¿Ya tienes una cuenta?",
+			"signIn": "Inicia sesión"
+		},
+		"verify": {
+			"title": "Revisa tu bandeja de entrada",
+			"description": "Te acabamos de enviar un enlace a {email}. Ábrelo para confirmar tu dirección.",
+			"descriptionNoEmail": "Te acabamos de enviar un enlace. Ábrelo para confirmar tu dirección.",
+			"resend": "Reenviar el enlace",
+			"sent": "Enviado. Revisa tu bandeja de entrada.",
+			"invalid": "Este enlace no es válido o ya caducó. Inicia sesión para recibir uno nuevo."
+		},
+		"forgot": {
+			"title": "Restablece tu contraseña",
+			"description": "Escribe tu correo electrónico. Si pertenece a una cuenta, te enviaremos un enlace.",
+			"submit": "Enviar el enlace",
+			"sent": "Si esta dirección pertenece a una cuenta, el enlace ya está en camino.",
+			"back": "Volver al inicio de sesión"
+		},
+		"reset": {
+			"title": "Elige una nueva contraseña",
+			"description": "Se cerrarán tus otras sesiones.",
+			"submit": "Guardar la contraseña",
+			"done": "Se cambió tu contraseña. Ya puedes iniciar sesión.",
+			"invalid": "Este enlace no es válido o ya caducó. Solicita uno nuevo."
+		},
+		"twoFactor": {
+			"title": "Verificación en dos pasos",
+			"description": "Escribe el código de 6 dígitos de tu aplicación de autenticación.",
+			"code": "Código",
+			"submit": "Verificar",
+			"trustDevice": "Confiar en este dispositivo durante 30 días",
+			"emailCode": "Recibir un código por correo electrónico",
+			"emailSent": "Te acabamos de enviar un código por correo electrónico.",
+			"emailDescription": "Escribe el código de 6 dígitos que te enviamos por correo electrónico.",
+			"backupCode": "Usar un código de recuperación",
+			"backupDescription": "Escribe uno de tus códigos de recuperación. Cada uno sirve una sola vez.",
+			"useApp": "Usar mi aplicación de autenticación"
+		},
+		"consent": {
+			"title": "¿Permitir que {client} acceda a tu cuenta?",
+			"description": "{client} quiere usar {product} en tu nombre.",
+			"scopesTitle": "Podrá:",
+			"allow": "Permitir",
+			"deny": "Denegar",
+			"signedInAs": "Sesión iniciada como {email}",
+			"scope": {
+				"offline_access": "Mantener el acceso hasta que lo quites",
+				"projects:read": "Ver tus proyectos",
+				"projects:write": "Crear, modificar y eliminar tus proyectos"
+			},
+			"invalid": "Esta solicitud de autorización no es válida o ya caducó. Vuelve a empezar desde tu asistente de IA.",
+			"error": "Algo salió mal. Vuelve a intentarlo desde tu asistente de IA.",
+			"redirectsTo": "Volverás a {host}."
+		},
+		"errors": {
+			"generic": "Algo salió mal. Vuelve a intentarlo.",
+			"invalidCredentials": "El correo electrónico o la contraseña no son correctos.",
+			"emailNotVerified": "Primero confirma tu dirección de correo electrónico. Te acabamos de enviar un enlace nuevo.",
+			"userExists": "Ya hay una cuenta con este correo electrónico.",
+			"passwordShort": "Usa al menos 8 caracteres.",
+			"rateLimited": "Demasiados intentos. Espera un minuto y vuelve a intentarlo.",
+			"invalidCode": "Este código no es correcto o ya caducó.",
+			"passkeyFailed": "La llave de acceso no funcionó. Vuelve a intentarlo o usa tu contraseña."
+		}
+	},
+	"App": {
+		"nav": {
+			"dashboard": "Panel",
+			"projects": "Proyectos",
+			"account": "Cuenta",
+			"organization": "Equipo",
+			"admin": "Administración",
+			"docs": "Documentación",
+			"home": "Inicio"
+		},
+		"userMenu": {
+			"account": "Configuración de la cuenta",
+			"signOut": "Cerrar sesión",
+			"toggle": "Menú de la cuenta"
+		},
+		"dashboard": {
+			"title": "Panel",
+			"welcome": "Te damos la bienvenida, {name}",
+			"intro": "Este es tu panel. Reemplázalo por lo que tus usuarios necesiten primero.",
+			"projects": "Tus proyectos",
+			"projectsCount": "{count, plural, =0 {Aún no hay proyectos} one {# proyecto} other {# proyectos}}",
+			"openProjects": "Ver proyectos",
+			"apiTitle": "Usar la API",
+			"apiBody": "Crea una clave de API para llamar a la API REST o conecta un asistente de IA al servidor MCP.",
+			"apiKeys": "Claves de API",
+			"connectedApps": "Aplicaciones conectadas"
+		}
+	},
+	"Account": {
+		"title": "Cuenta",
+		"tabs": {
+			"profile": "Perfil",
+			"security": "Seguridad",
+			"apiKeys": "Claves de API",
+			"connectedApps": "Aplicaciones conectadas",
+			"billing": "Facturación"
+		},
+		"save": "Guardar",
+		"saved": "Cambios guardados.",
+		"cancel": "Cancelar",
+		"delete": "Eliminar",
+		"remove": "Quitar",
+		"copy": "Copiar",
+		"copied": "Copiado.",
+		"close": "Cerrar",
+		"profile": {
+			"title": "Perfil",
+			"description": "Tu nombre y el idioma de tus correos.",
+			"name": "Nombre",
+			"email": "Correo electrónico",
+			"emailHelp": "Escríbenos para cambiar tu dirección de correo electrónico.",
+			"language": "Idioma de los correos",
+			"avatar": "Foto",
+			"avatarUpload": "Subir una foto",
+			"avatarHelp": "PNG, JPEG o WebP, de hasta 4 MB."
+		},
+		"danger": {
+			"title": "Eliminar tu cuenta",
+			"description": "Se eliminarán tu cuenta y todos sus datos. Esta acción no se puede deshacer.",
+			"confirm": "Escribe tu contraseña para confirmar.",
+			"button": "Eliminar mi cuenta"
+		},
+		"password": {
+			"title": "Contraseña",
+			"description": "Al cambiarla, se cerrarán tus otras sesiones.",
+			"current": "Contraseña actual",
+			"new": "Nueva contraseña",
+			"submit": "Cambiar la contraseña",
+			"done": "Se cambió tu contraseña."
+		},
+		"passkeys": {
+			"title": "Llaves de acceso",
+			"description": "Inicia sesión con tu huella digital, tu rostro o el PIN de tu dispositivo en lugar de una contraseña.",
+			"add": "Añadir una llave de acceso",
+			"empty": "Aún no tienes llaves de acceso.",
+			"added": "Llave de acceso añadida.",
+			"unnamed": "Llave de acceso",
+			"createdAt": "Añadida el {date}"
+		},
+		"twoFactor": {
+			"title": "Verificación en dos pasos",
+			"description": "Al iniciar sesión, se pide un código de una aplicación de autenticación.",
+			"enabled": "Activada",
+			"disabled": "Desactivada",
+			"enable": "Activar",
+			"disable": "Desactivar",
+			"passwordPrompt": "Escribe tu contraseña para continuar.",
+			"scan": "Escanea este código QR con tu aplicación de autenticación y escribe el código que aparece.",
+			"verify": "Confirmar",
+			"backupTitle": "Guarda tus códigos de recuperación",
+			"backupDescription": "Si pierdes tu dispositivo, puedes usar cada código una sola vez. Guárdalos en un lugar seguro.",
+			"done": "La verificación en dos pasos está activada.",
+			"off": "La verificación en dos pasos está desactivada."
+		},
+		"sessions": {
+			"title": "Sesiones",
+			"description": "Los dispositivos con sesión iniciada en tu cuenta.",
+			"current": "Este dispositivo",
+			"revoke": "Cerrar sesión",
+			"revokeOthers": "Cerrar sesión en todos los demás dispositivos",
+			"unknown": "Dispositivo desconocido",
+			"lastActive": "Iniciada el {date}"
+		},
+		"apiKeys": {
+			"title": "Claves de API",
+			"description": "Las claves permiten que tu código llame a la API REST y al servidor MCP. Trátalas como contraseñas.",
+			"create": "Crear una clave",
+			"name": "Nombre",
+			"namePlaceholder": "Mi script",
+			"access": "Acceso",
+			"read": "Solo lectura",
+			"readWrite": "Lectura y escritura",
+			"empty": "Aún no tienes claves.",
+			"createdTitle": "Copia tu nueva clave",
+			"createdDescription": "Solo se muestra esta vez. Guárdala en un lugar seguro.",
+			"lastUsed": "Último uso: {date}",
+			"neverUsed": "Sin usar",
+			"deleteConfirm": "¿Eliminar la clave «{name}»? El código que la usa dejará de funcionar de inmediato.",
+			"team": "Equipo: {team}",
+			"forTeam": "Esta clave actúa en nombre del equipo {team}: lee y modifica los datos del equipo, no los tuyos."
+		},
+		"connectedApps": {
+			"title": "Aplicaciones conectadas",
+			"description": "Los asistentes de IA a los que diste permiso para usar tu cuenta a través del servidor MCP.",
+			"empty": "No hay aplicaciones conectadas. Conecta un asistente a {url} para verlo aquí.",
+			"connected": "Conectada el {date}",
+			"lastUsed": "Último uso: {date}",
+			"remove": "Quitar el acceso",
+			"removeConfirm": "¿Quitar el acceso a {name}? Lo perderá de inmediato."
+		},
+		"billing": {
+			"title": "Facturación",
+			"description": "Tu plan, tu método de pago y tus facturas.",
+			"teamDescription": "El plan de {team}. Lo comparten todos sus miembros.",
+			"free": "Tienes el plan gratuito.",
+			"pro": "Tienes el plan Pro.",
+			"renews": "Se renueva el {date}.",
+			"ends": "Termina el {date}. Seguirás con Pro hasta entonces.",
+			"pastDue": "No se pudo cobrar el último pago. Actualiza tu método de pago para seguir con Pro.",
+			"upgradeMonthly": "Pasar a Pro: {price} / mes",
+			"upgradeYearly": "Pasar a Pro: {price} / año",
+			"manage": "Gestionar la facturación",
+			"managers": "Solo los propietarios y los administradores del equipo gestionan su facturación.",
+			"unavailable": "La facturación aún no está configurada en este sitio.",
+			"error": "No funcionó: {message}"
+		}
+	},
+	"Projects": {
+		"title": "Proyectos",
+		"description": "El recurso de ejemplo. Los mismos proyectos están disponibles a través de la API REST y del servidor MCP.",
+		"empty": "Aún no hay proyectos. Crea el primero.",
+		"create": "Nuevo proyecto",
+		"name": "Nombre",
+		"descriptionLabel": "Descripción",
+		"save": "Guardar",
+		"cancel": "Cancelar",
+		"created": "Proyecto creado.",
+		"saved": "Proyecto guardado.",
+		"deleted": "Proyecto eliminado.",
+		"edit": "Editar",
+		"delete": "Eliminar",
+		"deleteConfirm": "¿Eliminar «{name}» definitivamente?",
+		"updatedAt": "Actualizado el {date}",
+		"apiHint": "Para desarrolladores: GET /api/v1/projects con una clave de API, o la herramienta list_projects a través de MCP."
+	},
+	"Org": {
+		"title": "Equipo",
+		"description": "Trabaja con otras personas. Los proyectos y las claves de API creados en un equipo pertenecen al equipo.",
+		"personal": "Personal",
+		"switcher": {
+			"label": "Cambiar de equipo",
+			"create": "Crear un equipo"
+		},
+		"create": {
+			"title": "Crear un equipo",
+			"description": "Tendrás el rol de propietario. Después, invita a otras personas por correo electrónico.",
+			"name": "Nombre del equipo",
+			"namePlaceholder": "Acme",
+			"submit": "Crear el equipo",
+			"created": "Equipo creado."
+		},
+		"none": {
+			"title": "Estás en tu espacio personal",
+			"body": "Aquí, tus proyectos y tus claves de API son solo tuyos. Crea un equipo para compartirlos o cambia a un equipo del que formes parte.",
+			"teams": "Tus equipos",
+			"switch": "Abrir"
+		},
+		"general": {
+			"title": "General",
+			"description": "Los miembros ven este nombre, y también aparece en las invitaciones.",
+			"name": "Nombre",
+			"save": "Guardar",
+			"saved": "Cambios guardados."
+		},
+		"members": {
+			"title": "Miembros",
+			"description": "Los propietarios y los administradores pueden invitar a personas, cambiar roles y quitar miembros.",
+			"you": "tú",
+			"role": "Rol de {name}",
+			"remove": "Quitar",
+			"removeConfirm": "¿Quitar a {name} del equipo? Perderá de inmediato el acceso a los proyectos del equipo.",
+			"leave": "Salir del equipo",
+			"leaveConfirm": "¿Salir de {team}? Perderás de inmediato el acceso a los proyectos del equipo.",
+			"roles": {
+				"owner": "Propietario",
+				"admin": "Administrador",
+				"member": "Miembro"
+			}
+		},
+		"invitations": {
+			"title": "Invitaciones",
+			"description": "La persona recibe un correo con un enlace. El enlace es válido durante 48 horas.",
+			"email": "Correo electrónico",
+			"role": "Rol",
+			"send": "Invitar",
+			"sent": "Invitación enviada a {email}.",
+			"expires": "Caduca el {date}",
+			"cancel": "Cancelar la invitación",
+			"empty": "No hay invitaciones pendientes."
+		},
+		"danger": {
+			"title": "Eliminar el equipo",
+			"description": "Se eliminarán el equipo, su lista de miembros y sus proyectos. Esta acción no se puede deshacer.",
+			"delete": "Eliminar el equipo",
+			"confirm": "¿Eliminar {team} y todos sus proyectos? Esta acción no se puede deshacer."
+		},
+		"invitation": {
+			"title": "Únete a {team}",
+			"body": "{inviter} te invitó a unirte a {team} con el rol de {role}.",
+			"accept": "Aceptar",
+			"decline": "Rechazar",
+			"declined": "Rechazaste la invitación.",
+			"invalid": "Esta invitación no es válida. Caducó, se canceló o se envió a una dirección de correo electrónico distinta de {email}."
+		},
+		"error": "No funcionó. Vuelve a intentarlo."
+	},
+	"Admin": {
+		"title": "Administración",
+		"tabs": {
+			"users": "Usuarios",
+			"audit": "Registro de auditoría"
+		},
+		"users": {
+			"search": "Buscar por correo electrónico",
+			"searchButton": "Buscar",
+			"empty": "Ningún usuario coincide.",
+			"user": "Usuario",
+			"created": "Fecha de registro",
+			"status": "Estado",
+			"menu": "Acciones para {name}",
+			"admin": "Administrador",
+			"banned": "Bloqueado",
+			"unverified": "Correo electrónico sin verificar",
+			"active": "Activo",
+			"viewAs": "Ver la aplicación como este usuario",
+			"makeAdmin": "Hacer administrador",
+			"removeAdmin": "Quitar rol de administrador",
+			"ban": "Bloquear",
+			"unban": "Desbloquear",
+			"banTitle": "¿Bloquear a {name}?",
+			"banDescription": "Se cerrarán sus sesiones de inmediato y no podrá volver a iniciar sesión hasta que desbloquees su cuenta. Sus claves de API y sus aplicaciones conectadas dejarán de funcionar.",
+			"banReason": "Motivo (solo lo ven los administradores)",
+			"previous": "Anterior",
+			"next": "Siguiente",
+			"count": "{count, plural, one {# usuario} other {# usuarios}}"
+		},
+		"audit": {
+			"empty": "Aún no hay nada. Aquí aparecerán las acciones de los administradores.",
+			"when": "Fecha",
+			"who": "Administrador",
+			"what": "Acción",
+			"target": "Usuario",
+			"deleted": "usuario eliminado",
+			"actions": {
+				"banned": "Bloqueó",
+				"unbanned": "Desbloqueó",
+				"roleChanged": "Cambió el rol a {role}",
+				"impersonated": "Vio la aplicación como"
+			}
+		},
+		"impersonating": {
+			"banner": "Estás viendo la aplicación como {name} ({email}).",
+			"stop": "Volver a tu cuenta"
+		},
+		"error": "No funcionó: {message}"
+	}
+}

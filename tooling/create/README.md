@@ -14,7 +14,7 @@ project with only what you picked: no dead code, no unused dependencies.
 Every question has a flag, for agents and CI. `--help` lists them:
 
 ```sh
-pnpm create turbinekit my-app --yes --modules orgs,admin --locales en,fr
+pnpm create turbinekit my-app --yes --modules orgs,admin --locales en,es,pt-BR
 ```
 
 Needs Node.js 24 and pnpm. The

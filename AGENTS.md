@@ -134,6 +134,10 @@ doesn't use; the skill `add-module` brings one back later.
 - `turbinekit:a|b`: kept if a or b is on. `turbinekit:a+b`: kept if both are.
 - `!turbinekit:<module>`: kept only when the module is off. It is written
   commented out, because the full template has every module on.
+- Languages other than English are marked the same way, by code:
+  `turbinekit:fr`, `turbinekit:es`, `turbinekit:pt-BR`, `turbinekit:de`. A
+  new one also goes into `LOCALES` (`tooling/create/src/options.ts`) and
+  `MARKER_IDS` (`tooling/create/src/markers.ts`).
 
 Keep the markers when you edit marked code, and put new code for a module
 inside its markers.

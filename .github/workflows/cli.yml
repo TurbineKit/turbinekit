@@ -45,10 +45,14 @@ jobs:
               name: files on vercel blob,
               flags: "--modules files --files-driver vercel-blob",
             }
-          - { name: english only, flags: "--modules all --locales en" }
+          - { name: all languages, flags: "--modules all --locales all" }
           - {
               name: french first,
               flags: "--modules all --locales en,fr --default-locale fr",
+            }
+          - {
+              name: brazilian first,
+              flags: "--modules all --locales en,es,pt-BR --default-locale pt-BR",
             }
           - { name: ultracite, flags: "--modules all --lint ultracite" }
     steps:

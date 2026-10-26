@@ -25,8 +25,9 @@ project with only what you picked: no dead code, no unused dependencies.
 - **Postgres and Drizzle**, with a lazy client and tests on PGlite (no
   database needed). `pnpm db:local` runs a Postgres-compatible server
   without Docker.
-- **Languages** with next-intl: localized URLs, emails, legal pages and API
-  docs. A test keeps every catalog in sync.
+- **Languages** with next-intl: English, French, Spanish, Brazilian
+  Portuguese and German, ready to pick. Localized URLs, emails, legal pages
+  and API docs; a test keeps every catalog in sync.
 - **SEO built in**: metadata, hreflang, JSON-LD, a sitemap, robots.txt,
   share images, `llms.txt` and a Markdown copy of each page.
 - **AI-first**: `AGENTS.md` with real house rules, `SETUP.md` that agents
@@ -69,7 +70,7 @@ TurbineKit is a spiritual successor to [next-forge](https://github.com/vercel/ne
 ## Options
 
 ```sh
-pnpm create turbinekit my-app --yes --modules orgs,admin --locales en,fr
+pnpm create turbinekit my-app --yes --modules orgs,admin --locales en,es,pt-BR
 ```
 
 Every question has a flag (`--help` lists them). `--yes` takes the

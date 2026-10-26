@@ -43,9 +43,24 @@ export default defineConfig({
 	theme: { accent: "#171717", radius: "md", mode: "system" },
 	navigation: {
 		tabs: [
-			{ label: { en: "Guides", fr: "Guides" }, path: "/" },
 			{
-				label: { en: "API reference", fr: "Référence de l’API" },
+				label: {
+					en: "Guides",
+					fr: "Guides", // turbinekit:fr
+					es: "Guías", // turbinekit:es
+					"pt-BR": "Guias", // turbinekit:pt-BR
+					de: "Anleitungen", // turbinekit:de
+				},
+				path: "/",
+			},
+			{
+				label: {
+					en: "API reference",
+					fr: "Référence de l’API", // turbinekit:fr
+					es: "Referencia de la API", // turbinekit:es
+					"pt-BR": "Referência da API", // turbinekit:pt-BR
+					de: "API-Referenz", // turbinekit:de
+				},
 				path: "/reference",
 			},
 		],
@@ -68,11 +83,23 @@ export default defineConfig({
 		copyright: `© ${new Date().getFullYear()} ${site.company.name}`,
 		links: [
 			{
-				label: { en: "Terms", fr: "Conditions" },
+				label: {
+					en: "Terms",
+					fr: "Conditions", // turbinekit:fr
+					es: "Términos", // turbinekit:es
+					"pt-BR": "Termos", // turbinekit:pt-BR
+					de: "Nutzungsbedingungen", // turbinekit:de
+				},
 				href: `${siteUrl()}/legal/terms`,
 			},
 			{
-				label: { en: "Privacy", fr: "Confidentialité" },
+				label: {
+					en: "Privacy",
+					fr: "Confidentialité", // turbinekit:fr
+					es: "Privacidad", // turbinekit:es
+					"pt-BR": "Privacidade", // turbinekit:pt-BR
+					de: "Datenschutz", // turbinekit:de
+				},
 				href: `${siteUrl()}/legal/privacy`,
 			},
 		],

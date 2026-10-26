@@ -1,0 +1,46 @@
+---
+title: Autenticação
+description: Chaves de API para código, OAuth para assistentes de IA e as permissões que ambos carregam.
+sidebar:
+  order: 2
+---
+
+## Chaves de API
+
+Envie sua chave como um token Bearer em toda requisição:
+
+```bash
+curl https://example.com/api/v1/projects \
+  -H "Authorization: Bearer tk_…"
+```
+
+`X-Api-Key: tk_…` também funciona. Crie e exclua chaves em **Conta → Chaves de API**. Trate uma chave como uma senha: quem a tiver age como se fosse você.
+
+## Permissões
+
+Cada chave carrega permissões, escolhidas quando você a cria:
+
+| Acesso | Permissões | O que ela pode fazer |
+| --- | --- | --- |
+| Somente leitura | Toda permissão `…:read`, como `projects:read` | Listar e ler |
+| Leitura e escrita | Todas as permissões, como `projects:write` | Também criar, alterar e excluir |
+
+Uma requisição que precisa de uma permissão que a chave não tem recebe um `403` com o código `insufficient_scope`. Cada operação na [referência da API](/reference) indica a permissão de que precisa (`x-required-permission`).
+
+{/* #region turbinekit:orgs */}
+
+## Equipes
+
+Uma chave criada enquanto uma equipe está ativa (o seletor no topo da barra lateral) age em nome dessa equipe: ela lê e altera os dados da equipe, não os seus dados pessoais. Ela funciona enquanto você fizer parte da equipe. Depois que você sai da equipe, ou que alguém remove você, as requisições feitas com essa chave recebem um `403` com o código `not_a_member`.
+
+Assistentes de IA conectados com OAuth agem no seu espaço pessoal.
+
+{/* #endregion turbinekit:orgs */}
+
+## Limites de requisições
+
+Cada chave pode fazer 120 requisições por minuto. Acima disso, as requisições recebem um `429` com um cabeçalho `Retry-After`. Aguarde e tente novamente.
+
+## OAuth para assistentes de IA
+
+Assistentes de IA não usam chaves de API: eles se conectam ao [servidor MCP](/mcp), e o usuário entra e aprova o assistente em uma tela de consentimento. O assistente recebe um token com as permissões que o usuário aprovou (os mesmos nomes, como escopos OAuth), vinculado somente ao servidor MCP. Os usuários podem remover o acesso de um assistente a qualquer momento em **Conta → Apps conectados**; o acesso termina imediatamente.

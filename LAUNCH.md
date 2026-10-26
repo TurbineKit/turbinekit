@@ -42,6 +42,9 @@ each service; this list covers going live.
 
 - [ ] The legal pages (`apps/web/content/legal/`) name your company, your
   contact and your services. They are templates: have them reviewed.
+- [ ] Each language has its own copy of each legal page
+  (`<page>/<locale>.mdx`). These translations are templates too: have a
+  lawyer review the text in each language you publish.
 - [ ] The privacy policy names every processor that receives personal
   data: your host, your database and your email provider.
 - [ ] It names PostHog too (analytics). <!-- turbinekit:analytics -->
@@ -113,7 +116,7 @@ each service; this list covers going live.
 - [ ] The docs project is deployed, and `/docs` on the main domain shows it
   (`DOCS_ORIGIN`).
 <!-- #endregion turbinekit:docs -->
-- [ ] Connect the MCP server from Claude (Settings → Connectors → Add a
+- [ ] Connect the MCP server from Claude (Customize → Connectors → add a
   custom connector, `https://<your domain>/mcp`) and from Claude Code
   (`claude mcp add --transport http <name> https://<your domain>/mcp`).
   Sign in, approve, call a tool, then remove the app in

@@ -11,6 +11,6 @@
 		"payments"
 	],
 	"providers": { "email": "resend", "files": "local" },
-	"locales": ["en", "fr"],
+	"locales": ["en", "fr", "es", "pt-BR", "de"],
 	"lint": "biome"
 }

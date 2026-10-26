@@ -24,14 +24,14 @@ import {
 	TEMPLATE_MANIFEST,
 	TEMPLATE_ONLY,
 } from "./modules.ts";
-import type { Answers } from "./options.ts";
+import { type Answers, LOCALES, type Locale } from "./options.ts";
 
 /** A TurbineKit template: the bundled copy, or a git checkout (development). */
 export type Source = { root: string; kind: "bundle" | "checkout" };
 
 /** The ids the markers see as on. */
 export function enabledIds(answers: Answers): Set<string> {
-	const ids = new Set<string>(answers.modules);
+	const ids = new Set<string>([...answers.modules, ...answers.locales]);
 	ids.add(answers.emailProvider);
 	if (answers.modules.includes("files") && answers.filesDriver !== "local") {
 		ids.add(answers.filesDriver === "s3" ? "files-s3" : "files-blob");
@@ -63,6 +63,13 @@ function removedManifests(answers: Answers): Manifest[] {
 	return off;
 }
 
+/** The template's languages that the project doesn't get. */
+function removedLocales(answers: Answers): Locale[] {
+	return (Object.keys(LOCALES) as Locale[]).filter(
+		(code) => !answers.locales.includes(code),
+	);
+}
+
 /** Paths the project doesn't get, from its root. */
 function removedPaths(answers: Answers): string[] {
 	const paths = [
@@ -72,11 +79,11 @@ function removedPaths(answers: Answers): string[] {
 		"LICENSE",
 		...removedManifests(answers).flatMap((manifest) => manifest.files ?? []),
 	];
-	if (!answers.locales.includes("fr")) {
+	for (const code of removedLocales(answers)) {
 		paths.push(
-			"apps/web/messages/fr.json",
-			"packages/email/src/strings/fr.ts",
-			"apps/docs/docs/fr",
+			`apps/web/messages/${code}.json`,
+			`packages/email/src/strings/${code}.ts`,
+			`apps/docs/docs/${code}`,
 		);
 	}
 	return paths;
@@ -152,9 +159,12 @@ export async function copyTemplate(
 ): Promise<number> {
 	const enabled = enabledIds(answers);
 	const removed = removedPaths(answers);
-	const legalRemoved = answers.locales.includes("fr")
-		? null
-		: /^apps\/web\/content\/legal\/[\w-]+\/fr\.mdx$/;
+	const otherLocales = removedLocales(answers);
+	const legalRemoved = otherLocales.length
+		? new RegExp(
+				`^apps/web/content/legal/[\\w-]+/(?:${otherLocales.join("|")})\\.mdx$`,
+			)
+		: null;
 	let count = 0;
 	for (const file of await templateFiles(source)) {
 		if (isUnder(file, removed) || legalRemoved?.test(file)) {
@@ -395,13 +405,15 @@ export async function personalize(answers: Answers): Promise<void> {
 	await localize(answers);
 }
 
-/** Languages: the list, the default, and what a removed one leaves behind. */
+/**
+ * Languages: the list and the default. The markers (`turbinekit:<code>`)
+ * already removed the code of the others.
+ */
 async function localize(answers: Answers): Promise<void> {
 	const root = answers.directory;
-	const fr = answers.locales.includes("fr");
 
-	await edit(join(root, "packages/i18n/src/index.ts"), (text) => {
-		let next = text
+	await edit(join(root, "packages/i18n/src/index.ts"), (text) =>
+		text
 			.replace(
 				/export const locales = \[[^\]]*\] as const;/,
 				`export const locales = [${answers.locales.map((code) => `"${code}"`).join(", ")}] as const;`,
@@ -409,33 +421,8 @@ async function localize(answers: Answers): Promise<void> {
 			.replace(
 				/export const defaultLocale: Locale = "[^"]*";/,
 				`export const defaultLocale: Locale = "${answers.defaultLocale}";`,
-			);
-		if (!fr) {
-			next = next.replace(/^\s*fr: "[^"]*",\n/gm, "");
-		}
-		return next;
-	});
-
-	if (!fr) {
-		await edit(join(root, "packages/email/src/strings/index.ts"), (text) =>
-			text
-				.replace(/^import \{ fr \} from "\.\/fr\.ts";\n/m, "")
-				.replace("{ en, fr }", "{ en }"),
-		);
-		await edit(
-			join(root, "apps/web/src/components/consent-manager.tsx"),
-			(text) =>
-				text
-					.replace(
-						/^import \{ translations as fr \} from "@c15t\/translations\/fr";\n/m,
-						"",
-					)
-					.replace("{ en, fr }", "{ en }"),
-		);
-		await edit(join(root, "apps/docs/blume.config.ts"), (text) =>
-			text.replace(/,\s*fr: "[^"]*"/g, ""),
-		);
-	}
+			),
+	);
 
 	if (answers.defaultLocale !== "en") {
 		await edit(join(root, "packages/db/src/schema/auth.ts"), (text) =>

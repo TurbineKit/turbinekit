@@ -1,0 +1,14 @@
+---
+title: Versiones
+description: Cómo cambia la API sin romper tu código.
+sidebar:
+  order: 6
+---
+
+La versión está en la ruta: `/api/v1`. Dentro de la v1, los cambios solo añaden cosas:
+
+- nuevos endpoints y nuevos parámetros opcionales;
+- nuevos campos en las respuestas (ignora los que no conozcas);
+- nuevos códigos de error dentro de los tipos existentes.
+
+Un cambio que podría romper tu código (eliminar o renombrar un campo, cambiar un tipo) se publica como `/api/v2`, junto a la v1. Lo anunciamos con antelación y mantenemos la v1 en funcionamiento mientras migras.
