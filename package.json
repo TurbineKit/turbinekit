@@ -24,7 +24,8 @@
 		"email:dev": "pnpm --filter @repo/email dev",
 		"admin:grant": "pnpm --filter @repo/auth grant-admin",
 		"stripe:setup": "pnpm --filter @repo/billing stripe:setup",
-		"changeset": "changeset"
+		"changeset": "changeset",
+		"version-packages": "changeset version && node tooling/create/scripts/sync-version.ts"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "catalog:",

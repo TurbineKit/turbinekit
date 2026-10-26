@@ -58,6 +58,9 @@ jobs:
           package-manager-cache: false
       - run: pnpm install --frozen-lockfile
       - uses: changesets/action/version@v2
+        with:
+          # changeset version, then the same version in turbinekit.json.
+          script: pnpm version-packages
 
   # Builds and packs, without the right to publish.
   pack:
@@ -85,7 +88,7 @@ jobs:
         with:
           publish-plan-artifact-id: ${{ needs.select-mode.outputs.publish-plan-artifact-id }}
 
-  # Publishes the packed tarballs, then tags them and writes GitHub releases.
+  # Publishes the packed tarballs, tags them, then writes the GitHub release.
   # pnpm hands the tarballs to npm, which trades the OIDC token for the right
   # to publish (npm 11.5.1 or later, bundled with Node 24).
   publish:
@@ -106,6 +109,24 @@ jobs:
           package-manager-cache: false
       # No install scripts in the job that can publish.
       - run: pnpm install --frozen-lockfile --ignore-scripts
-      - uses: changesets/action/publish@v2
+      - id: publish
+        uses: changesets/action/publish@v2
         with:
           pack-dir-artifact-id: ${{ needs.pack.outputs.pack-dir-artifact-id }}
+          # The two packages share each version, so the next step writes one
+          # release per version instead of one per package. The tags stay.
+          create-github-releases: false
+      # The release takes create-turbinekit's tag and changelog. When the
+      # workflow runs again, it finds the release and stops.
+      - name: GitHub release
+        if: steps.publish.outputs.published == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          version=$(node -p 'require("./tooling/create/package.json").version')
+          tag="create-turbinekit@$version"
+          if gh release view "$tag" > /dev/null 2>&1; then exit 0; fi
+          awk -v heading="## $version" '$0 == heading { found = 1; next } found && /^## / { exit } found' \
+            tooling/create/CHANGELOG.md > "$RUNNER_TEMP/notes.md"
+          gh release create "$tag" --title "v$version" --notes-file "$RUNNER_TEMP/notes.md" --verify-tag --latest

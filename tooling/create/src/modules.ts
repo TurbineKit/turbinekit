@@ -218,7 +218,7 @@ export const TEMPLATE_MANIFEST: Manifest = {
 	dependencies: {
 		"package.json": ["@changesets/cli", "@changesets/changelog-github"],
 	},
-	scripts: { "package.json": ["changeset"] },
+	scripts: { "package.json": ["changeset", "version-packages"] },
 };
 
 /** Only in the TurbineKit repository: never in a project. */
@@ -228,6 +228,8 @@ export const TEMPLATE_ONLY: string[] = [
 	"CONTRIBUTING.md",
 	".github/workflows/cli.yml",
 	".github/workflows/release.yml",
+	// The logos of the README.
+	".github/assets",
 ];
 
 /** Never copied from the repository into a project. */
