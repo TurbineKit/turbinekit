@@ -1,5 +1,12 @@
 # turbinekit
 
+## 0.2.1
+
+### Patch Changes
+
+- Updated dependencies [[`675c6a5`](https://github.com/TurbineKit/turbinekit/commit/675c6a5a01a3a4017c554b417d90785d97463f1b)]:
+  - create-turbinekit@0.2.1
+
 ## 0.2.0
 
 ### Patch Changes
