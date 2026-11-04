@@ -21,7 +21,7 @@
 		"@better-auth/api-key": "catalog:",
 		"@better-auth/cimd": "catalog:",
 		"@better-auth/mcp": "catalog:",
-		"@better-auth/oauth-provider": "1.7.13",
+		"@better-auth/oauth-provider": "1.7.16",
 		"@better-auth/passkey": "catalog:",
 		"@repo/db": "workspace:*",
 		"@repo/email": "workspace:*",
