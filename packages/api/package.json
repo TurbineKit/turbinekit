@@ -16,7 +16,7 @@
 		"test": "vitest run"
 	},
 	"dependencies": {
-		"@better-auth/core": "1.7.13",
+		"@better-auth/core": "1.7.16",
 		"@modelcontextprotocol/server": "2.4.0",
 		"@repo/auth": "workspace:*",
 		"@repo/billing": "workspace:*",
